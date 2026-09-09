@@ -79,7 +79,7 @@ def run(message: str, verbose: bool = False) -> dict:
     reply = draft_reply(message, intent, similar_threads)
 
     if verbose:
-        print(f"[3] Reply:     \"{reply[:80]}...\"" if len(reply) > 80 else f"[3] Reply: \"{reply}\"")
+        print(f"[3] Reply:     \"{reply[:120]}...\"" if len(reply) > 120 else f"[3] Reply: \"{reply}\"")
 
     # ── Step 4: Escalation decision ───────────────────────
     escalation = should_escalate(message, intent)

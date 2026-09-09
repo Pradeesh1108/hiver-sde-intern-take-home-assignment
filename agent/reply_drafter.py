@@ -23,7 +23,7 @@ from agent.prompts import reply_drafting_prompt
 load_dotenv()
 _client     = Groq()
 _MODEL      = "openai/gpt-oss-120b"   # better quality for customer-facing text
-_MAX_TOKENS = 150                    # 2-3 sentences fits in 150 tokens easily
+_MAX_TOKENS = 256                    # 2-3 sentences fits comfortably
 
 
 def draft_reply(
@@ -81,9 +81,13 @@ def draft_reply(
             # and should not be longer than ~300 chars (Twitter limit ~280)
             if not reply:
                 return fallback
+                
+            if len(reply) < 50:
+                print(f"  [reply_drafter] Reply too short ({len(reply)} chars): {reply}")
+                return fallback
 
             # Trim if somehow over Twitter length
-            # (shouldn't happen with max_tokens=150 but just in case)
+            # (shouldn't happen with max_tokens=256 but just in case)
             if len(reply) > 280:
                 reply = reply[:277] + "..."
 
