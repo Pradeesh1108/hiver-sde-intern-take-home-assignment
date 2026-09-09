@@ -31,7 +31,7 @@ def _load_intent_taxonomy():
     with open("datasets/intent_taxonomy.json") as f:
         return json.load(f)
 
-def _load_eval_set(path="datasets/eval_set_labelled.csv"):
+def _load_eval_set(path="datasets/eval_set_to_label.csv"):
     """Load the hand-labelled eval set. Returns list of dicts."""
     rows = []
     with open(path, newline="", encoding="utf-8") as f:

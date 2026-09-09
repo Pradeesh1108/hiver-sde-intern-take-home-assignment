@@ -17,6 +17,7 @@
 # ============================================================
 
 import time
+import concurrent.futures
 from agent.classifier    import classify
 from agent.retriever     import retrieve_by_keywords
 from agent.reply_drafter import draft_reply
@@ -68,23 +69,26 @@ def run(message: str, verbose: bool = False) -> dict:
     if verbose:
         print(f"[1] Intent:    {intent}")
 
-    # ── Step 2: Retrieve similar threads ─────────────────
-    # Use keyword-enhanced retrieval for better grounding
-    similar_threads = retrieve_by_keywords(message, intent, n=3)
+    # ── Parallel Execution: Escalation & Drafting ──────────
+    # The Escalator only needs the message and intent.
+    # The Drafter needs the retrieved threads.
+    # We can run them both at the same time to save ~1-2 seconds.
+    
+    def drafting_flow():
+        threads = retrieve_by_keywords(message, intent, n=3)
+        rep = draft_reply(message, intent, threads)
+        return threads, rep
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+        future_draft = executor.submit(drafting_flow)
+        future_escalate = executor.submit(should_escalate, message, intent)
+        
+        similar_threads, reply = future_draft.result()
+        escalation = future_escalate.result()
 
     if verbose:
         print(f"[2] Retrieved: {len(similar_threads)} similar threads")
-
-    # ── Step 3: Draft reply ───────────────────────────────
-    reply = draft_reply(message, intent, similar_threads)
-
-    if verbose:
         print(f"[3] Reply:     \"{reply[:120]}...\"" if len(reply) > 120 else f"[3] Reply: \"{reply}\"")
-
-    # ── Step 4: Escalation decision ───────────────────────
-    escalation = should_escalate(message, intent)
-
-    if verbose:
         print(f"[4] Decision:  {escalation['decision']} — {escalation['reason']}")
 
     duration = round(time.time() - start_time, 2)

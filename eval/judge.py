@@ -25,12 +25,14 @@
 
 import json
 import re
-import anthropic
+import os
+from dotenv import load_dotenv
+from groq import Groq
 from agent.prompts import judge_prompt
 
-
-_client     = anthropic.Anthropic()
-_MODEL      = "claude-haiku-4-5-20251001"  # haiku sufficient for scoring
+load_dotenv()
+_client     = Groq()
+_MODEL      = "qwen/qwen3.8-27b"  # fast open source model on groq
 _MAX_TOKENS = 150
 
 
@@ -81,13 +83,13 @@ def judge_reply(
 
     for attempt in range(retries + 1):
         try:
-            response = _client.messages.create(
+            response = _client.chat.completions.create(
                 model=_MODEL,
                 max_tokens=_MAX_TOKENS,
                 messages=[{"role": "user", "content": prompt}]
             )
 
-            raw = response.content[0].text.strip()
+            raw = response.choices[0].message.content.strip()
 
             # Strip markdown code fences if present
             raw = re.sub(r"```(?:json)?", "", raw).strip()
