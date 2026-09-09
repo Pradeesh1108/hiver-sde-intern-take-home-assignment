@@ -21,6 +21,7 @@
 import json
 import csv
 import os
+import argparse
 import time
 from collections import defaultdict
 
@@ -89,6 +90,9 @@ def run_agent_eval(eval_set: list, verbose: bool = True) -> list:
 
         # Run the full pipeline
         result = agent_run(message, verbose=False)
+        
+        # Free Tier Rate Limit: Wait 3s between examples to stay under 30 RPM
+        time.sleep(3)
 
         results.append({
             "thread_id":        row.get("thread_id", ""),

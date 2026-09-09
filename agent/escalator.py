@@ -23,14 +23,8 @@
 import json
 import re
 import os
-from dotenv import load_dotenv
-from groq import Groq
 from agent.prompts import escalation_prompt
-
-load_dotenv()
-_client     = Groq()
-_MODEL      = "qwen/qwen3.8-27b"   # fast enough for binary decision
-_MAX_TOKENS = 100                             # JSON response is short
+from agent.llm_factory import generate_completion
 
 
 # ─────────────────────────────────────────────
@@ -111,15 +105,12 @@ def _llm_escalation_decision(message: str, intent: str) -> dict:
     prompt = escalation_prompt(message, intent)
 
     try:
-        response = _client.chat.completions.create(
-            model=_MODEL,
-            max_tokens=_MAX_TOKENS,
-            messages=[
-                {"role": "user", "content": prompt}
-            ]
+        raw = generate_completion(
+            messages=[{"role": "user", "content": prompt}],
+            task_type="fast",
+            max_tokens=100,
+            temperature=0.0
         )
-
-        raw = response.choices[0].message.content.strip()
 
         # Strip markdown code fences if the model added them
         # e.g. ```json {...} ``` → {...}

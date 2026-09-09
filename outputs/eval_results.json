@@ -1,0 +1,272 @@
+{
+  "agent_results": [
+    {
+      "thread_id": "2053581",
+      "message": "please fix this battery drain from iOS 11 ASAP. I feel like I downgraded software. Battery is horrible",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "We\u2019re sorry to hear the iOS\u202f11 update is causing severe battery drain. Could you tell us how many hours the battery lasts after a full charge? Please DM us so we can investigate further.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common performance issue (battery drain) following an iOS update without mentioning safety hazards, legal threats, or persistent failure after specific troubleshooting, allowing for standard advice such as checking battery usage statistics and restarting.",
+      "confidence": 0.95,
+      "duration_s": 1.9,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1930899",
+      "message": "I have a reservation for the X and can\u2019t get the site to \u201cconnect to my carrier\u201d will this be fixed? My time is running out",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "We're sorry to hear you're having trouble. Please DM us with more details about your issue and we'll be happy to help you get this sorted out.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is experiencing a common technical connectivity issue during the purchase process and has not indicated they have exhausted standard troubleshooting steps or faced significant financial harm.",
+      "confidence": 0.95,
+      "duration_s": 1.66,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2315945",
+      "message": "why does my phone drain 10X quicker and take double the time to charge since updating??",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "Sorry to hear the recent iOS update is causing faster battery drain and slower charging.\u202fCan you tell us which iPhone model and iOS version you\u2019re running?\u202fPlease DM us so we can walk through troubleshooting steps together.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common post-update battery issue without indicating that standard troubleshooting has already been exhausted or that there is a safety risk.",
+      "confidence": 0.95,
+      "duration_s": 2.0,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1849767",
+      "message": "having battery issues any help? iOS 11 sucks ass",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "Sorry to hear the iOS\u202f11 update is impacting your battery life. Could you let us know which iPhone model and iOS version you\u2019re running? Please DM us so we can share the next troubleshooting steps.",
+      "decision": "ESCALATE",
+      "reason": "Customer mentioned legal action \u2014 requires human agent.",
+      "confidence": 1.0,
+      "duration_s": 1.68,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1673550",
+      "message": "How can I prevent my iPhone7 from dying during cold weather runs?!!Was at 92% battery level.After a half hour at 35 degrees!",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "We're sorry to hear you're having trouble. Please DM us with more details about your issue and we'll be happy to help you get this sorted out.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common battery drain issue in cold weather without signs of emergency, legal threats, or prior failed troubleshooting, which can be addressed with standard tips.",
+      "confidence": 0.98,
+      "duration_s": 1.81,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2385121",
+      "message": "hey there! Only a question, what\u2019s the difference of the HEIF to JPEG format? Where i have a better quality? Please help me",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "HEIF captures more detail while using less storage, whereas JPEG is more widely compatible but can be larger for the same image quality. You can switch between them in Settings\u202f\u2192\u202fCamera\u202f\u2192\u202fFormats. Would you like a quick guide on adjusting this setting?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is asking a general question about image format differences and quality, which is a routine inquiry with a standard answer.",
+      "confidence": 1.0,
+      "duration_s": 2.85,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1676250",
+      "message": "can't log into Game Center and this msg keeps coming up. What does it mean?",
+      "true_intent": "app_issue",
+      "predicted_intent": "account_access",
+      "correct": false,
+      "reply": "We're sorry to hear you're having trouble. Please DM us with more details about your issue and we'll be happy to help you get this sorted out.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is asking for clarification on a specific error message related to a common login issue and has not indicated that standard troubleshooting steps have been exhausted.",
+      "confidence": 0.95,
+      "duration_s": 1.99,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2958745",
+      "message": "I'm sure this is not legit, but I just want to make sure. Please help!",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "We understand your concern and want to help verify this. Could you DM us a screenshot or a bit more detail about what you\u2019re seeing? We\u2019ll investigate right away.",
+      "decision": "ESCALATE",
+      "reason": "The message is highly ambiguous as it lacks specific context about the issue, making it impossible to determine if a standard automated reply would be appropriate or potentially harmful.",
+      "confidence": 0.9,
+      "duration_s": 1.27,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2835856",
+      "message": "reserved iPhone X 3 times. Had to cancel reservation each time. Now unable to reserve - limit reached. Can you help?",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "Sorry to hear the reservation limit is blocking you. Could you DM us your reservation number so we can check the status? You can also contact Apple Online Store Support directly here: https://support.apple.com/contact.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The issue is a common order limitation problem that can be resolved by explaining the reservation policy and directing the customer to attempt the purchase via the standard store interface or support channels for manual reset, without meeting any escalation criteria for legal, safety, or financial disputes.",
+      "confidence": 0.95,
+      "duration_s": 7.18,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1344605",
+      "message": "2) If I made a mistake in my informaton, will it cancel my reservation or will it give me an opportunity to correct it?",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "We're sorry to hear you're having trouble. Please DM us with more details about your issue and we'll be happy to help you get this sorted out.",
+      "decision": "AUTO_HANDLE",
+      "reason": "This is a general inquiry about order correction policies that can be answered with standard support information or directed to a human via DM without requiring immediate escalation based on the provided criteria.",
+      "confidence": 0.95,
+      "duration_s": 4.66,
+      "judge_scores": {}
+    }
+  ],
+  "baseline_results": {
+    "keyword": {
+      "overall_accuracy": 0.9,
+      "correct": 9,
+      "total": 10,
+      "per_intent": {
+        "ios_update_issue": {
+          "correct": 2,
+          "total": 3,
+          "accuracy": 0.6666666666666666
+        },
+        "order_purchase": {
+          "correct": 3,
+          "total": 3,
+          "accuracy": 1.0
+        },
+        "battery_drain": {
+          "correct": 1,
+          "total": 1,
+          "accuracy": 1.0
+        },
+        "general_inquiry": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "app_issue": {
+          "correct": 1,
+          "total": 1,
+          "accuracy": 1.0
+        }
+      },
+      "confusion": {
+        "ios_update_issue": {
+          "ios_update_issue": 2,
+          "battery_drain": 1
+        },
+        "order_purchase": {
+          "order_purchase": 3
+        },
+        "battery_drain": {
+          "battery_drain": 1
+        },
+        "general_inquiry": {
+          "general_inquiry": 2
+        },
+        "app_issue": {
+          "app_issue": 1
+        }
+      }
+    },
+    "tfidf": {
+      "overall_accuracy": 1.0,
+      "correct": 2,
+      "total": 2,
+      "per_intent": {
+        "ios_update_issue": {
+          "correct": 1,
+          "total": 1,
+          "accuracy": 1.0
+        },
+        "order_purchase": {
+          "correct": 1,
+          "total": 1,
+          "accuracy": 1.0
+        }
+      },
+      "confusion": {
+        "ios_update_issue": {
+          "ios_update_issue": 1
+        },
+        "order_purchase": {
+          "order_purchase": 1
+        }
+      }
+    },
+    "tfidf_train_n": 8,
+    "tfidf_test_n": 2
+  },
+  "summary": {
+    "classification": {
+      "overall_accuracy": 0.9,
+      "correct": 9,
+      "total": 10,
+      "per_intent": {
+        "ios_update_issue": {
+          "correct": 3,
+          "total": 3,
+          "accuracy": 1.0
+        },
+        "order_purchase": {
+          "correct": 3,
+          "total": 3,
+          "accuracy": 1.0
+        },
+        "battery_drain": {
+          "correct": 1,
+          "total": 1,
+          "accuracy": 1.0
+        },
+        "general_inquiry": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        },
+        "app_issue": {
+          "correct": 0,
+          "total": 1,
+          "accuracy": 0.0
+        }
+      }
+    },
+    "reply_quality": {
+      "relevance": null,
+      "tone": null,
+      "actionability": null,
+      "conciseness": null,
+      "overall": null,
+      "n_scored": 0
+    },
+    "escalation": {
+      "rate": 0.2,
+      "total": 2,
+      "by_intent": {
+        "ios_update_issue": 1,
+        "general_inquiry": 1
+      }
+    },
+    "baselines": {
+      "keyword_accuracy": 0.9,
+      "tfidf_accuracy": 1.0,
+      "agent_accuracy": 0.9
+    },
+    "performance": {
+      "avg_duration_s": 2.7,
+      "total_examples": 10
+    }
+  }
+}

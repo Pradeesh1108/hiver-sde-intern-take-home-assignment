@@ -16,14 +16,8 @@
 # ============================================================
 
 import os
-from dotenv import load_dotenv
-from groq import Groq
 from agent.prompts import reply_drafting_prompt
-
-load_dotenv()
-_client     = Groq()
-_MODEL      = "openai/gpt-oss-120b"   # better quality for customer-facing text
-_MAX_TOKENS = 256                    # 2-3 sentences fits comfortably
+from agent.llm_factory import generate_completion
 
 
 def draft_reply(
@@ -67,15 +61,12 @@ def draft_reply(
 
     for attempt in range(retries + 1):
         try:
-            response = _client.chat.completions.create(
-                model=_MODEL,
-                max_tokens=_MAX_TOKENS,
-                messages=[
-                    {"role": "user", "content": prompt}
-                ]
+            reply = generate_completion(
+                messages=[{"role": "user", "content": prompt}],
+                task_type="draft",
+                max_tokens=256,
+                temperature=0.0
             )
-
-            reply = response.choices[0].message.content.strip()
 
             # Basic sanity check: reply should not be empty
             # and should not be longer than ~300 chars (Twitter limit ~280)

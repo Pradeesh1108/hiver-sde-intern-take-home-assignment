@@ -26,14 +26,8 @@
 import json
 import re
 import os
-from dotenv import load_dotenv
-from groq import Groq
 from agent.prompts import judge_prompt
-
-load_dotenv()
-_client     = Groq()
-_MODEL      = "qwen/qwen3.8-27b"  # fast open source model on groq
-_MAX_TOKENS = 150
+from agent.llm_factory import generate_completion
 
 
 def judge_reply(
@@ -83,13 +77,12 @@ def judge_reply(
 
     for attempt in range(retries + 1):
         try:
-            response = _client.chat.completions.create(
-                model=_MODEL,
-                max_tokens=_MAX_TOKENS,
-                messages=[{"role": "user", "content": prompt}]
+            raw = generate_completion(
+                messages=[{"role": "user", "content": prompt}],
+                task_type="fast",
+                max_tokens=150,
+                temperature=0.0
             )
-
-            raw = response.choices[0].message.content.strip()
 
             # Strip markdown code fences if present
             raw = re.sub(r"```(?:json)?", "", raw).strip()

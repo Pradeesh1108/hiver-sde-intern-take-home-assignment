@@ -14,20 +14,12 @@
 # where output quality matters more.
 # ============================================================
 
-import os
-from dotenv import load_dotenv
-from groq import Groq
 from agent.prompts import classification_prompt, INTENT_NAMES
-
-# Initialize client once at module level
-# Reads GROQ_API_KEY from environment automatically
-load_dotenv()
-_client = Groq()
+from agent.llm_factory import generate_completion
 
 # Model choice: haiku is fast + cheap for classification
 # max_tokens=20 because the intent name is short (longest is
 # "device_hardware_issue" = 21 chars — we give a little headroom)
-_MODEL      = "qwen/qwen3.8-27b"
 _MAX_TOKENS = 20
 
 
@@ -55,16 +47,12 @@ def classify(message: str, retries: int = 2) -> str:
 
     for attempt in range(retries + 1):
         try:
-            response = _client.chat.completions.create(
-                model=_MODEL,
+            raw = generate_completion(
+                messages=[{"role": "user", "content": prompt}],
+                task_type="fast",
                 max_tokens=_MAX_TOKENS,
-                messages=[
-                    {"role": "user", "content": prompt}
-                ]
-            )
-
-            # response.choices[0].message.content is the actual string
-            raw = response.choices[0].message.content.strip().lower()
+                temperature=0.0
+            ).strip().lower()
 
             # Validate: only accept known intent names
             # If the model returns something unexpected, fall back
