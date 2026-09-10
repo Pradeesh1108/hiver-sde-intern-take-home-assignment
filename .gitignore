@@ -4,6 +4,13 @@ datasets/apple_threads.json
 datasets/retrieval_index.json
 datasets/eval_set_to_label.csv
 datasets/keyword_spot_check.csv
+
+# EDA2 generated data
+EDA2/data/embeddings.npy
+EDA2/data/umap_embeddings.npy
+EDA2/data/messages.json
+EDA2/data/messages_filtered.json
+EDA2/data/eval_set_to_label.csv
 docs/
 .DS_Store
 

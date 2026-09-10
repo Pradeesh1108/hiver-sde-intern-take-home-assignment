@@ -1,43 +1,43 @@
 {
   "classification": {
-    "overall_accuracy": 0.7916666666666666,
-    "correct": 95,
-    "total": 120,
+    "overall_accuracy": 0.6979591836734694,
+    "correct": 171,
+    "total": 245,
     "per_intent": {
       "ios_update_issue": {
-        "correct": 15,
-        "total": 18,
-        "accuracy": 0.8333333333333334
-      },
-      "order_purchase": {
-        "correct": 9,
-        "total": 12,
-        "accuracy": 0.75
-      },
-      "battery_drain": {
-        "correct": 12,
-        "total": 14,
-        "accuracy": 0.8571428571428571
-      },
-      "general_inquiry": {
-        "correct": 22,
-        "total": 26,
-        "accuracy": 0.8461538461538461
-      },
-      "app_issue": {
-        "correct": 11,
-        "total": 16,
-        "accuracy": 0.6875
-      },
-      "account_access": {
-        "correct": 13,
-        "total": 16,
+        "correct": 39,
+        "total": 48,
         "accuracy": 0.8125
       },
+      "order_purchase": {
+        "correct": 16,
+        "total": 28,
+        "accuracy": 0.5714285714285714
+      },
+      "battery_drain": {
+        "correct": 25,
+        "total": 32,
+        "accuracy": 0.78125
+      },
+      "general_inquiry": {
+        "correct": 38,
+        "total": 40,
+        "accuracy": 0.95
+      },
+      "app_issue": {
+        "correct": 18,
+        "total": 29,
+        "accuracy": 0.6206896551724138
+      },
+      "account_access": {
+        "correct": 19,
+        "total": 37,
+        "accuracy": 0.5135135135135135
+      },
       "device_hardware_issue": {
-        "correct": 13,
-        "total": 18,
-        "accuracy": 0.7222222222222222
+        "correct": 16,
+        "total": 31,
+        "accuracy": 0.5161290322580645
       }
     }
   },
@@ -55,12 +55,12 @@
     "by_intent": {}
   },
   "baselines": {
-    "keyword_accuracy": 0.625,
-    "tfidf_accuracy": 0.2916666666666667,
-    "agent_accuracy": 0.7916666666666666
+    "keyword_accuracy": 0.6775510204081633,
+    "tfidf_accuracy": 0.30612244897959184,
+    "agent_accuracy": 0.6979591836734694
   },
   "performance": {
-    "avg_duration_s": 3.73,
-    "total_examples": 120
+    "avg_duration_s": 38.84,
+    "total_examples": 245
   }
 }

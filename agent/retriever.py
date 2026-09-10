@@ -67,9 +67,10 @@ def retrieve(intent: str, n: int = 3, seed: int = None) -> list:
     # Filter to threads whose keyword_hint matches the intent
     # keyword_hint was assigned by the same keyword logic used
     # during sampling — so it's consistent with the intent names
+    # Filter to threads whose intent matches the classified intent
     matching = [
         entry for entry in index
-        if entry.get("keyword_hint") == intent
+        if entry.get("intent") == intent
     ]
 
     if not matching:
@@ -112,7 +113,7 @@ def retrieve_by_keywords(message: str, intent: str, n: int = 3) -> list:
     # Filter by intent first
     intent_matches = [
         entry for entry in index
-        if entry.get("keyword_hint") == intent
+        if entry.get("intent") == intent
     ]
 
     if not intent_matches:

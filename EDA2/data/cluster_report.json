@@ -1,0 +1,539 @@
+[
+  {
+    "intent_name": "general_inquiry",
+    "description": "Customer is making a vague complaint with no specific problem, asking a general customer service question, requesting a Genius Bar appointment, or the message is too short or unclear to classify into any specific intent. Use as last resort only when none of the above intents fit.",
+    "source_clusters": [
+      -1,
+      83,
+      84,
+      7,
+      5,
+      54,
+      95
+    ],
+    "size": 20723,
+    "pct_of_total": 27.0,
+    "representative_messages": [
+      "Fix this shit now ! #angryiphoneuser",
+      "Christ what the f is this? And why are screenshots so stupid now?! #stopbreakingmyiphone #please",
+      "hey why does keep re-fetching the thumbnail when it obviously hasn't changed? #appleQA #ChiefQA #Apple",
+      "How do I️ get rid of this? It’s seriously the first thing that made me think of switching to android.",
+      "Hey, it would be great if you could get both of these messes straightened out soon. Your “fix” didn’t work and I’m peeved. #iPhone #annoyed",
+      "#apple #iphone is taking all my #profoundness out of my words. It’s destroying my business!!!!!! please fix this issue!!!!!",
+      "I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I I️ I️ I️ I️ I️ I️ hate you. Right now. #iphoneglitch",
+      "It’s 6:30 and I️’m ready for bed... duh fukkk 🤷🏼‍♀️ #adulting #life Fucking iPhone I️I️🖕🏼 how can I️ fix this I️"
+    ],
+    "top_words": [
+      "phone",
+      "iphone",
+      "update",
+      "fix",
+      "new",
+      "ios",
+      "battery",
+      "shit",
+      "time",
+      "off",
+      "screen",
+      "updated"
+    ],
+    "sample_apple_replies": [
+      "We're here for you. Which version of the iOS are you running? Check from Settings > General > About.",
+      "What's going on? We're hapy to help if we can.",
+      "We're here to help. Meet us in DM and we can check on available options.",
+      "We'd like to look into this with you. Please DM us your current iOS version and your iPhone model.",
+      "We're happy to help. Has Home Sharing worked with these devices before?"
+    ]
+  },
+  {
+    "intent_name": "ios_update_general",
+    "description": "Customer is experiencing general problems after installing an iOS or macOS update — slowness, crashes, features broken, lock screen issues, screen rotation problems, or overall dissatisfaction with a new OS version. Also includes macOS High Sierra and iPad Pro update issues. IMPORTANT: If the problem is specifically the I-bug use autocorrect_i_bug. If the problem is specifically battery drain use battery_drain. If the problem is specifically WiFi or Bluetooth use wifi_bluetooth.",
+    "source_clusters": [
+      86,
+      104,
+      91,
+      35,
+      100,
+      81,
+      33,
+      105,
+      103,
+      101,
+      94,
+      77,
+      76,
+      2,
+      75,
+      66,
+      72,
+      45,
+      49
+    ],
+    "size": 13891,
+    "pct_of_total": 18.1,
+    "representative_messages": [
+      "hello is there some problems with new update of iOS? I have an iPad mini 3 and I noticed more lag and a slow work in general",
+      "my iPad is frozen. Please HELP!",
+      "Using my (fuckin expensive) Ipad 3 again. Like wading through treacle. Cheers for deliberately breaking your old stuff 😤",
+      "I updated my iPad and now it’s going so damn slow ! C’mon i even updated my iPhone & these damn little box(?) keep popping ,wth.",
+      "& Why Is My #IPADPro spontaneously rebooting over & over as of 5mins algo?!!!",
+      "new update on iPad but the screen goes from being super unresponsive to overly responsive when you touch it. Weird!",
+      "tell me why my iPad keeps randomly restarting itself",
+      "how do i prevent my ipad air from shutting down randomly and restarting by it self??? Cause it's getting really annoying"
+    ],
+    "top_words": [
+      "phone",
+      "ios",
+      "update",
+      "iphone",
+      "new",
+      "fix",
+      "battery",
+      "updated",
+      "slow",
+      "screen",
+      "time",
+      "photos"
+    ],
+    "sample_apple_replies": [
+      "Did you have a chance to update your iPhone to iOS 11.1? If so, please shoot us a DM and we'll dig into the situation.",
+      "Let's investigate this together. Does this only occur when using specific apps or website?",
+      "Thanks for reaching out. If you're having issues, we'd like to assist. DM us and we'll continue there.",
+      "We'd be happy to help. Send us a DM and we can start there.",
+      "We'd love to look into this with you! To begin, can you DM us what iOS version you're currently on?"
+    ]
+  },
+  {
+    "intent_name": "autocorrect_i_bug",
+    "description": "Customer is experiencing the iOS 11 autocorrect bug where the letter I is replaced by A? or a question mark in a box. Also includes the related it to I.T and is to I.S autocorrect glitches. This is a specific known iOS 11 bug with a targeted fix.",
+    "source_clusters": [
+      38,
+      61,
+      29,
+      19,
+      10,
+      59,
+      53,
+      39,
+      62,
+      48,
+      47,
+      28,
+      67,
+      58,
+      63,
+      64
+    ],
+    "size": 13414,
+    "pct_of_total": 17.5,
+    "representative_messages": [
+      "When the hell is going to fix the keyboard bug that changes the capital “i” to the question box with an a? So sick of this.",
+      "are you planning on fixing the bug causing all these weird characters when trying to use the letter 👁 I️",
+      "I️ miss being able to type I️ without some random symbols appearing. Get it together How long does it take to fix this?!",
+      "When is going to fix this issue with typing the letter “I”. It’s been madddd annoying for months now",
+      "please can you fix this vowel glitch now 🙄",
+      "My “i” key hasn’t been working since Wednesday, it’s Friday and still no solution. do ya’ll plan on fixing this any time soon?",
+      "Dear are y’all going to fix the “I️” problem from your most recent update?",
+      "thanks for fixing the “I” issue, but now my keyboard is laggy af. So thanks but no thanks🤗"
+    ],
+    "top_words": [
+      "fix",
+      "letter",
+      "question",
+      "shit",
+      "type",
+      "phone",
+      "mark",
+      "glitch",
+      "update",
+      "going",
+      "problem",
+      "box"
+    ],
+    "sample_apple_replies": [
+      "We'd like to look into this with you. Which model do you have and is iOS 11.1 installed? Any steps tried so far?",
+      "You're in the right place; we'll do all we can to help. To start, let us know what iOS version is installed via DM:",
+      "We definitely understand your concern. Please backup your iPhone, update and let us know the result:",
+      "We'd be glad to see what we can do for you. Let's meet up in DM first. Thanks!",
+      "We're here to help. Send us a DM with the iOS version number you're on. We'll follow up there."
+    ]
+  },
+  {
+    "intent_name": "app_issue",
+    "description": "Customer is having a problem with a specific app — iMessage not delivering, App Store not loading, FaceTime dropping, Mail not sending, Siri broken, AirPods not working, speaker phone failing, Calendar bugs, Notes deleting, Podcast broken, Maps or GPS not working, screenshots failing, AirPlay or HomeKit not working, alarm silent, notifications not arriving. IMPORTANT: Do not use if the customer cannot log in due to Apple ID issues — use account_access. Do not use if the problem is clearly physical hardware — use device_hardware.",
+    "source_clusters": [
+      57,
+      52,
+      71,
+      41,
+      46,
+      50,
+      42,
+      22,
+      37,
+      17,
+      55,
+      23,
+      18,
+      11,
+      40,
+      60,
+      44,
+      56,
+      27,
+      3,
+      34,
+      21,
+      0
+    ],
+    "size": 7417,
+    "pct_of_total": 9.7,
+    "representative_messages": [
+      "So not digging new voice to text on #ios11 keyboard. Mic opens in new window = 2xtra clicks 4 Enter/Send/Search. 😬",
+      "Hi, trying to export text to itunes as spoken track with voiceover already on, it keeps killing VO and not doing full doc.",
+      "is there anything that I can do to make your voice to text smarter? I just tried three times to comment and say “taunting call“ I was dictating slowly and clearly I got three different versions of this: Tonton car. Is there anything I can do to train my phone?",
+      "please fix the quality of the voice recorder on iMessage. My voice sounds unclear and horrible. 🤦🏻‍♀️",
+      "Using speech to read aloud (using Option+Esc) works fine in Safari, but not in Preview. In Preview I have to use Edit>Speech>Start Speaking. A bug maybe? (macOS 10.13)",
+      "Always tempted to use dictation features but since there is no sane way to repeat yourself or correct your mistakes by voice, it does seem to render the exercise useless.",
+      "Using dictation, how do I indent, paste, delete, and Undo?",
+      "Is there a reason why the voice to text technology in iOS 11 sucks so much worse than it’s processes? ‘Its predecessors’. When will $1150 get me something that just works? And why does it actually get worse the more I use it, instead of better? To the degree that I know in a few weeks I will have to stop using it all together."
+    ],
+    "top_words": [
+      "ios",
+      "iphone",
+      "phone",
+      "app",
+      "update",
+      "fix",
+      "new",
+      "off",
+      "apps",
+      "work",
+      "working",
+      "there"
+    ],
+    "sample_apple_replies": [
+      "Are you accidentally recording audio message or is this happening on its own? Let us know in a DM, we’ll communicate there:",
+      "We'd like to look into what's going on with your MMS. What happens when you try to send? Do you get an error?",
+      "Thank you for reaching out. We are here to help. Please DM us, and we will continue from there.",
+      "Thanks for reaching out. You can still leave a group text if you're using iMessage. If any users are not using iMessage, you can then mute the notifications. This article explains in more detail: We're here if you have any questions.",
+      "We want to do all we can to get your iMessage working on your new iPhone 8. Please let us know in DM, what iOS software is currently installed on the device, along with the exact error message you're seeing. We'll be happy to help from there."
+    ]
+  },
+  {
+    "intent_name": "device_hardware",
+    "description": "Customer has a physical hardware problem — cracked or flickering screen, keyboard not working, broken or burnt charger, overheating, Touch ID or Face ID not recognising, camera broken, contacts deleted from device, Apple Watch hardware issues or WatchOS problems. IMPORTANT: If the hardware problem started after an update but the physical component is clearly broken, still use device_hardware.",
+    "source_clusters": [
+      69,
+      70,
+      4,
+      79,
+      88,
+      32,
+      51,
+      9,
+      8,
+      80,
+      43,
+      96,
+      1
+    ],
+    "size": 4988,
+    "pct_of_total": 6.5,
+    "representative_messages": [
+      "I’m one of those who are in love with the notch of iPhone X, but now this “line” below signal and battery indicator on lock screen of my iPhone X is seriously irritating, I want to get rid of it asap. Chk pic attached",
+      "my 📱 X just developed a green bar on the left side of the screen. Suggestions?",
+      "Anybody else with the iPhoneX see a green bar of pixels on the right side??? 😡😡😡",
+      "noticing a purple/violet banding when scrolling around black borders. ‘Buy Now’ button in this case. #iPhoneX",
+      "Today I was testing some photography apps and all the sudden this black spot appeared on my sensor. My phone didn’t even drop! I’d like to know how can I fix this... I think it’s a software problem. The lens are clean, there’s no dust and my phone just fell once + weeks ago! I’ve got iPhone 7 since July.",
+      "i have a Situation in my iphone 7 it shows black lines. Did restart but nothing happened! What to do",
+      "when my alarm goes off on my iPhone X there is a weird area on the screen where the colour is different It doesn’t show up in screenshots",
+      "OLED green ghosting seen when in low light conditions #iPhoneX"
+    ],
+    "top_words": [
+      "iphone",
+      "watch",
+      "phone",
+      "keyboard",
+      "fix",
+      "new",
+      "update",
+      "ios",
+      "screen",
+      "charger",
+      "working",
+      "camera"
+    ],
+    "sample_apple_replies": [
+      "Thank you for reaching out to us. We'd be happy to try everything possible to provide the best support options. First, let's work as a team as we gather more information. DM us if you noticed any changes before the screen went black. What iOS is the device running?",
+      "Send us a DM so we can help. We'd like to get some more information on what happened here.",
+      "We're glad to look into all options with you to have your iPhone serviced. Please DM us to proceed.",
+      "We want to help. DM us which country are you located in.",
+      "We'd like to help. Have you tried other locations? You can find the places closest to you with this link:"
+    ]
+  },
+  {
+    "intent_name": "apple_pay",
+    "description": "Customer is asking about Apple Pay availability in their country or region, how Apple Pay Cash works, why Apple Pay is not supported yet, or requesting Apple Pay to be added to their region. These are feature availability questions not payment errors. IMPORTANT: If the customer has a billing charge dispute or purchase problem, use order_purchase instead.",
+    "source_clusters": [
+      20
+    ],
+    "size": 4405,
+    "pct_of_total": 5.7,
+    "representative_messages": [
+      "who would I contact for ItunesConnect for artists ?",
+      "it still says it’s restricted for me",
+      "Who do I speak to regarding registration for Apple Music?",
+      "Does an Apple Music membership work on an iPod Touch 6th Gen and a Mac?",
+      "Really need right now. So bloody confused about my family Apple Music accounts. Need help",
+      "hi can you help me? i have questions regarding apple music",
+      "why is my Apple ID invalid? I can't listen to my music",
+      "need some help regarding apple music please contact ..."
+    ],
+    "top_words": [
+      "music",
+      "itunes",
+      "app",
+      "update",
+      "phone",
+      "iphone",
+      "songs",
+      "ios",
+      "pay",
+      "fix",
+      "card",
+      "new"
+    ],
+    "sample_apple_replies": [
+      "Thanks for reaching out to us. Are you experiencing the missing app after restating your device?",
+      "This article should help with that:",
+      "We're here to help out! Which device is this on and which version of iOS is currently installed?",
+      "We'd like to look into this with you. Does the song appear to be greyed out?",
+      "We want to help. Does restarting help at all? DM us which iOS version you're on and we'll continue support there."
+    ]
+  },
+  {
+    "intent_name": "battery_drain",
+    "description": "Customer reports battery draining unusually fast, phone dying at high percentages, not charging properly, or battery life much shorter than expected. Includes both update-related battery drain and general battery issues. IMPORTANT: If battery drain started after an iOS update and the update is the main complaint, still use battery_drain if battery is clearly the primary symptom.",
+    "source_clusters": [
+      68,
+      82,
+      78,
+      90,
+      89,
+      87,
+      85,
+      6
+    ],
+    "size": 4077,
+    "pct_of_total": 5.3,
+    "representative_messages": [
+      "What’s wrong with the battery? 😩😩 literally killing me. It goes from 20% to 10% in just few minutes #iOS11.1",
+      "Your latest iOS 11 \"Update\" is even worse. Up at 4:30 with 100% battery, by 7:30 it is 45%. Are you kidding me?",
+      "left house from 100% battery Life when I went workplace just 20 minuets journey battery gone 90% #Apple hate #iOS11 fixed f***",
+      "iOS 11 update is useless. I was at 91% AN HOUR AGO and now 75%??? This really sucks",
+      "When you update to #iOS11.0.2 but now the phone can't decide (having been on charge ALL night) whether it's at 10%, 60% or 100%. Then the phone finally switches on (\"Battery 100%\" 😁) you start typing a Whatsapp reply and then we're back to this... 😠 My iPhone's relationship with the charger since #iOS11. Now the 🔋 is permanently at 10% while ON charge 👏🏾 It's raining so maybe I must take it outside for REAL lightning charging🤷🏾‍♀️ #iOS11",
+      "How can just sending this tweet to you take 3% battery life on an iPhone7 / ios11.0.3 😤😤",
+      "this battery drain is insane! From 100 to 17% overnight. Really?! #ios1103 #batterydrain",
+      "An iPhone that I bought 5 months ago shouldn't have its battery go from 100 to 93 in 12 MINUTES. What the hell! #ios11"
+    ],
+    "top_words": [
+      "battery",
+      "ios",
+      "iphone",
+      "phone",
+      "update",
+      "life",
+      "fix",
+      "draining",
+      "new",
+      "charge",
+      "drain",
+      "day"
+    ],
+    "sample_apple_replies": [
+      "We're here to help. Which exact iOS version is your device running? This info can be found under Settings > General > About.",
+      "Let’s work together on this situation. To clarify, did this start after updating to iOS 11.1? Also, which device are you using?",
+      "We want to make sure you have a working battery. Have you had a chance to update to the latest 11.1?",
+      "We'd like to help. Let's take this to DM and we'll explore ways to provide you assistance.",
+      "We'd like to offer our help. Please shoot us a DM and we'll explore the battery challenge."
+    ]
+  },
+  {
+    "intent_name": "account_access",
+    "description": "Customer cannot access their Apple ID, iCloud account, or App Store due to forgotten password, locked account, missing verification code, or two-factor authentication issues. Also includes phishing and scam emails pretending to be from Apple, iCloud storage questions, and iCloud backup problems. IMPORTANT: Do not use if the customer is having trouble with a specific third-party app login — use app_issue.",
+    "source_clusters": [
+      24,
+      25,
+      73,
+      26,
+      30,
+      31
+    ],
+    "size": 3179,
+    "pct_of_total": 4.1,
+    "representative_messages": [
+      "Thanks for screwing with my iCloud email. Can’t access it for 20 hours now!",
+      "Can't get into my iCloud since this email kanti yini",
+      ". This is totally unacceptable. iCloud mail has been broken for us for over 2 days. It’s been sent to engineering.",
+      "I haven’t had access to my iCloud email account in 2 weeks!! Help!! I already had 2 Apple Chat sessions 😭😭😭",
+      "Constantly prompted to sign back into my Gmail account. To validate the prompt’s legitimacy, I went to input in Accounts & Passwords. But I am not seeing a place to input my password. Am I missing it? I’d rather not remove and re-add, but I don’t trust the prompts.",
+      "hy, WTF is this? i forgot my apple icloud id so plx help me out i've my phones emei no., lets see how use full you are...",
+      "I wonder what it feels like to not overpack My iCloud was hacked!!! You are right, is ZERO HELP",
+      "please SEE this when you can. i'm having trouble trying to login into my icloud & apple id because it keeps popping up yet i know my password? & it deleted everything & i don't know what to do. i need it all back. PLS HELP...."
+    ],
+    "top_words": [
+      "phone",
+      "iphone",
+      "email",
+      "icloud",
+      "password",
+      "account",
+      "storage",
+      "new",
+      "need",
+      "reset",
+      "trying",
+      "there"
+    ],
+    "sample_apple_replies": [
+      "Having access to your Apple ID is important. Did you receive an email with a confirmation of your request? DM us here:",
+      "Hi! We're happy to help. Join us in DM with the macOS version installed on your iMac and more details about what's going on.",
+      "We're happy you reached out so we can find you the info you need. If you forgot your Apple ID, go to the Apple ID account page: From here, click \"Forgot Apple ID or password?\" then click \"look it up.\" From here, follow the on screen prompts.",
+      "We'd like to help. Are you able to log into successfully? Let us know in DM.",
+      "We'd be happy to provide you with some info. Start by taking a look at the following article:"
+    ]
+  },
+  {
+    "intent_name": "phone_freezing",
+    "description": "Customer phone is freezing, showing a black screen, restarting randomly, or completely unresponsive and will not turn on. Device is non-functional or intermittently functional. IMPORTANT: If freezing started after a specific update and the update is the main complaint, use ios_update_general.",
+    "source_clusters": [
+      92,
+      98,
+      94,
+      102,
+      99,
+      93,
+      97,
+      80
+    ],
+    "size": 1807,
+    "pct_of_total": 2.4,
+    "representative_messages": [
+      "Hey my this iPhone7s and the IOS keeps crashing. Fix this immediately before I go back to",
+      "Anyone else have an iPhone that randomly just started crashing every 30 to 90 seconds?",
+      "my iPhone is frozen. Can’t hard reset. Screen isn’t registering my touch. FIGURE YOUR UPDATES OUT",
+      "My iPhone 7+ keeps becoming unresponsive continuously and I can’t hard reset holding home button & lock. IOS up to date #Help",
+      "hello, my iPhone 7 keeps crashing? Help",
+      "my iPhone 7 keeps crashing and turning off. What’s the best way to contact you",
+      "My iPhone keeps crashing. Would my service provider who sold me phone take responsibility for this?Or is it issue",
+      "Landed in Singapore and now my iPhone continuously crashes every 51 seconds! So annoying, please make a fix, the phone is useless now while on travel!"
+    ],
+    "top_words": [
+      "iphone",
+      "phone",
+      "freezing",
+      "keeps",
+      "every",
+      "update",
+      "new",
+      "fix",
+      "screen",
+      "off",
+      "restarting",
+      "ios"
+    ],
+    "sample_apple_replies": [
+      "That is not the experience we want you to have. Let's work as a team to get the iPhone up and running. First, we will need to gather more information. Please DM us the iOS version and what was happening before the device began restarting.",
+      "We'll do all we can to help out. Please DM us more about what's going on.",
+      "Let's work on it together. Which iPhone is it, and which version of iOS does it have? How often is it restarting?",
+      "We’d like to see what’s going on. Has this happened before? Did you make any recent changes to the device?",
+      "We'd like to get this sorted for you. We know how important it is to have your phone working properly. Click here to connect with us in DM:"
+    ]
+  },
+  {
+    "intent_name": "wifi_bluetooth",
+    "description": "Customer has connectivity problems — WiFi dropping or not connecting, Bluetooth turning on by itself or not pairing, CarPlay disconnecting. Usually caused by iOS 11 update changing connectivity behaviour. IMPORTANT: If the update itself is the main complaint and not connectivity specifically, use ios_update_general.",
+    "source_clusters": [
+      12,
+      14,
+      16,
+      36,
+      15
+    ],
+    "size": 1770,
+    "pct_of_total": 2.3,
+    "representative_messages": [
+      "This WiFi turning on by itself with this update is literally pissing me the fuck off & the Bluetooth 🤦🏻‍♀️ I know like omfg thanks I wonder why my phone always dies so fast lol I’ve noticed that to and it never did that till now 🤦🏻‍♂️",
+      "- 3rd iOS 11 update and you still haven’t fixed the WiFi & Bluetooth turning on by itself?",
+      "Also, whilst I’m in a complainy Mood I updated my iPhone now the WiFi and Bluetooth turns itself on when it wants. WHY?",
+      "pls come up with an update ASAP so that WiFi and Bluetooth stops turning on at random ... battery drainage is annoying. This definitely started happening after the new update",
+      "Seriously you've released an interim #OS11 update & not fixed the wifi/Bluetooth staying on issue; surely this isn't a feature?!",
+      "your stupid update keeps turning on my damn WiFi and Bluetooth when I don’t want it on. Take that setting OFF!",
+      "Look quit turning on my WiFi & Bluetooth without my permission with this new update. FIX IT.",
+      "So... after getting the new iOS update, my phone just randomly turns on WiFi and Bluetooth constantly when I have them off"
+    ],
+    "top_words": [
+      "wifi",
+      "bluetooth",
+      "ios",
+      "off",
+      "iphone",
+      "update",
+      "turn",
+      "phone",
+      "fix",
+      "connect",
+      "turning",
+      "new"
+    ],
+    "sample_apple_replies": [
+      "We'd like to have you backup and update your iPhone to iOS 11.1 and let us know if that helps:",
+      "We are here to help. So we can best isolate the cause, could you verify your exact iOS version?",
+      "Send us a DM and let us know what version of iOS you're running. We'll go from there.",
+      "We've got your back. Have you recently seen a prompt for a carrier settings update? If not, lets check:",
+      "We can help you. Could you tell us what happens when you try to connect to the Internet? Do you get an error message?"
+    ]
+  },
+  {
+    "intent_name": "order_purchase",
+    "description": "Customer has a question or problem related to purchasing an Apple product, iPhone X reservation or delivery, billing charge, activation of a new device, or refund request. IMPORTANT: If the device arrived and has a hardware defect, use device_hardware instead.",
+    "source_clusters": [
+      74,
+      65
+    ],
+    "size": 1170,
+    "pct_of_total": 1.5,
+    "representative_messages": [
+      "why am I️ the only one without a I️ phone x when I️ ordered before everyone. I️ have a buisness account",
+      "I woke up at 3 am and ordered an iphonex only to get a generic \"unable to process your application\" in the morning. WTF",
+      "Silly thing to be irritated with but my “iPhone Upgrade Program Trade-in Kit” was just delivered to my house with $3.21 postage due.",
+      "Hey why did you make it so difficult to purchase an iPhoneX as a gift. not talking about stock outs and limited supply. l can’t order or even buy in store unless l use MY Verizon acct?!? Which deactivates the phone I’m using. How does that work of I️ want to buy a gift",
+      "i feel like 💩 from staying up to preorder the iphone x... How do i fix this",
+      "Damnit I’m going to have to wait an extra week or two for my new phone to come in by mail It’s gonna be one long wait Fml I bought the wrong model iPhone X, and I can’t reach customer service. any help?",
+      "Also might be helpful to have a chat and phone lines that work for help in ordering. #iphoneX",
+      "I resv'd iphonex for Nov 3, got res # pending carrier approval called who said all should be good. Am i getting it?"
+    ],
+    "top_words": [
+      "iphone",
+      "order",
+      "phone",
+      "iphonex",
+      "upgrade",
+      "store",
+      "pre",
+      "email",
+      "new",
+      "reservation",
+      "buy",
+      "activate"
+    ],
+    "sample_apple_replies": [
+      "Go ahead and send us a DM please. Let us know the country you're in.",
+      "We want to help out. Look here to talk with our Online Support:",
+      "Thanks for reaching out to us. Please send us a DM with your country, and we'll look into this.",
+      "Thank you for reaching out. May we ask where you're located? Let us know in DM.",
+      "We'd like to help. Let's take this to DM and we'll explore ways to provide you assistance."
+    ]
+  }
+]

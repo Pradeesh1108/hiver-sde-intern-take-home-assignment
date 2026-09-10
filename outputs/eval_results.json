@@ -10,7 +10,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 0.88,
+      "duration_s": 6.97,
       "judge_scores": {}
     },
     {
@@ -23,7 +23,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 0.59,
+      "duration_s": 13.6,
       "judge_scores": {}
     },
     {
@@ -36,7 +36,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 0.55,
+      "duration_s": 14.32,
       "judge_scores": {}
     },
     {
@@ -49,7 +49,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 0.78,
+      "duration_s": 30.25,
       "judge_scores": {}
     },
     {
@@ -62,7 +62,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 0.63,
+      "duration_s": 32.6,
       "judge_scores": {}
     },
     {
@@ -75,20 +75,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 0.6,
+      "duration_s": 6.55,
       "judge_scores": {}
     },
     {
       "thread_id": "1676250",
       "message": "can't log into Game Center and this msg keeps coming up. What does it mean?",
       "true_intent": "app_issue",
-      "predicted_intent": "account_access",
-      "correct": false,
+      "predicted_intent": "app_issue",
+      "correct": true,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 1.1,
+      "duration_s": 109.13,
       "judge_scores": {}
     },
     {
@@ -101,7 +101,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 0.85,
+      "duration_s": 15.2,
       "judge_scores": {}
     },
     {
@@ -114,7 +114,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 0.57,
+      "duration_s": 20.36,
       "judge_scores": {}
     },
     {
@@ -127,20 +127,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 0.54,
+      "duration_s": 9.59,
       "judge_scores": {}
     },
     {
       "thread_id": "1152759",
       "message": "2 months old? I don't think a shipping box is much to ask?",
       "true_intent": "order_purchase",
-      "predicted_intent": "order_purchase",
-      "correct": true,
+      "predicted_intent": "general_inquiry",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 0.55,
+      "duration_s": 18.83,
       "judge_scores": {}
     },
     {
@@ -153,7 +153,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 0.62,
+      "duration_s": 12.84,
       "judge_scores": {}
     },
     {
@@ -166,33 +166,33 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 0.58,
+      "duration_s": 35.16,
       "judge_scores": {}
     },
     {
       "thread_id": "1283981",
       "message": "why when I now screenshot it comes up with a blank picture",
       "true_intent": "device_hardware_issue",
-      "predicted_intent": "ios_update_issue",
+      "predicted_intent": "general_inquiry",
       "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 0.71,
+      "duration_s": 77.41,
       "judge_scores": {}
     },
     {
       "thread_id": "2590408",
       "message": "That feeling when your USB-c hub stops working so all your peripherals are rendered worthless on your MacBook Pro. Fucking Death by a 1000 cuts. #Touchbar #garbage",
       "true_intent": "device_hardware_issue",
-      "predicted_intent": "device_hardware_issue",
-      "correct": true,
+      "predicted_intent": "general_inquiry",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 0.72,
+      "duration_s": 75.35,
       "judge_scores": {}
     },
     {
@@ -205,20 +205,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 1.68,
+      "duration_s": 16.43,
       "judge_scores": {}
     },
     {
       "thread_id": "2557366",
       "message": "just after two days my iPhone X not working anymore, what an experience !",
       "true_intent": "general_inquiry",
-      "predicted_intent": "device_hardware_issue",
-      "correct": false,
+      "predicted_intent": "general_inquiry",
+      "correct": true,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.73,
+      "duration_s": 8.07,
       "judge_scores": {}
     },
     {
@@ -231,7 +231,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.73,
+      "duration_s": 20.45,
       "judge_scores": {}
     },
     {
@@ -244,46 +244,46 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.79,
+      "duration_s": 38.56,
       "judge_scores": {}
     },
     {
       "thread_id": "1558788",
       "message": "my photo library is not importing in iphone X? What can i do? Hello?",
       "true_intent": "app_issue",
-      "predicted_intent": "app_issue",
-      "correct": true,
+      "predicted_intent": "general_inquiry",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.88,
+      "duration_s": 18.59,
       "judge_scores": {}
     },
     {
       "thread_id": "2431291",
       "message": "silly question, but why is the Photos app not quitting after 15 minutes and preventing the restart or shutdown?! #HighSierra",
       "true_intent": "ios_update_issue",
-      "predicted_intent": "app_issue",
-      "correct": false,
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.87,
+      "duration_s": 25.63,
       "judge_scores": {}
     },
     {
       "thread_id": "2237285",
       "message": "keeps calling my house phone talking about a security breach in iCloud.. the problem is it's a land line so what's going on here",
       "true_intent": "account_access",
-      "predicted_intent": "account_access",
-      "correct": true,
+      "predicted_intent": "general_inquiry",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.8,
+      "duration_s": 41.12,
       "judge_scores": {}
     },
     {
@@ -296,20 +296,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.86,
+      "duration_s": 11.5,
       "judge_scores": {}
     },
     {
       "thread_id": "1404838",
       "message": "i pre-booked iPhone X. Am first time user of iPhone. Give me customer care number for india and Bangalore, FB page link",
       "true_intent": "order_purchase",
-      "predicted_intent": "order_purchase",
-      "correct": true,
+      "predicted_intent": "general_inquiry",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.01,
+      "duration_s": 28.1,
       "judge_scores": {}
     },
     {
@@ -322,7 +322,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.9,
+      "duration_s": 17.46,
       "judge_scores": {}
     },
     {
@@ -335,7 +335,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.04,
+      "duration_s": 7.2,
       "judge_scores": {}
     },
     {
@@ -348,33 +348,33 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.87,
+      "duration_s": 37.52,
       "judge_scores": {}
     },
     {
       "thread_id": "2786502",
       "message": "anyone else besides me use the snapchat camera to take selfies because the iphone camera reverses your face? i find it so annoying that that happens.. u should fix this",
       "true_intent": "general_inquiry",
-      "predicted_intent": "device_hardware_issue",
-      "correct": false,
+      "predicted_intent": "general_inquiry",
+      "correct": true,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.06,
+      "duration_s": 41.85,
       "judge_scores": {}
     },
     {
       "thread_id": "619445",
       "message": "I think you need to address this hug when swiping between contacts list! I thought I had a damaged screen! Take a look at what happens in the apple logo. #apple #bugs",
       "true_intent": "app_issue",
-      "predicted_intent": "device_hardware_issue",
+      "predicted_intent": "general_inquiry",
       "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.88,
+      "duration_s": 24.93,
       "judge_scores": {}
     },
     {
@@ -387,20 +387,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.68,
+      "duration_s": 12.26,
       "judge_scores": {}
     },
     {
       "thread_id": "2549923",
       "message": "what the heck is going on with #iPhone7Plus at the moment. It\u2019s slow, sluggish, Wi-Fi constantly not working. Apps freezing??\ud83d\ude21",
       "true_intent": "device_hardware_issue",
-      "predicted_intent": "ios_update_issue",
+      "predicted_intent": "general_inquiry",
       "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.29,
+      "duration_s": 69.33,
       "judge_scores": {}
     },
     {
@@ -413,20 +413,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 5.04,
+      "duration_s": 16.19,
       "judge_scores": {}
     },
     {
       "thread_id": "2751142",
       "message": "whats up with my 7 showing corrective text when I have itbon off,also phone tends to freeze sending i mes",
       "true_intent": "device_hardware_issue",
-      "predicted_intent": "ios_update_issue",
+      "predicted_intent": "app_issue",
       "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.75,
+      "duration_s": 36.44,
       "judge_scores": {}
     },
     {
@@ -439,7 +439,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 6.19,
+      "duration_s": 17.54,
       "judge_scores": {}
     },
     {
@@ -452,7 +452,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 1.25,
+      "duration_s": 49.59,
       "judge_scores": {}
     },
     {
@@ -465,7 +465,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.66,
+      "duration_s": 19.84,
       "judge_scores": {}
     },
     {
@@ -478,33 +478,33 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.76,
+      "duration_s": 15.73,
       "judge_scores": {}
     },
     {
       "thread_id": "2734403",
       "message": "I restored my iCloud to my new iPhone but my photos didn\u2019t com through",
       "true_intent": "account_access",
-      "predicted_intent": "account_access",
-      "correct": true,
+      "predicted_intent": "general_inquiry",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.86,
+      "duration_s": 23.53,
       "judge_scores": {}
     },
     {
       "thread_id": "2112819",
       "message": "do you need a good developer or tester? Your website registration site fails to create an account after choosing a username which was okay. PFA",
       "true_intent": "account_access",
-      "predicted_intent": "account_access",
-      "correct": true,
+      "predicted_intent": "general_inquiry",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.64,
+      "duration_s": 23.1,
       "judge_scores": {}
     },
     {
@@ -517,7 +517,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.9,
+      "duration_s": 12.26,
       "judge_scores": {}
     },
     {
@@ -530,20 +530,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.66,
+      "duration_s": 8.52,
       "judge_scores": {}
     },
     {
       "thread_id": "1130549",
       "message": "icloudta 250 tane foto\u011fraf\u0131m var telefonda 100 tane icloudu telefonumdan a\u00e7\u0131yorum foto\u011fraflar\u0131 \u00e7ekmiyo bu i\u015fi bilen biri dmden yazabilir mi",
       "true_intent": "account_access",
-      "predicted_intent": "account_access",
-      "correct": true,
+      "predicted_intent": "general_inquiry",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.77,
+      "duration_s": 61.83,
       "judge_scores": {}
     },
     {
@@ -556,7 +556,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.75,
+      "duration_s": 41.58,
       "judge_scores": {}
     },
     {
@@ -569,20 +569,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.66,
+      "duration_s": 18.91,
       "judge_scores": {}
     },
     {
       "thread_id": "36126",
       "message": "fix my phone, just bc y\u2019all got a new phone out doesn\u2019t mean everyone\u2019s 7+ needs to freeze constantly and shit.",
       "true_intent": "device_hardware_issue",
-      "predicted_intent": "device_hardware_issue",
-      "correct": true,
+      "predicted_intent": "ios_update_issue",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.77,
+      "duration_s": 64.95,
       "judge_scores": {}
     },
     {
@@ -595,7 +595,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.75,
+      "duration_s": 15.63,
       "judge_scores": {}
     },
     {
@@ -608,7 +608,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.77,
+      "duration_s": 27.91,
       "judge_scores": {}
     },
     {
@@ -621,7 +621,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.77,
+      "duration_s": 16.87,
       "judge_scores": {}
     },
     {
@@ -634,7 +634,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.78,
+      "duration_s": 15.82,
       "judge_scores": {}
     },
     {
@@ -647,7 +647,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.03,
+      "duration_s": 27.16,
       "judge_scores": {}
     },
     {
@@ -660,7 +660,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.81,
+      "duration_s": 24.79,
       "judge_scores": {}
     },
     {
@@ -673,7 +673,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.74,
+      "duration_s": 11.54,
       "judge_scores": {}
     },
     {
@@ -686,7 +686,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.21,
+      "duration_s": 22.81,
       "judge_scores": {}
     },
     {
@@ -699,7 +699,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.63,
+      "duration_s": 39.03,
       "judge_scores": {}
     },
     {
@@ -712,7 +712,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.76,
+      "duration_s": 16.3,
       "judge_scores": {}
     },
     {
@@ -725,7 +725,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.76,
+      "duration_s": 7.63,
       "judge_scores": {}
     },
     {
@@ -738,20 +738,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.8,
+      "duration_s": 51.69,
       "judge_scores": {}
     },
     {
       "thread_id": "1752115",
       "message": "is iTunes down? Have purchased songs but they say unavailable to download at this time?!!!",
       "true_intent": "order_purchase",
-      "predicted_intent": "app_issue",
+      "predicted_intent": "general_inquiry",
       "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.8,
+      "duration_s": 26.49,
       "judge_scores": {}
     },
     {
@@ -764,7 +764,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 5.12,
+      "duration_s": 16.98,
       "judge_scores": {}
     },
     {
@@ -777,7 +777,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.72,
+      "duration_s": 17.1,
       "judge_scores": {}
     },
     {
@@ -790,7 +790,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.75,
+      "duration_s": 18.06,
       "judge_scores": {}
     },
     {
@@ -803,7 +803,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.71,
+      "duration_s": 20.85,
       "judge_scores": {}
     },
     {
@@ -816,7 +816,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.63,
+      "duration_s": 16.16,
       "judge_scores": {}
     },
     {
@@ -829,20 +829,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.7,
+      "duration_s": 48.45,
       "judge_scores": {}
     },
     {
       "thread_id": "666253",
       "message": "how am I supposed to receive a two-factor authentication setting when setting up a new iPhone?",
       "true_intent": "account_access",
-      "predicted_intent": "account_access",
-      "correct": true,
+      "predicted_intent": "general_inquiry",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.85,
+      "duration_s": 32.35,
       "judge_scores": {}
     },
     {
@@ -855,7 +855,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.74,
+      "duration_s": 12.12,
       "judge_scores": {}
     },
     {
@@ -868,7 +868,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.68,
+      "duration_s": 15.36,
       "judge_scores": {}
     },
     {
@@ -881,7 +881,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.62,
+      "duration_s": 11.56,
       "judge_scores": {}
     },
     {
@@ -894,7 +894,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.02,
+      "duration_s": 11.48,
       "judge_scores": {}
     },
     {
@@ -907,7 +907,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.85,
+      "duration_s": 12.61,
       "judge_scores": {}
     },
     {
@@ -920,7 +920,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.88,
+      "duration_s": 13.7,
       "judge_scores": {}
     },
     {
@@ -933,7 +933,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.73,
+      "duration_s": 30.83,
       "judge_scores": {}
     },
     {
@@ -946,7 +946,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.98,
+      "duration_s": 88.3,
       "judge_scores": {}
     },
     {
@@ -959,20 +959,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.47,
+      "duration_s": 28.42,
       "judge_scores": {}
     },
     {
       "thread_id": "2712602",
       "message": "Phone starts at 20% ... 4 mins into FaceTime drops to 1% stop updating the software without a battery solution",
       "true_intent": "ios_update_issue",
-      "predicted_intent": "ios_update_issue",
-      "correct": true,
+      "predicted_intent": "battery_drain",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.95,
+      "duration_s": 36.34,
       "judge_scores": {}
     },
     {
@@ -985,7 +985,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.74,
+      "duration_s": 60.02,
       "judge_scores": {}
     },
     {
@@ -998,7 +998,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.8,
+      "duration_s": 35.6,
       "judge_scores": {}
     },
     {
@@ -1011,20 +1011,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.72,
+      "duration_s": 29.49,
       "judge_scores": {}
     },
     {
       "thread_id": "1973348",
       "message": "Could you please fix this bug in \u2018Kannada\u2019 language keyboard. Character gets jumbled up. #\u0c95\u0ca8\u0ccd\u0ca8\u0ca1\u0cb0\u0cbe\u0c9c\u0ccd\u0caf\u0ccb\u0ca4\u0ccd\u0cb8\u0cb5 #\u0c95\u0ca8\u0ccd\u0ca8\u0ca1",
       "true_intent": "device_hardware_issue",
-      "predicted_intent": "device_hardware_issue",
-      "correct": true,
+      "predicted_intent": "general_inquiry",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.82,
+      "duration_s": 51.99,
       "judge_scores": {}
     },
     {
@@ -1037,7 +1037,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.71,
+      "duration_s": 61.65,
       "judge_scores": {}
     },
     {
@@ -1050,7 +1050,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.72,
+      "duration_s": 9.37,
       "judge_scores": {}
     },
     {
@@ -1063,7 +1063,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.74,
+      "duration_s": 8.49,
       "judge_scores": {}
     },
     {
@@ -1076,7 +1076,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.88,
+      "duration_s": 20.35,
       "judge_scores": {}
     },
     {
@@ -1089,7 +1089,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.06,
+      "duration_s": 59.97,
       "judge_scores": {}
     },
     {
@@ -1102,46 +1102,46 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.73,
+      "duration_s": 28.1,
       "judge_scores": {}
     },
     {
       "thread_id": "2812584",
       "message": "why my account can\u2019t change to none at payment metod",
       "true_intent": "account_access",
-      "predicted_intent": "account_access",
-      "correct": true,
+      "predicted_intent": "general_inquiry",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.9,
+      "duration_s": 37.41,
       "judge_scores": {}
     },
     {
       "thread_id": "2378898",
       "message": "- Haven't used my iPad in 3 days. Went to use it and rec'd message saying \"could not activate iPad.\" What's going on??",
       "true_intent": "general_inquiry",
-      "predicted_intent": "account_access",
-      "correct": false,
+      "predicted_intent": "general_inquiry",
+      "correct": true,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.96,
+      "duration_s": 56.01,
       "judge_scores": {}
     },
     {
       "thread_id": "1817759",
       "message": "Omg please make another update. My phone is FREAKING OUT. It has taken me 37 min to tweet this bc my phone is FREAKING OUT",
       "true_intent": "ios_update_issue",
-      "predicted_intent": "ios_update_issue",
-      "correct": true,
+      "predicted_intent": "general_inquiry",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.76,
+      "duration_s": 16.25,
       "judge_scores": {}
     },
     {
@@ -1154,7 +1154,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.99,
+      "duration_s": 10.33,
       "judge_scores": {}
     },
     {
@@ -1167,7 +1167,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.71,
+      "duration_s": 62.61,
       "judge_scores": {}
     },
     {
@@ -1180,7 +1180,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.72,
+      "duration_s": 43.51,
       "judge_scores": {}
     },
     {
@@ -1193,7 +1193,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.67,
+      "duration_s": 10.48,
       "judge_scores": {}
     },
     {
@@ -1206,20 +1206,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.72,
+      "duration_s": 35.47,
       "judge_scores": {}
     },
     {
       "thread_id": "2109740",
       "message": "Dear why is it almost impossible to listen to a podcast or music on your iPhone & browse the web without interruption?",
       "true_intent": "app_issue",
-      "predicted_intent": "app_issue",
-      "correct": true,
+      "predicted_intent": "general_inquiry",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.79,
+      "duration_s": 21.44,
       "judge_scores": {}
     },
     {
@@ -1232,7 +1232,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.86,
+      "duration_s": 23.98,
       "judge_scores": {}
     },
     {
@@ -1245,7 +1245,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.8,
+      "duration_s": 18.57,
       "judge_scores": {}
     },
     {
@@ -1258,20 +1258,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.71,
+      "duration_s": 23.1,
       "judge_scores": {}
     },
     {
       "thread_id": "940596",
       "message": "can we get battery replaced for this #IPOD 80GB ?",
       "true_intent": "battery_drain",
-      "predicted_intent": "device_hardware_issue",
+      "predicted_intent": "general_inquiry",
       "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.68,
+      "duration_s": 21.83,
       "judge_scores": {}
     },
     {
@@ -1284,7 +1284,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.75,
+      "duration_s": 79.52,
       "judge_scores": {}
     },
     {
@@ -1297,7 +1297,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.88,
+      "duration_s": 13.06,
       "judge_scores": {}
     },
     {
@@ -1310,20 +1310,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.7,
+      "duration_s": 13.23,
       "judge_scores": {}
     },
     {
       "thread_id": "604019",
       "message": "Where has HDR mode gone on iPhone X ?",
       "true_intent": "general_inquiry",
-      "predicted_intent": "ios_update_issue",
-      "correct": false,
+      "predicted_intent": "general_inquiry",
+      "correct": true,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.77,
+      "duration_s": 24.33,
       "judge_scores": {}
     },
     {
@@ -1336,7 +1336,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.75,
+      "duration_s": 12.78,
       "judge_scores": {}
     },
     {
@@ -1349,7 +1349,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.96,
+      "duration_s": 18.48,
       "judge_scores": {}
     },
     {
@@ -1362,7 +1362,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.92,
+      "duration_s": 16.93,
       "judge_scores": {}
     },
     {
@@ -1375,7 +1375,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.61,
+      "duration_s": 7.21,
       "judge_scores": {}
     },
     {
@@ -1388,7 +1388,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.65,
+      "duration_s": 15.57,
       "judge_scores": {}
     },
     {
@@ -1401,20 +1401,20 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.88,
+      "duration_s": 14.4,
       "judge_scores": {}
     },
     {
       "thread_id": "1738846",
       "message": "So isn\u2019t going to fix the keyboard situation? Oh okay. #Apple #iphone",
       "true_intent": "ios_update_issue",
-      "predicted_intent": "device_hardware_issue",
+      "predicted_intent": "general_inquiry",
       "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.86,
+      "duration_s": 20.93,
       "judge_scores": {}
     },
     {
@@ -1427,7 +1427,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.85,
+      "duration_s": 18.09,
       "judge_scores": {}
     },
     {
@@ -1440,7 +1440,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.86,
+      "duration_s": 55.17,
       "judge_scores": {}
     },
     {
@@ -1453,7 +1453,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.87,
+      "duration_s": 13.83,
       "judge_scores": {}
     },
     {
@@ -1466,7 +1466,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.76,
+      "duration_s": 9.09,
       "judge_scores": {}
     },
     {
@@ -1479,7 +1479,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.86,
+      "duration_s": 59.77,
       "judge_scores": {}
     },
     {
@@ -1492,7 +1492,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.77,
+      "duration_s": 27.74,
       "judge_scores": {}
     },
     {
@@ -1505,7 +1505,7 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.86,
+      "duration_s": 18.52,
       "judge_scores": {}
     },
     {
@@ -1518,33 +1518,33 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.73,
+      "duration_s": 8.55,
       "judge_scores": {}
     },
     {
       "thread_id": "484598",
       "message": "fix the fucking iTunes Store. Gotta buy songs twice smh",
       "true_intent": "order_purchase",
-      "predicted_intent": "order_purchase",
-      "correct": true,
+      "predicted_intent": "app_issue",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.89,
+      "duration_s": 58.13,
       "judge_scores": {}
     },
     {
       "thread_id": "1906552",
       "message": "Using my last 2% battery life to tell to go fuck themselves. Your company and your products are trash. \ud83d\udd95\ud83c\udffd\ud83d\udd95\ud83c\udffd And trust me my phone is not the issue here.",
       "true_intent": "general_inquiry",
-      "predicted_intent": "general_inquiry",
-      "correct": true,
+      "predicted_intent": "battery_drain",
+      "correct": false,
       "reply": "",
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 3.75,
+      "duration_s": 41.81,
       "judge_scores": {}
     },
     {
@@ -1557,209 +1557,1857 @@
       "decision": "SKIPPED",
       "reason": "Skipped via --skip-escalate",
       "confidence": 1.0,
-      "duration_s": 4.97,
+      "duration_s": 41.3,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1454537",
+      "message": "These glitches happening to anyone else on their default mail app on ios 11, when trying to mark emails read?",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 17.2,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "161296",
+      "message": "What am I doing wrong when paying on my iPhone X always requires the passcode?",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 56.8,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "567629",
+      "message": "Gettin real damn tired of constantly buying earphones only to have them shit out every 2 weeks. #iPhone #FirstWorldProblems #bringbacktheheadphonejack",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 10.36,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "924602",
+      "message": "Why am I getting notifications from FaceBook? i don\u2019t even have the app on my device? How do I stop them please? Thanks.",
+      "true_intent": "app_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 17.2,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "693948",
+      "message": "Day 3 of iMessage \u201cwaiting for activation\u201d. can you help me out over here?",
+      "true_intent": "app_issue",
+      "predicted_intent": "app_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 57.45,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1002040",
+      "message": "please fix this battery issue. Ridiculous!",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 18.82,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2220743",
+      "message": "why does my iPhone X type \u201c ? \u201c for no reason it\u2019s really annoying.",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 13.03,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "302930",
+      "message": "my phone isn't working, yet again. come on get it together.",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 10.13,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1466918",
+      "message": "Congrats on the new update I\ufe0f\u2019m now the proud owner of a $600 paperweight",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 38.6,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "506538",
+      "message": "Accidentally deleted my iTunes app, redownloaded it and ALL of my music is gone! I pay for this shit give me my music back!",
+      "true_intent": "order_purchase",
+      "predicted_intent": "app_issue",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 51.25,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2057166",
+      "message": "Battery drained quickly in my 6s.please help.",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 12.68,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2622758",
+      "message": "I ordered iphone from the store before 13 days ago my order is still in progress why ?",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 7.82,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2631613",
+      "message": "OK great, now I've been hung up on twice trying to get access to my account and I'm an iOS developer trying to launch something.",
+      "true_intent": "account_access",
+      "predicted_intent": "account_access",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 15.9,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1773457",
+      "message": "please tell me there\u2019s a known issue causing iPhone 7 batteries to be so shit. I\u2019ve never had a phone battery this bad, ever.",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 21.97,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2343754",
+      "message": "hey can you explain why my battery is incapable of lasting 30 minutes after ios 11?",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 9.26,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "464700",
+      "message": "Just updated my MacBook to the recent version of High Sierra and this what I'm presented with when I look at launchpad, anyway to fix this?",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 9.88,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "931982",
+      "message": "Hey the 3G/4G symbol is not showing up and mobile data is not working. I still have 5GB left of data so it should work?",
+      "true_intent": "device_hardware_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 66.12,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2729001",
+      "message": "Hello dear, I\u2019m not able to see my mail contacts?! Kindly advice. #iphone",
+      "true_intent": "app_issue",
+      "predicted_intent": "app_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 38.91,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "457232",
+      "message": "So some random person is trying to use my email address for their apple id and now I'm 1) getting spammed with verification emails 2) can't create an apple id using that email address 3) can't login to their apple id (don't know the phone number) 4) no way to tell",
+      "true_intent": "account_access",
+      "predicted_intent": "account_access",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 21.49,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "554786",
+      "message": "Honestly though when is charging more for my phone than I pay in rent, they should be able to afford tech support that doesn\u2019t leave me on hold for 15 minutes and counting..... that\u2019s personal concierge money. I have ONE QUESTION \ud83d\ude44",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "battery_drain",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 7.5,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2280557",
+      "message": "have You seen this before ? #MacBookPro",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 15.94,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "382437",
+      "message": "after performing a network reset on my iPhone X, I am still being told that my device is sending duplicate text messages.",
+      "true_intent": "app_issue",
+      "predicted_intent": "app_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 42.11,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2524562",
+      "message": "iPhones are literally fucking up and it\u2019s annoying . Calls now and just random apps opening like wtffff camera might be better but ain\u2019t worth it no more",
+      "true_intent": "device_hardware_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 27.13,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2833023",
+      "message": "After iOS 11.1.2 update, my phone slowed down and started to freeze. this happened to a few friends. why can we do it.",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 8.27,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1168568",
+      "message": "Thanks a lot for the 11.0.3 up date it just deleted half of my photos",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 16.23,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "498578",
+      "message": "Hi, all apps on my iPhone crashed, then the phone turned black and back to lock screen, and it kept on going that way. What happened?",
+      "true_intent": "device_hardware_issue",
+      "predicted_intent": "device_hardware_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 38.64,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1338080",
+      "message": "I got a reservation number for the new iPhone x. Does that mean I get the phone as promised with the delivery date that it showed? Also it says I will get an email to complete my order. When should I expect it?",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 11.21,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1528787",
+      "message": "Aye Y\u2019all need to fix this nonsense with the letter \u201cI\ufe0f\u201d on our keyboards",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 19.78,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1578502",
+      "message": "Honestly what is going on? This I\ufe0f shit is driving me crazy.",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 11.26,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2037627",
+      "message": "My husbands Apple Watch 3\u2019s battery sucks. In a matter of minutes it went from 100 to 69 & he wasn\u2019t even on it. wtf?! Not to mention his cellular service doesn\u2019t work half the time. I\u2019m tempted to just return the thing \ud83d\ude12",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 50.49,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2594411",
+      "message": "please fix your app before 12 tonight",
+      "true_intent": "app_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 8.82,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "96985",
+      "message": "Apenas sali\u00f3 en nuevo iPhone X y el 7 ya empieza a colgarse, la bater\u00eda se descarga r\u00e1pido, etc, siempre lo mismo",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 19.76,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2142418",
+      "message": "How can I reset my Keychain password to match my login password without loosing the contents of my current keychain?",
+      "true_intent": "account_access",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 15.21,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2949603",
+      "message": "i was playing candy crush and it said something about making a purchase. How do I know if I\u2019ve mistakenly placed an order?",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 50.04,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1711990",
+      "message": "I hate you for breaking my phone What happened ???? Jk jk mines doing weird things too its frozen, i can only lock/unlock it Whatttt weird. Mines just doing the stupid A ? in a box thing",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 15.49,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1395644",
+      "message": "why do your chargers last a month or so Was that as long as you guys where making it with effort before you gave up for money? Selfish assholes. The saying Quality over quantity obviously went waaayyy over your heads.",
+      "true_intent": "battery_drain",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 565.46,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1201144",
+      "message": "Hey, your two factor authentication is bullshit and once again locking me out of purchased items on my account. Fix or ditch",
+      "true_intent": "account_access",
+      "predicted_intent": "account_access",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 111.55,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "325909",
+      "message": "worst support ever after buying the extended warranty they told me your previous warranty has expired nothing can be done now.",
+      "true_intent": "order_purchase",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 107.67,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1998363",
+      "message": "pls tell me why my battery dies after 2hrs of normal use when all apps are closed, location, fetch, etc are off \ud83d\ude21\ud83d\udc4e\ud83c\udffc",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 33.86,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "563077",
+      "message": "iPhone battery performance in anything other than a brand new phone is a joke. So sick of carrying multiple external batteries just for a few hours unplugged.",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 67.01,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1991153",
+      "message": "It\u2019s been four days and a contact I added still isn\u2019t synced with iCloud.",
+      "true_intent": "account_access",
+      "predicted_intent": "app_issue",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 68.43,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1638759",
+      "message": "My iPhone was stuck on \u201cupdating iCloud settings\u201d for iOS 11.1 for six hours and this is the BS I return to #WTF Same here. And now I don\u2019t have internet connection unless connected to WiFi thanks a lot. #thisupdatesucks",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 17.46,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1458801",
+      "message": "Why doesn\u2019t the letter I\ufe0f appear correctly on my phone!? Lmfao! No but really \ud83d\ude02\ud83d\ude02 they\u2019re pissing me off. I\ufe0f updated thinking it would fix it but nothing. It doesn\u2019t work on my MacBook either!",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 15.45,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1738829",
+      "message": "My iPhone X order is \u201cIn Progress\u201d Ppl who ordered after me are receiving their deliveries already ! ? Any help?! My iPhone X order is \u201cIn Progress\u201d Ppl who ordered after me are receiving their deliveries already ! ? Any help?!",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 13.69,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1933305",
+      "message": "Hey Fix your iOS. Bluetooth is supposed to work.",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 9.5,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1957960",
+      "message": "my phone battery barely lasts half a day after updating to iOS 11, ever gonna do anything about that nah?",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 16.07,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1358145",
+      "message": "looks like there is a problem with the payment for my iPhone X pre-order, where can I reach out to solve it in Mexico?",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 10.26,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1162039",
+      "message": "I've forgotten my password to my iPad... what's the best thing to do?",
+      "true_intent": "account_access",
+      "predicted_intent": "account_access",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 22.34,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "312175",
+      "message": "when are you gonna fix the issue with Pok\u00e9mon GO plus and the bluetooth delay?",
+      "true_intent": "app_issue",
+      "predicted_intent": "app_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 38.03,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "825135",
+      "message": "do you have to have Mac OS to operate Final Cut Pro X or Logic Pro X or can it operate on windows 10",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 21.64,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "489720",
+      "message": "Can help me.. I don\u2019t want to use PayPal anymore but I don\u2019t have a credit card to log into and I don\u2019t haves None option -_-",
+      "true_intent": "account_access",
+      "predicted_intent": "account_access",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 88.36,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2853852",
+      "message": "kudos to you guys you blocked my wifes phone 4 a week. If you have little sense of problem you created for us and little senstivity in how we are being affected please help restoring the phone.",
+      "true_intent": "account_access",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 45.23,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "633775",
+      "message": "my phone isn\u2019t letting me airdrop, tapping the airdrop button but nothing is happening?",
+      "true_intent": "device_hardware_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 59.67,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2833102",
+      "message": "I don't know whose fault it is but my twitter app crashed 8 times while watching a vine thread, so somebody needs to fix it before I transfer to using Facebook on my android at University of Sydney",
+      "true_intent": "app_issue",
+      "predicted_intent": "app_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 16.2,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2372172",
+      "message": "I\u2019m logged into the same iTunes account on my lap-fucking-top so how & why on Gods green earth is my account disabled! All i wanna do is play 8ball but y\u2019all wanna make stuff complicated for no reason \ud83d\ude11 please fix it! I will be more than happy to DM y\u2019all my info.",
+      "true_intent": "account_access",
+      "predicted_intent": "account_access",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 13.41,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2238930",
+      "message": "Seria normal o meu celular estar com 82% da bateria desde as 7 da noite de ontem ? \ud83e\udd14\ud83e\udd14\ud83e\udd14",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 10.56,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2237233",
+      "message": "I recently got an iphone 8+ and touch id doesn\u2019t work. Are you having this problem? FIX THIS!",
+      "true_intent": "device_hardware_issue",
+      "predicted_intent": "device_hardware_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 16.14,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "940975",
+      "message": "When needs to fix the lockscreen issue that has been affecting my iphone 7 plus since i downloaded",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 14.9,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "455067",
+      "message": "hey could you please check my iPhone 7? The battery drainage is pretty quick in the recent days not sure why. Thank you.",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 22.66,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1221984",
+      "message": "still getting this rubbish trying to restore, to gain some much needed space \ud83d\ude21 wtf!",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 29.21,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1143108",
+      "message": "I don\u2019t know if it\u2019s just my iPhone 8 but it lags & freezes so much! \ud83d\ude21",
+      "true_intent": "device_hardware_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 43.64,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2279575",
+      "message": "I love my iPhone X \ud83d\ude0d Thank you and for the amazing job! Can you set it to \u201czoomed\" view (instead of standard). I tried but couldn\u2019t find this option; was it removed? It was an comfort option for my eyes.",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 17.44,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "286878",
+      "message": "Turns out the 5c isn\u2018t even fire resistant :(( gonna buy next time!",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 53.75,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1935697",
+      "message": "last Apple product I will ever own your iPhone 8 is pos and so is your customer service",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 29.88,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "851231",
+      "message": "my phone has been charging for 3.5 HOURS and Is only at 19% WHAT IS GOING ON",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 27.16,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1798507",
+      "message": "my songs wont re download to my music app",
+      "true_intent": "app_issue",
+      "predicted_intent": "app_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 23.65,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1087797",
+      "message": "can you advise?? #When you buy a premium priced product you expect premium customer service.....#obviously it\u2019s too much to ask for these days!!!",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 25.38,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1728552",
+      "message": "2/2 wasn\u2019t like this before. Remembered where I was before. Not anymore since new IOS. It\u2019s a little annoying",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 17.06,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1740886",
+      "message": "y\u2019all need to fix this software and get our emojis back correct ! No stupid boxes. Thank you.",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 24.01,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2372227",
+      "message": "getting a \u201cconnection error\u201d when trying to login on a desktop through a browser. What\u2019s going on?",
+      "true_intent": "account_access",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 21.33,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1961601",
+      "message": "shocked at the awful customer service I\u2019ve received for my recent purchase.",
+      "true_intent": "order_purchase",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 77.07,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1121646",
+      "message": "I updated my phon to #ios11.0.3 and i am not able to shar photo on from gallery. When i try closed itself",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 18.53,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2867953",
+      "message": "I\u2019m facing troubles on my iPad air 2 after the upgrade to ios 11. Have noticed some lags(very unexpected from Apple products), heating issues, quick battery drain, and also the display screen fitting issue(the one in the picture). Please help",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 22.73,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1809092",
+      "message": "hello please refund MNWF00KQ9D order id. I wasnt able to use it. It wont show up on my phone thank you",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 18.39,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2238110",
+      "message": "I preordered the album, why can\u2019t I play all of it? It\u2019s released now.",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 83.34,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2321180",
+      "message": "why can't I click next when creating this apple id? Been messing with this for close to an hour. Such a convoluted and frustrating process. Shouldn't have to enter a payment just to set this up.",
+      "true_intent": "account_access",
+      "predicted_intent": "account_access",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 58.39,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "94783",
+      "message": "any idea what this means when I restart my 2016 MacBook Pro?",
+      "true_intent": "device_hardware_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 21.42,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1912819",
+      "message": "dear \uf8ff support I have issue with some iCloud pics Pls help its not uploading it via Twitter",
+      "true_intent": "account_access",
+      "predicted_intent": "app_issue",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 67.78,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "553548",
+      "message": "i havent had my iphone x for a month and its already lagging help",
+      "true_intent": "device_hardware_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 46.78,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2138816",
+      "message": "I\ufe0f am so over the glitches from the new IOS update \ud83d\ude44",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 9.14,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2695114",
+      "message": "back in touch ever since. Am now heading back go university where I am unable to use anyone else\u2019s phone to make a phone call to apple support nor can I receive any calls on my phone to resolve issue. Before I was disconnected I was told it was a software issue. 2/2",
+      "true_intent": "device_hardware_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 42.8,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2130246",
+      "message": "And now my #iPhone is losing charge even when plugged in. I need my #iPhoneX now.",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 9.53,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2647368",
+      "message": "just wanted to say today I think I\u2019ve had the worst experience within your stores I\u2019ve ever had, I took my MacBook Pro in for a checkup due to overheating issues and battery issues and instead of initially quoting repairs which is what I wanted your colleague consistently",
+      "true_intent": "battery_drain",
+      "predicted_intent": "device_hardware_issue",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 92.61,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "936211",
+      "message": ". shipped my replacement part to someone else. They can't find it. I'm trying to contact you but I get this: Whether I do it from my phone or computer, same for phone call or chat options. I get this error every time. Please help.",
+      "true_intent": "order_purchase",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 46.61,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2834443",
+      "message": "pls help! I purchased this album but I can't listen to it \ud83d\ude2d",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 47.03,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1693418",
+      "message": "I forget my icloud password. How to reset??",
+      "true_intent": "account_access",
+      "predicted_intent": "account_access",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 16.55,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1555561",
+      "message": "Hold up, did really remove the actual battery % option on the iPhone X? Am I trippen",
+      "true_intent": "battery_drain",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 10.79,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2448415",
+      "message": "hi i have iphone 7, should i close apps get to save power?",
+      "true_intent": "battery_drain",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 13.87,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1857173",
+      "message": "I bought an iphone 6 in august 2017 and I have a iphone cresentgate problem which is very famous with iphone 6 need fix.",
+      "true_intent": "device_hardware_issue",
+      "predicted_intent": "device_hardware_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 38.33,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "662798",
+      "message": "FIX MY NOTE APP.",
+      "true_intent": "app_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 35.36,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "41558",
+      "message": "Can you pair 2 AirPods to one iCloud account?",
+      "true_intent": "account_access",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 21.95,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "302276",
+      "message": "Ajeitem a cagada com sistema operacional thanks",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 49.14,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "500083",
+      "message": "after 11 year as a loyal customer I get treated like this. All I want is my iPhone unlocking so I can use a sim. they have blamed you for the hold up as they need to get a code from you is this true?",
+      "true_intent": "account_access",
+      "predicted_intent": "device_hardware_issue",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 23.66,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "393611",
+      "message": "I have over 100gb free in my iPhone 7+ but the App Store won\u2019t let me install anything, why is that?",
+      "true_intent": "app_issue",
+      "predicted_intent": "app_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 16.34,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2377130",
+      "message": "y\u2019all nigga\u2019s new name is Banana until this \u201cI\u201d shit is handled",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 12.52,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1078547",
+      "message": "hey, thanks for giving me the brush off- still locked out, but what do you care?",
+      "true_intent": "account_access",
+      "predicted_intent": "account_access",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 16.64,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2817853",
+      "message": "Please for the love of the already broken auto correct, fix the I\ufe0f issue. This is getting very very annoying and I\ufe0f can\u2019t edit posts on twitter either which makes I\ufe0ft ten times worse. Please. Signed, Loyal Apple Customer",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 6.69,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1634049",
+      "message": "why is the icon missing? I've deleted and rebackup gives no difference.",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 25.97,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "333283",
+      "message": "my iPhone has been \u201cbricked\u201d for over 20 minutes.. cannot reset, turn off, or do anything except lock/unlock..",
+      "true_intent": "device_hardware_issue",
+      "predicted_intent": "device_hardware_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 69.05,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "590878",
+      "message": "why can\u2019t my son buy the In-app purchase for Hearthstone? He\u2019s on my family plan and I have accepted the charge, but he keeps getting this.",
+      "true_intent": "order_purchase",
+      "predicted_intent": "app_issue",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 60.98,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "390056",
+      "message": "I'm using the iPhone 7 now, account recovery been useless, I've been on it for 2 months",
+      "true_intent": "account_access",
+      "predicted_intent": "account_access",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 10.8,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2400381",
+      "message": "the new iOS 11.0.3 update has messed up all my phone settings, and is also killing the battery on my iphone7 plus! \ud83d\ude21\ud83d\ude21\ud83d\ude21 #fixit",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 11.44,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "619551",
+      "message": "it seems Apple is unable to swap broken watches. I\u2019m trying since 10 days to get a new one, but Apple is cancelling my the swap orders without any comment, the second time now. I have Apple Care +, but it makes no difference, beside I paid for nothing.",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 17.31,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "216143",
+      "message": "Apparently 31% is the new 1%!!!! Thx for making iPhone 6's battery complete ASS since the X came out!!!!",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 16.98,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1569682",
+      "message": "over an hour on hold, failing to speak to someone at Southampton store!",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 20.66,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1969005",
+      "message": "Wtf my iPhone has failed to backup to iCloud since Oct 17 and the new phone comes this Friday. Great timing I don't want to lose 2wks",
+      "true_intent": "account_access",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 36.54,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2145705",
+      "message": "omg this phone is pissing me off . get it together",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 7.12,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1598236",
+      "message": "what's my iCloud password again? I always forget.",
+      "true_intent": "account_access",
+      "predicted_intent": "account_access",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 8.86,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1641313",
+      "message": "can you plz fix the \u201cI\ufe0f\u201d issue !!!! hard to yell at my friends via text when my letters are coming out funny!",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 17.9,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2322520",
+      "message": "work harder to fix the issues #mov doesn\u2019t play on #iPhone X #battery not fully charging #iPhone doesn\u2019t response in cold weather",
+      "true_intent": "battery_drain",
+      "predicted_intent": "device_hardware_issue",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 89.34,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "711139",
+      "message": "I can't hear calls on my iPhone. WTF ? It worked fine yesterday. about to get a new customer",
+      "true_intent": "device_hardware_issue",
+      "predicted_intent": "device_hardware_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 36.18,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1485413",
+      "message": "Hey what\u2019s with the autocorrect of I to I\ufe0f??",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 10.8,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2179587",
+      "message": "Bought new MacBook Pro today. Getting \"is damaged and can\u2019t be opened. You should move it to the Trash.\" message with every application I download from Safari. Answers?",
+      "true_intent": "app_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 60.23,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2285195",
+      "message": "hola .son estos correos ciertos ? Gracias",
+      "true_intent": "account_access",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 16.71,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1003683",
+      "message": "I have to charge the battery 2 times a day which is ending very quickly",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 7.49,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1268356",
+      "message": "I redeemed a 3 month Apple Music subscription on October 7th and now this happens ! My subscription seems to have been deleted in your system",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 55.34,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1540642",
+      "message": "The install issues for #HighSierra not installing on Macs with aftermarket hard drives need resolved ASAP!!!",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 84.38,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1742590",
+      "message": "Hey A ? Hate this error. When are you going to fix it?",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 17.53,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2020448",
+      "message": "Hey Apple Music crashes immediately upon being opened please fix this ASAP!",
+      "true_intent": "app_issue",
+      "predicted_intent": "app_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 19.96,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2910456",
+      "message": "need some help regarding apple music please contact ...",
+      "true_intent": "app_issue",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 8.63,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1160686",
+      "message": "I can\u2019t get my account reenabled, I hate you",
+      "true_intent": "account_access",
+      "predicted_intent": "account_access",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 9.33,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2287239",
+      "message": "Omg wtf why do my i\u2019s keep coming out with an exclamation point and a question mark?!",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 1899.87,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "1128233",
+      "message": "the new update has destroyed the life of my battery \ud83d\ude14 #iphoneproblems",
+      "true_intent": "ios_update_issue",
+      "predicted_intent": "ios_update_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 7.42,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "2019598",
+      "message": "my brand new #iPhoneX has a nasty bleed through problem. For only 1k+ you can get 3/4 of an awesome screen! Genius here I come.",
+      "true_intent": "device_hardware_issue",
+      "predicted_intent": "device_hardware_issue",
+      "correct": true,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 13.06,
+      "judge_scores": {}
+    },
+    {
+      "thread_id": "743463",
+      "message": "Hello. Just wondering when the iPhone X accessories will be available. In particular the leather cases.",
+      "true_intent": "order_purchase",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "",
+      "decision": "SKIPPED",
+      "reason": "Skipped via --skip-escalate",
+      "confidence": 1.0,
+      "duration_s": 5.7,
       "judge_scores": {}
     }
   ],
   "baseline_results": {
     "keyword": {
-      "overall_accuracy": 0.625,
-      "correct": 75,
-      "total": 120,
+      "overall_accuracy": 0.6775510204081633,
+      "correct": 166,
+      "total": 245,
       "per_intent": {
         "ios_update_issue": {
-          "correct": 11,
-          "total": 18,
-          "accuracy": 0.6111111111111112
+          "correct": 33,
+          "total": 48,
+          "accuracy": 0.6875
         },
         "order_purchase": {
-          "correct": 11,
-          "total": 12,
-          "accuracy": 0.9166666666666666
+          "correct": 22,
+          "total": 28,
+          "accuracy": 0.7857142857142857
         },
         "battery_drain": {
-          "correct": 12,
-          "total": 14,
-          "accuracy": 0.8571428571428571
+          "correct": 28,
+          "total": 32,
+          "accuracy": 0.875
         },
         "general_inquiry": {
-          "correct": 13,
-          "total": 26,
+          "correct": 20,
+          "total": 40,
           "accuracy": 0.5
         },
         "app_issue": {
-          "correct": 6,
-          "total": 16,
-          "accuracy": 0.375
+          "correct": 17,
+          "total": 29,
+          "accuracy": 0.5862068965517241
         },
         "account_access": {
-          "correct": 11,
-          "total": 16,
-          "accuracy": 0.6875
+          "correct": 27,
+          "total": 37,
+          "accuracy": 0.7297297297297297
         },
         "device_hardware_issue": {
-          "correct": 11,
-          "total": 18,
-          "accuracy": 0.6111111111111112
+          "correct": 19,
+          "total": 31,
+          "accuracy": 0.6129032258064516
         }
       },
       "confusion": {
         "ios_update_issue": {
-          "ios_update_issue": 11,
+          "ios_update_issue": 33,
           "battery_drain": 2,
-          "device_hardware_issue": 3,
-          "general_inquiry": 1,
-          "app_issue": 1
+          "device_hardware_issue": 5,
+          "general_inquiry": 6,
+          "app_issue": 1,
+          "order_purchase": 1
         },
         "order_purchase": {
-          "order_purchase": 11,
-          "account_access": 1
-        },
-        "battery_drain": {
-          "battery_drain": 12,
-          "general_inquiry": 1,
+          "order_purchase": 22,
+          "account_access": 1,
+          "app_issue": 3,
+          "battery_drain": 1,
           "device_hardware_issue": 1
         },
+        "battery_drain": {
+          "battery_drain": 28,
+          "general_inquiry": 2,
+          "device_hardware_issue": 1,
+          "order_purchase": 1
+        },
         "general_inquiry": {
-          "general_inquiry": 13,
-          "order_purchase": 3,
-          "account_access": 3,
-          "app_issue": 3,
+          "general_inquiry": 20,
+          "order_purchase": 7,
+          "account_access": 4,
+          "app_issue": 4,
           "device_hardware_issue": 3,
-          "battery_drain": 1
+          "battery_drain": 2
         },
         "app_issue": {
-          "app_issue": 6,
+          "app_issue": 17,
           "account_access": 2,
-          "order_purchase": 2,
+          "order_purchase": 3,
           "device_hardware_issue": 4,
           "battery_drain": 1,
-          "ios_update_issue": 1
+          "ios_update_issue": 1,
+          "general_inquiry": 1
         },
         "account_access": {
-          "account_access": 11,
-          "app_issue": 3,
-          "device_hardware_issue": 2
+          "account_access": 27,
+          "app_issue": 6,
+          "device_hardware_issue": 2,
+          "ios_update_issue": 1,
+          "general_inquiry": 1
         },
         "device_hardware_issue": {
-          "device_hardware_issue": 11,
+          "device_hardware_issue": 19,
           "app_issue": 4,
-          "general_inquiry": 2,
-          "battery_drain": 1
+          "general_inquiry": 5,
+          "battery_drain": 1,
+          "order_purchase": 1,
+          "account_access": 1
         }
       }
     },
     "tfidf": {
-      "overall_accuracy": 0.2916666666666667,
-      "correct": 7,
-      "total": 24,
+      "overall_accuracy": 0.30612244897959184,
+      "correct": 15,
+      "total": 49,
       "per_intent": {
-        "ios_update_issue": {
-          "correct": 1,
-          "total": 2,
-          "accuracy": 0.5
-        },
-        "app_issue": {
+        "order_purchase": {
           "correct": 0,
-          "total": 5,
+          "total": 10,
+          "accuracy": 0.0
+        },
+        "general_inquiry": {
+          "correct": 0,
+          "total": 11,
           "accuracy": 0.0
         },
         "account_access": {
-          "correct": 1,
-          "total": 5,
-          "accuracy": 0.2
-        },
-        "general_inquiry": {
           "correct": 4,
-          "total": 4,
-          "accuracy": 1.0
+          "total": 5,
+          "accuracy": 0.8
         },
-        "order_purchase": {
-          "correct": 0,
-          "total": 2,
-          "accuracy": 0.0
+        "app_issue": {
+          "correct": 1,
+          "total": 9,
+          "accuracy": 0.1111111111111111
+        },
+        "ios_update_issue": {
+          "correct": 8,
+          "total": 9,
+          "accuracy": 0.8888888888888888
         },
         "battery_drain": {
           "correct": 1,
-          "total": 2,
-          "accuracy": 0.5
+          "total": 4,
+          "accuracy": 0.25
         },
         "device_hardware_issue": {
-          "correct": 0,
-          "total": 4,
-          "accuracy": 0.0
+          "correct": 1,
+          "total": 1,
+          "accuracy": 1.0
         }
       },
       "confusion": {
-        "ios_update_issue": {
+        "order_purchase": {
+          "ios_update_issue": 5,
           "general_inquiry": 1,
+          "account_access": 1,
+          "device_hardware_issue": 2,
+          "battery_drain": 1
+        },
+        "general_inquiry": {
+          "account_access": 3,
+          "ios_update_issue": 6,
+          "device_hardware_issue": 1,
+          "battery_drain": 1
+        },
+        "account_access": {
+          "account_access": 4,
           "ios_update_issue": 1
         },
         "app_issue": {
-          "general_inquiry": 5
-        },
-        "account_access": {
-          "general_inquiry": 4,
+          "app_issue": 1,
+          "ios_update_issue": 4,
+          "device_hardware_issue": 2,
+          "battery_drain": 1,
           "account_access": 1
         },
-        "general_inquiry": {
-          "general_inquiry": 4
-        },
-        "order_purchase": {
-          "general_inquiry": 2
+        "ios_update_issue": {
+          "ios_update_issue": 8,
+          "device_hardware_issue": 1
         },
         "battery_drain": {
-          "battery_drain": 1,
-          "general_inquiry": 1
+          "general_inquiry": 1,
+          "device_hardware_issue": 1,
+          "ios_update_issue": 1,
+          "battery_drain": 1
         },
         "device_hardware_issue": {
-          "general_inquiry": 4
+          "device_hardware_issue": 1
         }
       }
     },
-    "tfidf_train_n": 96,
-    "tfidf_test_n": 24
+    "tfidf_train_n": 196,
+    "tfidf_test_n": 49
   },
   "summary": {
     "classification": {
-      "overall_accuracy": 0.7916666666666666,
-      "correct": 95,
-      "total": 120,
+      "overall_accuracy": 0.6979591836734694,
+      "correct": 171,
+      "total": 245,
       "per_intent": {
         "ios_update_issue": {
-          "correct": 15,
-          "total": 18,
-          "accuracy": 0.8333333333333334
-        },
-        "order_purchase": {
-          "correct": 9,
-          "total": 12,
-          "accuracy": 0.75
-        },
-        "battery_drain": {
-          "correct": 12,
-          "total": 14,
-          "accuracy": 0.8571428571428571
-        },
-        "general_inquiry": {
-          "correct": 22,
-          "total": 26,
-          "accuracy": 0.8461538461538461
-        },
-        "app_issue": {
-          "correct": 11,
-          "total": 16,
-          "accuracy": 0.6875
-        },
-        "account_access": {
-          "correct": 13,
-          "total": 16,
+          "correct": 39,
+          "total": 48,
           "accuracy": 0.8125
         },
+        "order_purchase": {
+          "correct": 16,
+          "total": 28,
+          "accuracy": 0.5714285714285714
+        },
+        "battery_drain": {
+          "correct": 25,
+          "total": 32,
+          "accuracy": 0.78125
+        },
+        "general_inquiry": {
+          "correct": 38,
+          "total": 40,
+          "accuracy": 0.95
+        },
+        "app_issue": {
+          "correct": 18,
+          "total": 29,
+          "accuracy": 0.6206896551724138
+        },
+        "account_access": {
+          "correct": 19,
+          "total": 37,
+          "accuracy": 0.5135135135135135
+        },
         "device_hardware_issue": {
-          "correct": 13,
-          "total": 18,
-          "accuracy": 0.7222222222222222
+          "correct": 16,
+          "total": 31,
+          "accuracy": 0.5161290322580645
         }
       }
     },
@@ -1777,13 +3425,13 @@
       "by_intent": {}
     },
     "baselines": {
-      "keyword_accuracy": 0.625,
-      "tfidf_accuracy": 0.2916666666666667,
-      "agent_accuracy": 0.7916666666666666
+      "keyword_accuracy": 0.6775510204081633,
+      "tfidf_accuracy": 0.30612244897959184,
+      "agent_accuracy": 0.6979591836734694
     },
     "performance": {
-      "avg_duration_s": 3.73,
-      "total_examples": 120
+      "avg_duration_s": 38.84,
+      "total_examples": 245
     }
   }
 }
