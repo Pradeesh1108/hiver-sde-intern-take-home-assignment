@@ -24,7 +24,7 @@ from agent.reply_drafter import draft_reply
 from agent.escalator     import should_escalate
 
 
-def run(message: str, verbose: bool = False) -> dict:
+def run(message: str, verbose: bool = False, skip_reply: bool = False, skip_escalate: bool = False) -> dict:
     """
     Run the full agent pipeline on a single customer message.
 
@@ -75,13 +75,20 @@ def run(message: str, verbose: bool = False) -> dict:
     # We can run them both at the same time to save ~1-2 seconds.
     
     def drafting_flow():
+        if skip_reply:
+            return [], ""
         threads = retrieve_by_keywords(message, intent, n=3)
         rep = draft_reply(message, intent, threads)
         return threads, rep
 
+    def escalation_flow():
+        if skip_escalate:
+            return {"decision": "SKIPPED", "reason": "Skipped via --skip-escalate", "confidence": 1.0}
+        return should_escalate(message, intent)
+
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
         future_draft = executor.submit(drafting_flow)
-        future_escalate = executor.submit(should_escalate, message, intent)
+        future_escalate = executor.submit(escalation_flow)
         
         similar_threads, reply = future_draft.result()
         escalation = future_escalate.result()

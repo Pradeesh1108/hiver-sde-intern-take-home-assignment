@@ -108,7 +108,7 @@ def _llm_escalation_decision(message: str, intent: str) -> dict:
         raw = generate_completion(
             messages=[{"role": "user", "content": prompt}],
             task_type="fast",
-            max_tokens=100,
+            max_tokens=500,
             temperature=0.0
         )
 

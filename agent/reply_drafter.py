@@ -64,7 +64,7 @@ def draft_reply(
             reply = generate_completion(
                 messages=[{"role": "user", "content": prompt}],
                 task_type="draft",
-                max_tokens=256,
+                max_tokens=800,
                 temperature=0.0
             )
 
@@ -78,7 +78,7 @@ def draft_reply(
                 return fallback
 
             # Trim if somehow over Twitter length
-            # (shouldn't happen with max_tokens=256 but just in case)
+            # (shouldn't happen with max_tokens=800 but just in case)
             if len(reply) > 280:
                 reply = reply[:277] + "..."
 

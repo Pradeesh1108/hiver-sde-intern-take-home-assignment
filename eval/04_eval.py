@@ -59,7 +59,7 @@ def load_eval_set(path: str = "datasets/eval_set_labelled.csv") -> list:
 # STEP 1: RUN AGENT ON ALL EXAMPLES
 # ─────────────────────────────────────────────
 
-def run_agent_eval(eval_set: list, verbose: bool = True) -> list:
+def run_agent_eval(eval_set: list, verbose: bool = True, skip_reply: bool = False, skip_escalate: bool = False) -> list:
     """
     Run the full agent pipeline on every example in the eval set.
 
@@ -89,7 +89,7 @@ def run_agent_eval(eval_set: list, verbose: bool = True) -> list:
         true_label = row["your_label"]
 
         # Run the full pipeline
-        result = agent_run(message, verbose=False)
+        result = agent_run(message, verbose=False, skip_reply=skip_reply, skip_escalate=skip_escalate)
         
         # Free Tier Rate Limit: Wait 3s between examples to stay under 30 RPM
         time.sleep(3)
@@ -333,6 +333,14 @@ if __name__ == "__main__":
         help="Skip LLM judge scoring (faster, classification metrics only)"
     )
     parser.add_argument(
+        "--skip-reply", action="store_true",
+        help="Skip reply drafting (saves API calls and time)"
+    )
+    parser.add_argument(
+        "--skip-escalate", action="store_true",
+        help="Skip LLM escalation checks (saves API calls)"
+    )
+    parser.add_argument(
         "--limit", type=int, default=None,
         help="Only evaluate first N examples (for quick testing)"
     )
@@ -348,7 +356,12 @@ if __name__ == "__main__":
         print(f"Limited to first {args.limit} examples")
 
     # Step 1: Run agent
-    agent_results = run_agent_eval(eval_set, verbose=True)
+    agent_results = run_agent_eval(
+        eval_set, 
+        verbose=True, 
+        skip_reply=args.skip_reply,
+        skip_escalate=args.skip_escalate
+    )
 
     # Step 2: Judge replies (optional — slow)
     if not args.skip_judge:

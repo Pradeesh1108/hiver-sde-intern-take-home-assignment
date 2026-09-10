@@ -1,33 +1,43 @@
 {
   "classification": {
-    "overall_accuracy": 0.9,
-    "correct": 9,
-    "total": 10,
+    "overall_accuracy": 0.7916666666666666,
+    "correct": 95,
+    "total": 120,
     "per_intent": {
       "ios_update_issue": {
-        "correct": 3,
-        "total": 3,
-        "accuracy": 1.0
+        "correct": 15,
+        "total": 18,
+        "accuracy": 0.8333333333333334
       },
       "order_purchase": {
-        "correct": 3,
-        "total": 3,
-        "accuracy": 1.0
+        "correct": 9,
+        "total": 12,
+        "accuracy": 0.75
       },
       "battery_drain": {
-        "correct": 1,
-        "total": 1,
-        "accuracy": 1.0
+        "correct": 12,
+        "total": 14,
+        "accuracy": 0.8571428571428571
       },
       "general_inquiry": {
-        "correct": 2,
-        "total": 2,
-        "accuracy": 1.0
+        "correct": 22,
+        "total": 26,
+        "accuracy": 0.8461538461538461
       },
       "app_issue": {
-        "correct": 0,
-        "total": 1,
-        "accuracy": 0.0
+        "correct": 11,
+        "total": 16,
+        "accuracy": 0.6875
+      },
+      "account_access": {
+        "correct": 13,
+        "total": 16,
+        "accuracy": 0.8125
+      },
+      "device_hardware_issue": {
+        "correct": 13,
+        "total": 18,
+        "accuracy": 0.7222222222222222
       }
     }
   },
@@ -40,20 +50,17 @@
     "n_scored": 0
   },
   "escalation": {
-    "rate": 0.2,
-    "total": 2,
-    "by_intent": {
-      "ios_update_issue": 1,
-      "general_inquiry": 1
-    }
+    "rate": 0.0,
+    "total": 0,
+    "by_intent": {}
   },
   "baselines": {
-    "keyword_accuracy": 0.9,
-    "tfidf_accuracy": 1.0,
-    "agent_accuracy": 0.9
+    "keyword_accuracy": 0.625,
+    "tfidf_accuracy": 0.2916666666666667,
+    "agent_accuracy": 0.7916666666666666
   },
   "performance": {
-    "avg_duration_s": 2.7,
-    "total_examples": 10
+    "avg_duration_s": 3.73,
+    "total_examples": 120
   }
 }

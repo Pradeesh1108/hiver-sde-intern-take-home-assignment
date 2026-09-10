@@ -18,18 +18,26 @@ def generate_completion(messages: list, task_type: str = "fast", max_tokens: int
     provider = os.getenv("LLM_PROVIDER", "groq").lower()
 
     if provider == "ollama":
-        # Local Ollama Execution
+        # Local or Remote Ollama Execution
         model = os.getenv("OLLAMA_MODEL", "llama3.2:latest")
+        base_url_raw = os.getenv("OLLAMA_BASE_URL", "localhost:11434")
+        
+        # Ensure proper URL formatting for the OpenAI client
+        if not base_url_raw.startswith("http"):
+            base_url_raw = f"http://{base_url_raw}"
+        if not base_url_raw.endswith("/v1"):
+            base_url_raw = f"{base_url_raw}/v1"
+
         client = OpenAI(
-            base_url="http://localhost:11434/v1",
+            base_url=base_url_raw,
             api_key="ollama", # required, but unused by ollama
         )
         
         response = client.chat.completions.create(
             model=model,
             messages=messages,
-            max_tokens=max_tokens,
-            temperature=temperature
+            temperature=temperature,
+            extra_body={"think": False}
         )
         return response.choices[0].message.content.strip()
 

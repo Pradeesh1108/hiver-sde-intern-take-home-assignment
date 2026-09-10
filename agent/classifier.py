@@ -20,7 +20,7 @@ from agent.llm_factory import generate_completion
 # Model choice: haiku is fast + cheap for classification
 # max_tokens=20 because the intent name is short (longest is
 # "device_hardware_issue" = 21 chars — we give a little headroom)
-_MAX_TOKENS = 20
+_MAX_TOKENS = 500
 
 
 def classify(message: str, retries: int = 2) -> str:
