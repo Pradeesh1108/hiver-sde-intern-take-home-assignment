@@ -1,0 +1,53 @@
+{
+  "few_shot_examples": {
+    "ios_update_issue": [
+      "Since updating to iOS 11.1 my iPhone 7 is incredibly slow, apps take forever to open and my battery drains twice as fast as before the update",
+      "iOS 11 has completely broken my phone - WiFi keeps disconnecting, Bluetooth won't stay connected, and the home button lags. This update is a disaster",
+      "After installing the latest iOS update, the letter I keeps turning into a question mark when I type. Really frustrating, please fix this",
+      "My alarm stopped working after I updated to iOS 11.0.3. Missed work this morning because of your broken update",
+      "Every app crashes constantly since I updated to iOS 11. Instagram, Snapchat, even your own apps like Mail just close themselves"
+    ],
+    "battery_drain": [
+      "My iPhone 6s battery drops from 100% to dead in under 4 hours with normal use. No update happened, it just started dying fast this week",
+      "Phone was at 78% battery and just shut off completely. Restarted and shows 1%. This has happened 3 times today",
+      "My iPhone won't charge at all. Tried 3 different lightning cables and 2 different plugs, nothing works. Battery just stuck at 14%",
+      "Battery life on my iPhone 8 is terrible. Goes from 100% charged to 30% in just 2 hours of light use. This is unacceptable for a new phone",
+      "My phone dies at 30% every single day. The battery percentage is clearly wrong. How do I fix this?"
+    ],
+    "device_hardware_issue": [
+      "I dropped my iPhone X and now the screen has green lines running across it and the touch is completely unresponsive on the right side",
+      "My iPhone home button stopped clicking. It still works but there is no physical click anymore. Is this a hardware defect?",
+      "The front camera on my iPhone 8 is completely blurry. Rear camera works fine. I have not dropped it or got it wet",
+      "My MacBook Pro keyboard has several keys that do not work after I accidentally spilled water on it",
+      "iPhone 7 keeps randomly restarting by itself multiple times a day. No update installed, no new apps. Just restarts out of nowhere"
+    ],
+    "app_issue": [
+      "Safari crashes every single time I try to open a new tab. I have restarted my phone but it keeps crashing",
+      "iMessage is delivering my texts out of order and some messages are not being delivered at all to one specific contact",
+      "Apple Music keeps stopping my songs randomly mid-play even when I have WiFi. The app just pauses and I have to press play again",
+      "The App Store won't load at all. Just shows a blank white screen. I can't download or update any apps",
+      "My FaceTime camera shows a black screen to the other person even though I can see them fine. Audio works, only video is black"
+    ],
+    "account_access": [
+      "I forgot my Apple ID password and when I try to reset it the verification code never arrives to my phone number. I am completely locked out",
+      "My Apple ID has been disabled for security reasons and I can't get back in. I did not do anything suspicious",
+      "I set up two-factor authentication but now I no longer have access to my old phone number. How do I get into my account?",
+      "Someone is trying to hack my Apple ID. I keep getting emails saying my password was changed but I did not change it",
+      "I redeemed an Apple gift card but the balance never showed up in my account. The code says already redeemed but I just bought this card"
+    ],
+    "order_purchase": [
+      "I pre-ordered the iPhone X 3 weeks ago and the delivery date has been pushed back twice. I need to know when it will actually arrive",
+      "I was charged twice for the same app purchase on my iTunes account. One charge should not have gone through. I need a refund",
+      "I placed an iPhone X reservation and got a confirmation email but the portal now shows no active reservations under my account",
+      "My iPhone X delivery arrived but the box was empty. No phone inside, just packaging material. I need this resolved immediately",
+      "I cancelled my iPhone X pre-order 2 days ago but I have still been charged on my credit card. When will the refund appear?"
+    ],
+    "general_inquiry": [
+      "What is the difference between iCloud and iCloud Drive? Do I need both or just one?",
+      "Does the iPhone X work with wireless chargers or do I still need a lightning cable?",
+      "Can you tell me if the iPhone 8 Plus is water resistant? I want to use it near a pool",
+      "How long does it usually take for Apple to release a new iOS update after announcing it?",
+      "Is there any way to transfer all my data from Android to iPhone without losing anything?"
+    ]
+  }
+}

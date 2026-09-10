@@ -1,0 +1,165 @@
+{
+  "intents": [
+    {
+      "name": "ios_update_issue",
+      "description": "Customer is experiencing problems after installing an iOS or macOS update. Symptoms include slowness, crashes, features breaking, WiFi or Bluetooth issues, or the iOS 11 autocorrect I-question-mark glitch. IMPORTANT: Only use this if the problem is clearly tied to a software update. If battery drain is mentioned WITH an update, use ios_update_issue. If battery drain is mentioned WITHOUT any update, use battery_drain.",
+      "keywords": [
+        "update",
+        "ios",
+        "upgraded",
+        "upgrade",
+        "version",
+        "ios11",
+        "ios 11",
+        "slow after",
+        "since update",
+        "new update",
+        "question mark",
+        "letter i",
+        "i\ufe0f",
+        "boxes and",
+        "glitch",
+        "11.0",
+        "11.1",
+        "high sierra"
+      ]
+    },
+    {
+      "name": "battery_drain",
+      "description": "Customer reports that their device battery is draining unusually fast, not charging properly, dying at high percentages, or lasting much shorter than expected. IMPORTANT: If the customer mentions battery drain started after an iOS update, use ios_update_issue instead. If the physical charger cable or adapter is broken or exploded, use device_hardware_issue.",
+      "keywords": [
+        "battery",
+        "drain",
+        "draining",
+        "charge",
+        "charging",
+        "percent",
+        "dying",
+        "dead",
+        "power",
+        "charger"
+      ]
+    },
+    {
+      "name": "device_hardware_issue",
+      "description": "Customer is having a problem with a physical component of their device \u2014 screen cracked or flickering, keyboard broken, camera not focusing, microphone not working, buttons stuck, SIM card not recognised, device randomly restarting, or touchscreen unresponsive. IMPORTANT: The problem must be physical hardware. If the device is slow after an update, use ios_update_issue. If a specific app is causing freezes, use app_issue.",
+      "keywords": [
+        "keyboard",
+        "screen",
+        "freeze",
+        "frozen",
+        "restart",
+        "camera",
+        "touch",
+        "button",
+        "microphone",
+        "hardware",
+        "cracked",
+        "broken",
+        "physical",
+        "sim card",
+        "ringer",
+        "trackpad"
+      ]
+    },
+    {
+      "name": "app_issue",
+      "description": "Customer is having a problem with a specific named app \u2014 it crashes, freezes, shows wrong content, or a feature inside it is broken. Includes Apple apps (Safari, Mail, Music, iMessage, FaceTime, App Store, Maps, Alarm) and third-party apps (Spotify, Instagram, Snapchat, WhatsApp). IMPORTANT: Do NOT use app_issue if the customer cannot log in due to a forgotten Apple ID password or locked account \u2014 use account_access. Do NOT use app_issue if the problem started after an iOS update \u2014 use ios_update_issue.",
+      "keywords": [
+        "app",
+        "apps",
+        "mail",
+        "music",
+        "imessage",
+        "facetime",
+        "whatsapp",
+        "crash",
+        "crashes",
+        "crashing",
+        "spotify",
+        "instagram",
+        "safari",
+        "imovie",
+        "alarm",
+        "game center",
+        "appstore",
+        "snapchat",
+        "podcast",
+        "youtube"
+      ]
+    },
+    {
+      "name": "account_access",
+      "description": "Customer cannot access their Apple ID, iCloud, App Store, or iTunes due to a forgotten password, locked account, missing verification code, or two-factor authentication problem. Also includes suspicious login alerts and gift card issues. IMPORTANT: Do NOT use account_access if the customer is having trouble with a specific third-party app login (like Netflix or a game) \u2014 use app_issue. Do NOT use account_access if the customer is asking about a purchase \u2014 use order_purchase.",
+      "keywords": [
+        "apple id",
+        "password",
+        "code",
+        "locked",
+        "account",
+        "sign in",
+        "login",
+        "log in",
+        "verification",
+        "icloud",
+        "two factor",
+        "authentication",
+        "unlock",
+        "icloud storage",
+        "itunes account",
+        "phishing",
+        "suspicious email"
+      ]
+    },
+    {
+      "name": "order_purchase",
+      "description": "Customer has a question or problem related to buying an Apple product, a pre-order, a delivery, a billing charge, or a refund. Includes iPhone X reservation problems, unexpected App Store charges, and refund requests. IMPORTANT: If the customer received their order but the device is physically broken, use device_hardware_issue. If they cannot access their account to make a purchase, use account_access.",
+      "keywords": [
+        "order",
+        "buy",
+        "purchase",
+        "delivery",
+        "charge",
+        "charged",
+        "billed",
+        "billing",
+        "reserve",
+        "reservation",
+        "ship",
+        "iphone x",
+        "refund",
+        "receipt",
+        "pre order",
+        "release date",
+        "trade in",
+        "trade-in",
+        "family sharing",
+        "credit card"
+      ]
+    },
+    {
+      "name": "general_inquiry",
+      "description": "Customer is asking a general product question (how-to, feature explanation, compatibility) with no specific problem, or the message is too vague to classify. Use this as a last resort only when none of the other intents clearly fit. IMPORTANT: Do not put hardware complaints, app crashes, or update complaints here just because the message is short or uses informal language. Short informal complaints still belong to their specific intent.",
+      "keywords": []
+    }
+  ],
+  "intent_names": [
+    "ios_update_issue",
+    "battery_drain",
+    "device_hardware_issue",
+    "app_issue",
+    "account_access",
+    "order_purchase",
+    "general_inquiry"
+  ],
+  "labelling_rules": [
+    "battery + update in same message \u2192 ios_update_issue (update is the cause)",
+    "app + update in same message \u2192 ios_update_issue",
+    "very short or vague message with no specific problem \u2192 general_inquiry",
+    "when genuinely unsure \u2192 pick the problem the customer seems most upset about",
+    "app login failure \u2192 app_issue if the app is broken; account_access if Apple ID/password is the issue",
+    "a thank-you or resolution confirmation is NOT a complaint \u2014 do not classify it"
+  ],
+  "why_these_7": "Intents defined at granularity where two messages in the same bucket receive meaningfully similar Apple Support replies.",
+  "why_keywords_for_sampling": "Keywords used only for stratified sampling \u2014 not for runtime classification. Runtime classification uses LLM with few-shot examples."
+}
