@@ -73,22 +73,32 @@ def classification_prompt(customer_message: str) -> str:
 
     intent_section = "\n\n".join(intent_lines)
 
-    return f"""You are classifying customer support messages sent to Apple Support on Twitter.
+    return f"""You are classifying customer support messages...
 
-Classify the following customer message into exactly one of these intents:
+        {intent_section}
 
-{intent_section}
+        BOUNDARY RULES — apply these before deciding:
+        1. Phone FROZEN, BLACK SCREEN, WON'T TURN ON → phone_freezing
+        (even if an update caused it — the symptom is the freeze)
+        2. Cannot log into APPLE ID or ICLOUD → account_access
+        (not app_issue, even if the problem is inside an app)
+        3. CHARGED wrongly, BILLING issue, ORDER problem → order_purchase
+        (not account_access, even if the account is involved)
+        4. Update caused a SPECIFIC symptom → use the specific intent
+        "update broke my wifi" → wifi_bluetooth (not ios_update_general)
+        "update killed my battery" → battery_drain (not ios_update_general)
+        "phone frozen since update" → phone_freezing (not ios_update_general)
+        ios_update_general only when no more specific intent fits.
 
-Labelling rules:
-- battery + iOS update mentioned together → ios_update_issue (update is the cause)
-- app + iOS update mentioned together → ios_update_issue
-- too vague or too short to classify → general_inquiry
-- when unsure, pick the intent the customer seems most upset about
+        Customer message:
+        \"\"\"{customer_message}\"\"\"
 
-Customer message:
-\"\"\"{customer_message}\"\"\"
+        Step 1 — In one sentence, identify the PRIMARY problem the customer has.
+        Step 2 — Write the intent name on the next line.
 
-Reply with ONLY the intent name. No explanation. No punctuation. Just the intent name."""
+        Your response must be exactly two lines:
+        Line 1: one sentence describing the primary problem
+        Line 2: the intent name (nothing else)"""
 
 
 # ─────────────────────────────────────────────

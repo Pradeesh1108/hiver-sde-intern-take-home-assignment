@@ -1,182 +1,234 @@
 {
   "keyword_baseline": {
-    "overall_accuracy": 0.6775510204081633,
-    "correct": 166,
-    "total": 245,
+    "overall_accuracy": 0.5785123966942148,
+    "correct": 140,
+    "total": 242,
     "per_intent": {
-      "ios_update_issue": {
-        "correct": 33,
-        "total": 48,
-        "accuracy": 0.6875
-      },
-      "order_purchase": {
-        "correct": 22,
-        "total": 28,
-        "accuracy": 0.7857142857142857
-      },
-      "battery_drain": {
-        "correct": 28,
-        "total": 32,
-        "accuracy": 0.875
-      },
-      "general_inquiry": {
-        "correct": 20,
-        "total": 40,
-        "accuracy": 0.5
+      "autocorrect_i_bug": {
+        "correct": 19,
+        "total": 25,
+        "accuracy": 0.76
       },
       "app_issue": {
-        "correct": 17,
-        "total": 29,
-        "accuracy": 0.5862068965517241
+        "correct": 22,
+        "total": 33,
+        "accuracy": 0.6666666666666666
+      },
+      "device_hardware": {
+        "correct": 3,
+        "total": 16,
+        "accuracy": 0.1875
+      },
+      "wifi_bluetooth": {
+        "correct": 14,
+        "total": 21,
+        "accuracy": 0.6666666666666666
+      },
+      "battery_drain": {
+        "correct": 23,
+        "total": 26,
+        "accuracy": 0.8846153846153846
+      },
+      "order_purchase": {
+        "correct": 13,
+        "total": 30,
+        "accuracy": 0.43333333333333335
+      },
+      "general_inquiry": {
+        "correct": 9,
+        "total": 19,
+        "accuracy": 0.47368421052631576
+      },
+      "ios_update_general": {
+        "correct": 14,
+        "total": 32,
+        "accuracy": 0.4375
       },
       "account_access": {
-        "correct": 27,
-        "total": 37,
-        "accuracy": 0.7297297297297297
+        "correct": 11,
+        "total": 23,
+        "accuracy": 0.4782608695652174
       },
-      "device_hardware_issue": {
-        "correct": 19,
-        "total": 31,
-        "accuracy": 0.6129032258064516
+      "phone_freezing": {
+        "correct": 12,
+        "total": 17,
+        "accuracy": 0.7058823529411765
       }
     },
     "confusion": {
-      "ios_update_issue": {
-        "ios_update_issue": 33,
-        "battery_drain": 2,
-        "device_hardware_issue": 5,
-        "general_inquiry": 6,
-        "app_issue": 1,
-        "order_purchase": 1
-      },
-      "order_purchase": {
-        "order_purchase": 22,
-        "account_access": 1,
-        "app_issue": 3,
-        "battery_drain": 1,
-        "device_hardware_issue": 1
-      },
-      "battery_drain": {
-        "battery_drain": 28,
-        "general_inquiry": 2,
-        "device_hardware_issue": 1,
-        "order_purchase": 1
-      },
-      "general_inquiry": {
-        "general_inquiry": 20,
-        "order_purchase": 7,
-        "account_access": 4,
-        "app_issue": 4,
-        "device_hardware_issue": 3,
-        "battery_drain": 2
+      "autocorrect_i_bug": {
+        "general_inquiry": 3,
+        "autocorrect_i_bug": 19,
+        "ios_update_general": 2,
+        "app_issue": 1
       },
       "app_issue": {
-        "app_issue": 17,
-        "account_access": 2,
-        "order_purchase": 3,
-        "device_hardware_issue": 4,
-        "battery_drain": 1,
-        "ios_update_issue": 1,
-        "general_inquiry": 1
+        "app_issue": 22,
+        "general_inquiry": 2,
+        "ios_update_general": 2,
+        "order_purchase": 2,
+        "phone_freezing": 2,
+        "device_hardware": 3
+      },
+      "device_hardware": {
+        "phone_freezing": 1,
+        "battery_drain": 3,
+        "device_hardware": 3,
+        "app_issue": 6,
+        "general_inquiry": 2,
+        "autocorrect_i_bug": 1
+      },
+      "wifi_bluetooth": {
+        "general_inquiry": 1,
+        "wifi_bluetooth": 14,
+        "battery_drain": 2,
+        "ios_update_general": 2,
+        "autocorrect_i_bug": 2
+      },
+      "battery_drain": {
+        "battery_drain": 23,
+        "general_inquiry": 2,
+        "ios_update_general": 1
+      },
+      "order_purchase": {
+        "order_purchase": 13,
+        "general_inquiry": 8,
+        "battery_drain": 2,
+        "app_issue": 5,
+        "account_access": 2
+      },
+      "general_inquiry": {
+        "general_inquiry": 9,
+        "ios_update_general": 2,
+        "autocorrect_i_bug": 5,
+        "phone_freezing": 1,
+        "app_issue": 2
+      },
+      "ios_update_general": {
+        "ios_update_general": 14,
+        "device_hardware": 2,
+        "general_inquiry": 4,
+        "autocorrect_i_bug": 2,
+        "app_issue": 7,
+        "phone_freezing": 2,
+        "order_purchase": 1
       },
       "account_access": {
-        "account_access": 27,
-        "app_issue": 6,
-        "device_hardware_issue": 2,
-        "ios_update_issue": 1,
-        "general_inquiry": 1
+        "app_issue": 8,
+        "account_access": 11,
+        "general_inquiry": 3,
+        "battery_drain": 1
       },
-      "device_hardware_issue": {
-        "device_hardware_issue": 19,
-        "app_issue": 4,
-        "general_inquiry": 5,
-        "battery_drain": 1,
-        "order_purchase": 1,
-        "account_access": 1
+      "phone_freezing": {
+        "phone_freezing": 12,
+        "general_inquiry": 2,
+        "autocorrect_i_bug": 1,
+        "app_issue": 2
       }
     }
   },
   "tfidf_baseline": {
-    "overall_accuracy": 0.30612244897959184,
-    "correct": 15,
+    "overall_accuracy": 0.4897959183673469,
+    "correct": 24,
     "total": 49,
     "per_intent": {
+      "battery_drain": {
+        "correct": 3,
+        "total": 5,
+        "accuracy": 0.6
+      },
+      "ios_update_general": {
+        "correct": 5,
+        "total": 7,
+        "accuracy": 0.7142857142857143
+      },
+      "app_issue": {
+        "correct": 6,
+        "total": 7,
+        "accuracy": 0.8571428571428571
+      },
       "order_purchase": {
+        "correct": 4,
+        "total": 6,
+        "accuracy": 0.6666666666666666
+      },
+      "account_access": {
         "correct": 0,
-        "total": 10,
+        "total": 5,
         "accuracy": 0.0
       },
       "general_inquiry": {
-        "correct": 0,
-        "total": 11,
-        "accuracy": 0.0
-      },
-      "account_access": {
-        "correct": 4,
-        "total": 5,
-        "accuracy": 0.8
-      },
-      "app_issue": {
-        "correct": 1,
-        "total": 9,
-        "accuracy": 0.1111111111111111
-      },
-      "ios_update_issue": {
-        "correct": 8,
-        "total": 9,
-        "accuracy": 0.8888888888888888
-      },
-      "battery_drain": {
         "correct": 1,
         "total": 4,
         "accuracy": 0.25
       },
-      "device_hardware_issue": {
+      "autocorrect_i_bug": {
+        "correct": 4,
+        "total": 5,
+        "accuracy": 0.8
+      },
+      "wifi_bluetooth": {
         "correct": 1,
-        "total": 1,
-        "accuracy": 1.0
+        "total": 4,
+        "accuracy": 0.25
+      },
+      "device_hardware": {
+        "correct": 0,
+        "total": 3,
+        "accuracy": 0.0
+      },
+      "phone_freezing": {
+        "correct": 0,
+        "total": 3,
+        "accuracy": 0.0
       }
     },
     "confusion": {
-      "order_purchase": {
-        "ios_update_issue": 5,
-        "general_inquiry": 1,
-        "account_access": 1,
-        "device_hardware_issue": 2,
-        "battery_drain": 1
+      "battery_drain": {
+        "ios_update_general": 1,
+        "app_issue": 1,
+        "battery_drain": 3
       },
-      "general_inquiry": {
-        "account_access": 3,
-        "ios_update_issue": 6,
-        "device_hardware_issue": 1,
-        "battery_drain": 1
-      },
-      "account_access": {
-        "account_access": 4,
-        "ios_update_issue": 1
+      "ios_update_general": {
+        "app_issue": 2,
+        "ios_update_general": 5
       },
       "app_issue": {
-        "app_issue": 1,
-        "ios_update_issue": 4,
-        "device_hardware_issue": 2,
-        "battery_drain": 1,
-        "account_access": 1
+        "app_issue": 6,
+        "ios_update_general": 1
       },
-      "ios_update_issue": {
-        "ios_update_issue": 8,
-        "device_hardware_issue": 1
+      "order_purchase": {
+        "order_purchase": 4,
+        "app_issue": 2
       },
-      "battery_drain": {
+      "account_access": {
+        "order_purchase": 2,
+        "app_issue": 2,
+        "ios_update_general": 1
+      },
+      "general_inquiry": {
+        "autocorrect_i_bug": 2,
         "general_inquiry": 1,
-        "device_hardware_issue": 1,
-        "ios_update_issue": 1,
-        "battery_drain": 1
+        "ios_update_general": 1
       },
-      "device_hardware_issue": {
-        "device_hardware_issue": 1
+      "autocorrect_i_bug": {
+        "app_issue": 1,
+        "autocorrect_i_bug": 4
+      },
+      "wifi_bluetooth": {
+        "wifi_bluetooth": 1,
+        "app_issue": 1,
+        "ios_update_general": 2
+      },
+      "device_hardware": {
+        "app_issue": 2,
+        "ios_update_general": 1
+      },
+      "phone_freezing": {
+        "ios_update_general": 3
       }
     }
   },
-  "tfidf_train_size": 196,
+  "tfidf_train_size": 193,
   "tfidf_test_size": 49
 }

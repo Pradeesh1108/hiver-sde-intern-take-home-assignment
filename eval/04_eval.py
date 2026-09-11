@@ -27,16 +27,57 @@ from collections import defaultdict
 
 from agent.pipeline  import run as agent_run
 from eval.judge      import judge_reply, judge_batch
-from eval.baselines  import (
-    KeywordBaseline,
-    TFIDFBaseline,
-    compute_metrics,
-    print_metrics,
-    _load_intent_taxonomy,
-)
+from eval.ml_baseline_test import get_models, preprocess
+from sklearn.model_selection import StratifiedShuffleSplit
 
 os.makedirs("outputs", exist_ok=True)
 
+
+# ─────────────────────────────────────────────
+# EVAL HELPER FUNCTIONS
+# ─────────────────────────────────────────────
+
+def _load_intent_taxonomy():
+    with open("datasets/intent_taxonomy.json") as f:
+        return json.load(f)
+
+def compute_metrics(predictions: list, ground_truth: list, intent_names: list) -> dict:
+    assert len(predictions) == len(ground_truth), "Length mismatch"
+    total   = len(predictions)
+    correct = sum(p == t for p, t in zip(predictions, ground_truth))
+
+    per_intent = defaultdict(lambda: {"correct": 0, "total": 0})
+    for pred, true in zip(predictions, ground_truth):
+        per_intent[true]["total"]   += 1
+        if pred == true:
+            per_intent[true]["correct"] += 1
+
+    for name, counts in per_intent.items():
+        counts["accuracy"] = (counts["correct"] / counts["total"] if counts["total"] > 0 else 0.0)
+
+    confusion = defaultdict(lambda: defaultdict(int))
+    for pred, true in zip(predictions, ground_truth):
+        confusion[true][pred] += 1
+
+    return {
+        "overall_accuracy": correct / total,
+        "correct":          correct,
+        "total":            total,
+        "per_intent":       dict(per_intent),
+        "confusion":        {k: dict(v) for k, v in confusion.items()},
+    }
+
+def print_metrics(metrics: dict, name: str):
+    print(f"\n{'='*55}")
+    print(f"  {name}")
+    print(f"{'='*55}")
+    print(f"  Overall accuracy: {metrics['overall_accuracy']*100:.1f}%  "
+          f"({metrics['correct']}/{metrics['total']})")
+    print("\n  Per-intent accuracy:")
+    for intent, counts in sorted(metrics["per_intent"].items()):
+        acc = counts["accuracy"] * 100
+        bar = "█" * int(acc / 10)
+        print(f"    {intent:<25} {counts['correct']:>2}/{counts['total']:>2} = {acc:5.1f}%  {bar}")
 
 # ─────────────────────────────────────────────
 # LOAD EVAL SET
@@ -91,8 +132,10 @@ def run_agent_eval(eval_set: list, verbose: bool = True, skip_reply: bool = Fals
         # Run the full pipeline
         result = agent_run(message, verbose=False, skip_reply=skip_reply, skip_escalate=skip_escalate)
         
-        # Free Tier Rate Limit: Wait 3s between examples to stay under 30 RPM
-        time.sleep(3)
+        import os
+        # Free Tier Rate Limit: Wait 3s between examples to stay under 30 RPM (skip if local ollama)
+        if os.getenv("LLM_PROVIDER", "groq").lower() != "ollama":
+            time.sleep(3)
 
         results.append({
             "thread_id":        row.get("thread_id", ""),
@@ -168,40 +211,40 @@ def run_baseline_eval(eval_set: list) -> dict:
 
     taxonomy     = _load_intent_taxonomy()
     intent_names = taxonomy["intent_names"]
-    messages     = [row["message"]    for row in eval_set]
+    # Prepare data
+    messages     = [preprocess(row["message"]) for row in eval_set]
     ground_truth = [row["your_label"] for row in eval_set]
 
-    # Baseline 1: keyword
-    print("\nRunning Baseline 1: Keyword Matching...")
-    kb       = KeywordBaseline()
-    kb_preds = kb.predict_batch(messages)
-    kb_metrics = compute_metrics(kb_preds, ground_truth, intent_names)
-    print_metrics(kb_metrics, "Keyword Baseline")
-
-    # Baseline 2: TF-IDF — 80/20 split
-    print("\nRunning Baseline 2: TF-IDF + Logistic Regression...")
-    indices   = list(range(len(eval_set)))
-    random.shuffle(indices)
-    split     = int(0.8 * len(indices))
-    train_idx = indices[:split]
-    test_idx  = indices[split:]
+    # Baseline: ML models from ml_baseline_test (Stratified 80/20 split)
+    print("\nRunning ML Baselines...")
+    sss = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
+    train_idx, test_idx = next(sss.split(messages, ground_truth))
+    train_idx, test_idx = list(train_idx), list(test_idx)
 
     train_msgs    = [messages[i]     for i in train_idx]
     train_labels  = [ground_truth[i] for i in train_idx]
     test_msgs     = [messages[i]     for i in test_idx]
     test_labels   = [ground_truth[i] for i in test_idx]
 
-    tfidf = TFIDFBaseline()
-    tfidf.fit(train_msgs, train_labels)
-    tfidf_preds   = tfidf.predict_batch(test_msgs)
-    tfidf_metrics = compute_metrics(tfidf_preds, test_labels, intent_names)
-    print_metrics(tfidf_metrics, "TF-IDF + LR Baseline (test set)")
+    models = get_models()
+    baseline_metrics = {}
+
+    for name, pipeline in models.items():
+        print(f"  Training {name}...")
+        pipeline.fit(train_msgs, train_labels)
+        preds = pipeline.predict(test_msgs)
+        metrics = compute_metrics(preds, test_labels, intent_names)
+        baseline_metrics[name] = metrics
+        print_metrics(metrics, f"{name} Baseline (test set)")
+
+    # Find the best baseline for summary reporting
+    best_name = max(baseline_metrics, key=lambda k: baseline_metrics[k]["overall_accuracy"])
 
     return {
-        "keyword":        kb_metrics,
-        "tfidf":          tfidf_metrics,
-        "tfidf_train_n":  len(train_idx),
-        "tfidf_test_n":   len(test_idx),
+        "metrics":        baseline_metrics,
+        "best_baseline":  best_name,
+        "train_n":        len(train_idx),
+        "test_n":         len(test_idx),
     }
 
 
@@ -273,9 +316,9 @@ def compute_summary(agent_results: list, baseline_results: dict) -> dict:
             "by_intent":   dict(esc_by_intent),
         },
         "baselines": {
-            "keyword_accuracy": baseline_results["keyword"]["overall_accuracy"],
-            "tfidf_accuracy":   baseline_results["tfidf"]["overall_accuracy"],
-            "agent_accuracy":   clf_metrics["overall_accuracy"],
+            "best_baseline_name":     baseline_results["best_baseline"],
+            "best_baseline_accuracy": baseline_results["metrics"][baseline_results["best_baseline"]]["overall_accuracy"],
+            "agent_accuracy":         clf_metrics["overall_accuracy"],
         },
         "performance": {
             "avg_duration_s": round(avg_duration, 2),
@@ -296,9 +339,8 @@ def print_summary(summary: dict):
     print(f"{'='*55}")
 
     print(f"\n  CLASSIFICATION ACCURACY")
-    print(f"  Agent:    {base['agent_accuracy']*100:.1f}%")
-    print(f"  TF-IDF:   {base['tfidf_accuracy']*100:.1f}%  (simple baseline)")
-    print(f"  Keyword:  {base['keyword_accuracy']*100:.1f}%  (trivial baseline)")
+    print(f"  Agent:          {base['agent_accuracy']*100:.1f}%")
+    print(f"  Best Baseline ({base['best_baseline_name']}): {base['best_baseline_accuracy']*100:.1f}%")
 
     print(f"\n  REPLY QUALITY (judge scores, 1-5)")
     print(f"  Relevance:     {rq.get('relevance', 'N/A')}")

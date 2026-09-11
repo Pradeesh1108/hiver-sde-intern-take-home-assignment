@@ -1,0 +1,81 @@
+{
+  "few_shot_examples": {
+    "general_inquiry": [
+      "Fix this shit now ! #angryiphoneuser",
+      "Christ what the f is this? And why are screenshots so stupid now?! #stopbreakingmyiphone #please",
+      "hey why does keep re-fetching the thumbnail when it obviously hasn't changed? #appleQA #ChiefQA #Apple",
+      "How do I️ get rid of this? It’s seriously the first thing that made me think of switching to android.",
+      "Hey, it would be great if you could get both of these messes straightened out soon. Your “fix” didn’t work and I’m peeved. #iPhone #annoyed"
+    ],
+    "ios_update_general": [
+      "hello is there some problems with new update of iOS? I have an iPad mini 3 and I noticed more lag and a slow work in general",
+      "my iPad is frozen. Please HELP!",
+      "Using my (fuckin expensive) Ipad 3 again. Like wading through treacle. Cheers for deliberately breaking your old stuff 😤",
+      "I updated my iPad and now it’s going so damn slow ! C’mon i even updated my iPhone & these damn little box(?) keep popping ,wth.",
+      "& Why Is My #IPADPro spontaneously rebooting over & over as of 5mins algo?!!!"
+    ],
+    "autocorrect_i_bug": [
+      "When the hell is going to fix the keyboard bug that changes the capital “i” to the question box with an a? So sick of this.",
+      "are you planning on fixing the bug causing all these weird characters when trying to use the letter 👁 I️",
+      "I️ miss being able to type I️ without some random symbols appearing. Get it together How long does it take to fix this?!",
+      "When is going to fix this issue with typing the letter “I”. It’s been madddd annoying for months now",
+      "please can you fix this vowel glitch now 🙄"
+    ],
+    "app_issue": [
+      "So not digging new voice to text on #ios11 keyboard. Mic opens in new window = 2xtra clicks 4 Enter/Send/Search. 😬",
+      "Hi, trying to export text to itunes as spoken track with voiceover already on, it keeps killing VO and not doing full doc.",
+      "is there anything that I can do to make your voice to text smarter? I just tried three times to comment and say “taunting call“ I was dictating slowly and clearly I got three different versions of this: Tonton car. Is there anything I can do to train my phone?",
+      "please fix the quality of the voice recorder on iMessage. My voice sounds unclear and horrible. 🤦🏻‍♀️",
+      "Using speech to read aloud (using Option+Esc) works fine in Safari, but not in Preview. In Preview I have to use Edit>Speech>Start Speaking. A bug maybe? (macOS 10.13)"
+    ],
+    "device_hardware": [
+      "my 📱 X just developed a green bar on the left side of the screen. Suggestions?",
+      "Anybody else with the iPhoneX see a green bar of pixels on the right side??? 😡😡😡",
+      "noticing a purple/violet banding when scrolling around black borders. ‘Buy Now’ button in this case. #iPhoneX",
+      "i have a Situation in my iphone 7 it shows black lines. Did restart but nothing happened! What to do",
+      "when my alarm goes off on my iPhone X there is a weird area on the screen where the colour is different It doesn’t show up in screenshots"
+    ],
+    "apple_pay": [
+      "who would I contact for ItunesConnect for artists ?",
+      "it still says it’s restricted for me",
+      "Who do I speak to regarding registration for Apple Music?",
+      "Does an Apple Music membership work on an iPod Touch 6th Gen and a Mac?",
+      "Really need right now. So bloody confused about my family Apple Music accounts. Need help"
+    ],
+    "battery_drain": [
+      "What’s wrong with the battery? 😩😩 literally killing me. It goes from 20% to 10% in just few minutes #iOS11.1",
+      "Your latest iOS 11 \"Update\" is even worse. Up at 4:30 with 100% battery, by 7:30 it is 45%. Are you kidding me?",
+      "left house from 100% battery Life when I went workplace just 20 minuets journey battery gone 90% #Apple hate #iOS11 fixed f***",
+      "iOS 11 update is useless. I was at 91% AN HOUR AGO and now 75%??? This really sucks",
+      "How can just sending this tweet to you take 3% battery life on an iPhone7 / ios11.0.3 😤😤"
+    ],
+    "account_access": [
+      "Thanks for screwing with my iCloud email. Can’t access it for 20 hours now!",
+      "Can't get into my iCloud since this email kanti yini",
+      ". This is totally unacceptable. iCloud mail has been broken for us for over 2 days. It’s been sent to engineering.",
+      "I haven’t had access to my iCloud email account in 2 weeks!! Help!! I already had 2 Apple Chat sessions 😭😭😭",
+      "hy, WTF is this? i forgot my apple icloud id so plx help me out i've my phones emei no., lets see how use full you are..."
+    ],
+    "phone_freezing": [
+      "Hey my this iPhone7s and the IOS keeps crashing. Fix this immediately before I go back to",
+      "Anyone else have an iPhone that randomly just started crashing every 30 to 90 seconds?",
+      "my iPhone is frozen. Can’t hard reset. Screen isn’t registering my touch. FIGURE YOUR UPDATES OUT",
+      "My iPhone 7+ keeps becoming unresponsive continuously and I can’t hard reset holding home button & lock. IOS up to date #Help",
+      "hello, my iPhone 7 keeps crashing? Help"
+    ],
+    "wifi_bluetooth": [
+      "- 3rd iOS 11 update and you still haven’t fixed the WiFi & Bluetooth turning on by itself?",
+      "Also, whilst I’m in a complainy Mood I updated my iPhone now the WiFi and Bluetooth turns itself on when it wants. WHY?",
+      "Seriously you've released an interim #OS11 update & not fixed the wifi/Bluetooth staying on issue; surely this isn't a feature?!",
+      "your stupid update keeps turning on my damn WiFi and Bluetooth when I don’t want it on. Take that setting OFF!",
+      "Look quit turning on my WiFi & Bluetooth without my permission with this new update. FIX IT."
+    ],
+    "order_purchase": [
+      "why am I️ the only one without a I️ phone x when I️ ordered before everyone. I️ have a buisness account",
+      "I woke up at 3 am and ordered an iphonex only to get a generic \"unable to process your application\" in the morning. WTF",
+      "Silly thing to be irritated with but my “iPhone Upgrade Program Trade-in Kit” was just delivered to my house with $3.21 postage due.",
+      "i feel like 💩 from staying up to preorder the iphone x... How do i fix this",
+      "Also might be helpful to have a chat and phone lines that work for help in ordering. #iphoneX"
+    ]
+  }
+}

@@ -22,6 +22,7 @@ from agent.classifier    import classify
 from agent.retriever     import retrieve_by_keywords
 from agent.reply_drafter import draft_reply
 from agent.escalator     import should_escalate
+from agent.semantic_retrieve import retrieve_semantic
 
 
 def run(message: str, verbose: bool = False, skip_reply: bool = False, skip_escalate: bool = False) -> dict:
@@ -77,7 +78,7 @@ def run(message: str, verbose: bool = False, skip_reply: bool = False, skip_esca
     def drafting_flow():
         if skip_reply:
             return [], ""
-        threads = retrieve_by_keywords(message, intent, n=3)
+        threads = retrieve_semantic(message, intent, n=3)
         rep = draft_reply(message, intent, threads)
         return threads, rep
 

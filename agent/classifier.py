@@ -20,8 +20,7 @@ from agent.llm_factory import generate_completion
 # Model choice: haiku is fast + cheap for classification
 # max_tokens=20 because the intent name is short (longest is
 # "device_hardware_issue" = 21 chars — we give a little headroom)
-_MAX_TOKENS = 500
-
+_MAX_TOKENS = 800
 
 def classify(message: str, retries: int = 2) -> str:
     """
@@ -47,28 +46,41 @@ def classify(message: str, retries: int = 2) -> str:
 
     for attempt in range(retries + 1):
         try:
+            # Chain-of-thought response:
+            # Line 1: reasoning sentence
+            # Line 2: intent name
+            # Keep original case for line splitting, lowercase only for matching
             raw = generate_completion(
                 messages=[{"role": "user", "content": prompt}],
                 task_type="fast",
                 max_tokens=_MAX_TOKENS,
                 temperature=0.0
-            ).strip().lower()
+            ).strip()
 
-            # Validate: only accept known intent names
-            # If the model returns something unexpected, fall back
-            if raw in INTENT_NAMES:
-                return raw
-            else:
-                # Try to find a valid intent name inside the response
-                # e.g. model returned "battery_drain." or "Intent: battery_drain"
-                for name in INTENT_NAMES:
-                    if name in raw:
-                        return name
+            # Split into lines, take the last non-empty line as the intent
+            lines = [line.strip() for line in raw.split('\n') if line.strip()]
 
-                # Nothing matched — log and fall back
-                print(f"  [classifier] Unexpected output: '{raw}' — using general_inquiry")
+            if not lines:
                 return "general_inquiry"
 
+            # Last line should be the intent name
+            intent_line = lines[-1].lower()
+
+            # Remove punctuation the model might add
+            intent_line = intent_line.replace('.', '').replace(',', '').strip()
+
+            if intent_line in INTENT_NAMES:
+                return intent_line
+
+            # Fuzzy match — model may have written "Intent: battery_drain"
+            for name in INTENT_NAMES:
+                if name in intent_line:
+                    return name
+
+            # Log full response for debugging
+            print(f"  [classifier] Unexpected: '{raw[:100]}' — using general_inquiry")
+            return "general_inquiry"
+            
         except Exception as e:
             print(f"  [classifier] API error (attempt {attempt + 1}): {e}")
             if attempt < retries:
@@ -76,12 +88,6 @@ def classify(message: str, retries: int = 2) -> str:
                 time.sleep(1)   # wait 1 second before retry
             else:
                 return "general_inquiry"   # final fallback
-
-        except Exception as e:
-            print(f"  [classifier] Unexpected error: {e}")
-            return "general_inquiry"
-
-
 # ─────────────────────────────────────────────
 # QUICK TEST — run this file directly to verify
 # python3 -m agent.classifier

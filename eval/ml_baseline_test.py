@@ -6,7 +6,7 @@
 # accuracy, precision, recall, F1, and confusion matrix.
 #
 # Usage:
-#   python3 eval/ml_baseline.py
+#   python3 eval/ml_baseline_test.py
 #   python3 eval/ml_baseline.py --csv path/to/your_file.csv
 #
 # Install dependencies:

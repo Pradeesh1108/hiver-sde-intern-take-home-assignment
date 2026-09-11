@@ -4,6 +4,7 @@ datasets/apple_threads.json
 datasets/retrieval_index.json
 datasets/eval_set_to_label.csv
 datasets/keyword_spot_check.csv
+datasets/semantic_index/
 
 # EDA2 generated data
 EDA2/data/embeddings.npy
