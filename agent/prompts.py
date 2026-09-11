@@ -234,7 +234,7 @@ Respond with ONLY valid JSON in this exact format (no markdown, no extra text):
 # ─────────────────────────────────────────────
 # PROMPT 4: LLM-AS-JUDGE (reply quality)
 # ─────────────────────────────────────────────
-# Used by: eval/judge.py
+# Used by: evaluation_harness/llm_as_judge.py
 #
 # Design decisions:
 #   - Score on 4 dimensions separately, not one overall score —
@@ -242,7 +242,7 @@ Respond with ONLY valid JSON in this exact format (no markdown, no extra text):
 #   - Dimensions match what the assignment evaluates:
 #     relevance, tone, actionability, conciseness
 #   - Scale 1-5 not 1-10 — less ambiguity between adjacent scores
-#   - JSON output for programmatic parsing in 04_eval.py
+#   - JSON output for programmatic parsing in evaluation_harness/automated_metrics.py
 
 def judge_prompt(
     customer_message: str,

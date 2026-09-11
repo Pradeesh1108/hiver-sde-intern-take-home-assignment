@@ -366,5 +366,5 @@ To activate the new taxonomy:
   cp EDA2/data/retrieval_index.json   datasets/retrieval_index.json
 
 Then label eval_set_to_label.csv and run:
-  python3 -m eval.04_eval --skip-reply --skip-escalate --skip-judge
+  python3 -m evaluation_harness.automated_metrics --skip-reply --skip-escalate --skip-judge
 """)

@@ -1,13 +1,13 @@
 # ============================================================
-# eval/ml_baseline.py — Standalone ML Baseline
+# evaluation_harness/classical_ml_baseline.py — Standalone ML Baseline
 # ============================================================
 # Standalone script. No other project files needed.
 # Takes the labelled CSV, trains multiple models, reports
 # accuracy, precision, recall, F1, and confusion matrix.
 #
 # Usage:
-#   python3 eval/ml_baseline_test.py
-#   python3 eval/ml_baseline.py --csv path/to/your_file.csv
+#   python3 evaluation_harness/classical_ml_baseline.py
+#   python3 evaluation_harness/classical_ml_baseline.py --csv path/to/your_file.csv
 #
 # Install dependencies:
 #   pip install scikit-learn pandas numpy
@@ -35,6 +35,30 @@ from sklearn.preprocessing           import LabelEncoder
 # ─────────────────────────────────────────────
 # STEP 1: LOAD DATA
 # ─────────────────────────────────────────────
+
+def load_76k_training_data(csv_path: str = "EDA2/data/cluster_assignments.csv", taxonomy_path: str = "datasets/intent_taxonomy.json") -> tuple:
+    import pandas as pd
+    
+    train_df = pd.read_csv(csv_path)
+
+    with open(taxonomy_path) as f:
+        taxonomy = json.load(f)
+
+    cluster_to_intent = {}
+    for intent_info in taxonomy.get("intents", []):
+        intent_name = intent_info["name"]
+        for cluster in intent_info.get("source_clusters", []):
+            cluster_to_intent[cluster] = intent_name
+
+    train_df["intent"] = train_df["cluster_label"].map(cluster_to_intent).fillna("general_inquiry")
+    
+    messages = train_df["message"].tolist()
+    labels = train_df["intent"].tolist()
+    
+    print(f"Loaded {len(messages)} training examples from {csv_path}")
+    return messages, labels
+
+
 
 def load_csv(path: str) -> tuple:
     """
@@ -368,50 +392,23 @@ def main():
     args = parser.parse_args()
 
     # ── Load ───────────────────────────────────
-    messages_raw, labels = load_csv(args.csv)
-    messages = [preprocess(m) for m in messages_raw]
-    intent_names = sorted(set(labels))
+    print("\n" + "=" * 55)
+    print("STEP 1: LOAD 76K CLUSTER-LABELLED TRAINING DATA")
+    print("=" * 55)
+    X_train_raw, y_train = load_76k_training_data()
+    X_train = [preprocess(m) for m in X_train_raw]
 
-    print(f"Intents: {intent_names}")
-    print(f"Total examples: {len(messages)}")
-    print()
+    print("\n" + "=" * 55)
+    print("STEP 2: LOAD 242 HUMAN-LABELLED TEST DATA")
+    print("=" * 55)
+    X_test_raw, y_test = load_csv(args.csv)
+    X_test = [preprocess(m) for m in X_test_raw]
 
-    # ── Stratified train/test split ────────────
-    # Stratified = every intent appears proportionally in both
-    # train and test. Critical with only ~35 examples per intent.
-    print(f"Splitting: {int((1-args.test_size)*100)}% train / "
-          f"{int(args.test_size*100)}% test (stratified)\n")
-
-    sss = StratifiedShuffleSplit(
-        n_splits   = 1,
-        test_size  = args.test_size,
-        random_state = 42,
-    )
-    train_idx, test_idx = next(sss.split(messages, labels))
-
-    X_train = [messages[i] for i in train_idx]
-    y_train = [labels[i]   for i in train_idx]
-    X_test  = [messages[i] for i in test_idx]
-    y_test  = [labels[i]   for i in test_idx]
+    intent_names = sorted(set(y_test))
 
     print(f"Train: {len(X_train)} examples")
     print(f"Test:  {len(X_test)} examples")
     print()
-
-    # ── Cross-validation first ─────────────────
-    # CV gives us a more reliable estimate than a single split.
-    print(f"{'='*60}")
-    print(f"  {args.cv}-FOLD CROSS-VALIDATION (on full dataset)")
-    print(f"{'='*60}")
-    models    = get_models()
-    cv_scores = {}
-
-    for name, pipeline in models.items():
-        cv_scores[name] = cross_validate_model(name, pipeline, messages, labels, cv=args.cv)
-
-    # Pick best model by CV score
-    best_name = max(cv_scores, key=cv_scores.get)
-    print(f"\n  Best model by CV: {best_name} ({cv_scores[best_name]*100:.1f}%)")
 
     # ── Train/test evaluation ──────────────────
     print(f"\n{'='*60}")
@@ -419,7 +416,8 @@ def main():
     print(f"{'='*60}")
 
     all_results = {}
-    for name, pipeline in get_models().items():
+    models = get_models()
+    for name, pipeline in models.items():
         result = evaluate_model(
             name, pipeline,
             X_train, y_train,
@@ -428,6 +426,9 @@ def main():
         )
         all_results[name] = result
         print_results(result, intent_names)
+        
+    # Find best model
+    best_name = max(all_results, key=lambda k: all_results[k]["accuracy"])
 
     # ── Best model deep dive ───────────────────
     best_result = all_results[best_name]
@@ -442,24 +443,23 @@ def main():
     print(f"\n{'='*60}")
     print(f"  COMPARISON SUMMARY")
     print(f"{'='*60}")
-    print(f"  {'Model':<22} {'CV Accuracy':>12} {'Test Accuracy':>14}")
-    print(f"  {'─'*50}")
+    print(f"  {'Model':<22} {'Test Accuracy':>14}")
+    print(f"  {'─'*37}")
     for name in models:
-        cv  = cv_scores[name] * 100
         tst = all_results[name]["accuracy"] * 100
         marker = " ← best" if name == best_name else ""
-        print(f"  {name:<22} {cv:>11.1f}% {tst:>13.1f}%{marker}")
+        print(f"  {name:<22} {tst:>13.1f}%{marker}")
 
     # ── Context: what these numbers mean ───────
     print(f"""
   CONTEXT FOR REPORT:
   ─────────────────────────────────────────────────────
   Random baseline (always guess majority class):
-    ~{max(Counter(labels).values())/len(labels)*100:.0f}% (always predicts '{Counter(labels).most_common(1)[0][0]}')
+    ~{max(Counter(y_test).values())/len(y_test)*100:.0f}% (always predicts '{Counter(y_test).most_common(1)[0][0]}')
 
   Keyword baseline:   ~67.8%  (from keyword spot-check)
-  Best ML baseline:   {cv_scores[best_name]*100:.1f}%   ({args.cv}-fold CV)
-  LLM agent:          TBD     (run eval/04_eval.py)
+  Best ML baseline:   {all_results[best_name]['accuracy']*100:.1f}%   (trained on 76k)
+  LLM agent:          TBD     (run evaluation_harness/automated_metrics.py)
 
   Expected order: random < keyword < ML < LLM agent
   ─────────────────────────────────────────────────────
@@ -470,10 +470,8 @@ def main():
     os.makedirs("outputs", exist_ok=True)
 
     save_data = {
-        "cv_scores":   {name: float(score) for name, score in cv_scores.items()},
         "test_scores": {name: float(r["accuracy"]) for name, r in all_results.items()},
         "best_model":  best_name,
-        "best_cv_accuracy":   float(cv_scores[best_name]),
         "best_test_accuracy": float(all_results[best_name]["accuracy"]),
         "per_intent_report":  {
             name: {

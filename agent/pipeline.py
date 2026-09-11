@@ -117,7 +117,7 @@ def run_batch(messages: list, verbose: bool = False) -> list:
     Run the pipeline on a list of messages.
     Returns a list of result dicts in the same order.
 
-    Used by 04_eval.py to process all 245 eval examples.
+    Used by evaluation_harness/automated_metrics.py to process all 245 eval examples.
 
     Args:
         messages: list of message strings

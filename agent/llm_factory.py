@@ -51,7 +51,7 @@ def generate_completion(messages: list, task_type: str = "fast", max_tokens: int
             model = "qwen/qwen3.8-27b"
 
         # Rate Limit / Retry logic could go here if needed, 
-        # but 04_eval.py sleeps mitigate this on the batch level.
+        # but evaluation_harness/automated_metrics.py sleeps mitigate this on the batch level.
         response = client.chat.completions.create(
             model=model,
             max_tokens=max_tokens,

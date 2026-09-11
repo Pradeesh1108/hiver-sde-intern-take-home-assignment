@@ -1,143 +1,138 @@
 {
-  "cv_scores": {
-    "Logistic Regression": 0.45901360544217684,
-    "ComplementNB": 0.4341836734693877
-  },
   "test_scores": {
-    "Logistic Regression": 0.5510204081632653,
-    "ComplementNB": 0.5306122448979592
+    "Logistic Regression": 0.6983471074380165,
+    "ComplementNB": 0.6570247933884298
   },
   "best_model": "Logistic Regression",
-  "best_cv_accuracy": 0.45901360544217684,
-  "best_test_accuracy": 0.5510204081632653,
+  "best_test_accuracy": 0.6983471074380165,
   "per_intent_report": {
     "Logistic Regression": {
       "account_access": {
-        "precision": 0.6,
-        "recall": 0.6,
-        "f1-score": 0.6,
-        "support": 5.0
+        "precision": 1.0,
+        "recall": 0.7391304347826086,
+        "f1-score": 0.85,
+        "support": 23.0
       },
       "app_issue": {
-        "precision": 0.25,
-        "recall": 0.2857142857142857,
-        "f1-score": 0.26666666666666666,
-        "support": 7.0
+        "precision": 0.574468085106383,
+        "recall": 0.8181818181818182,
+        "f1-score": 0.675,
+        "support": 33.0
       },
       "autocorrect_i_bug": {
-        "precision": 0.42857142857142855,
-        "recall": 0.6,
-        "f1-score": 0.5,
-        "support": 5.0
+        "precision": 0.8095238095238095,
+        "recall": 0.68,
+        "f1-score": 0.7391304347826086,
+        "support": 25.0
       },
       "battery_drain": {
         "precision": 1.0,
-        "recall": 0.8,
-        "f1-score": 0.8888888888888888,
-        "support": 5.0
+        "recall": 0.6153846153846154,
+        "f1-score": 0.7619047619047619,
+        "support": 26.0
       },
       "device_hardware": {
-        "precision": 1.0,
-        "recall": 0.3333333333333333,
-        "f1-score": 0.5,
-        "support": 3.0
+        "precision": 0.7777777777777778,
+        "recall": 0.875,
+        "f1-score": 0.8235294117647058,
+        "support": 16.0
       },
       "general_inquiry": {
-        "precision": 0.5,
-        "recall": 0.25,
-        "f1-score": 0.3333333333333333,
-        "support": 4.0
+        "precision": 0.2127659574468085,
+        "recall": 0.5263157894736842,
+        "f1-score": 0.30303030303030304,
+        "support": 19.0
       },
       "ios_update_general": {
-        "precision": 0.4,
-        "recall": 0.5714285714285714,
-        "f1-score": 0.47058823529411764,
-        "support": 7.0
+        "precision": 0.6956521739130435,
+        "recall": 0.5,
+        "f1-score": 0.5818181818181818,
+        "support": 32.0
       },
       "order_purchase": {
-        "precision": 0.6666666666666666,
+        "precision": 0.9523809523809523,
         "recall": 0.6666666666666666,
-        "f1-score": 0.6666666666666666,
-        "support": 6.0
+        "f1-score": 0.7843137254901961,
+        "support": 30.0
       },
       "phone_freezing": {
-        "precision": 0.5,
-        "recall": 0.3333333333333333,
-        "f1-score": 0.4,
-        "support": 3.0
+        "precision": 1.0,
+        "recall": 0.6470588235294118,
+        "f1-score": 0.7857142857142857,
+        "support": 17.0
       },
       "wifi_bluetooth": {
         "precision": 1.0,
         "recall": 1.0,
         "f1-score": 1.0,
-        "support": 4.0
+        "support": 21.0
       }
     },
     "ComplementNB": {
       "account_access": {
-        "precision": 0.42857142857142855,
-        "recall": 0.6,
-        "f1-score": 0.5,
-        "support": 5.0
+        "precision": 0.9411764705882353,
+        "recall": 0.6956521739130435,
+        "f1-score": 0.8,
+        "support": 23.0
       },
       "app_issue": {
-        "precision": 0.5,
-        "recall": 0.2857142857142857,
-        "f1-score": 0.36363636363636365,
-        "support": 7.0
+        "precision": 0.4915254237288136,
+        "recall": 0.8787878787878788,
+        "f1-score": 0.6304347826086957,
+        "support": 33.0
       },
       "autocorrect_i_bug": {
-        "precision": 0.5,
-        "recall": 0.6,
-        "f1-score": 0.5454545454545454,
-        "support": 5.0
+        "precision": 0.6363636363636364,
+        "recall": 0.84,
+        "f1-score": 0.7241379310344828,
+        "support": 25.0
       },
       "battery_drain": {
-        "precision": 0.75,
-        "recall": 0.6,
-        "f1-score": 0.6666666666666666,
-        "support": 5.0
+        "precision": 1.0,
+        "recall": 0.7692307692307693,
+        "f1-score": 0.8695652173913043,
+        "support": 26.0
       },
       "device_hardware": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1-score": 0.0,
-        "support": 3.0
+        "precision": 0.8571428571428571,
+        "recall": 0.75,
+        "f1-score": 0.8,
+        "support": 16.0
       },
       "general_inquiry": {
-        "precision": 0.6666666666666666,
-        "recall": 0.5,
-        "f1-score": 0.5714285714285714,
-        "support": 4.0
+        "precision": 0.3076923076923077,
+        "recall": 0.42105263157894735,
+        "f1-score": 0.35555555555555557,
+        "support": 19.0
       },
       "ios_update_general": {
-        "precision": 0.6,
-        "recall": 0.42857142857142855,
-        "f1-score": 0.5,
-        "support": 7.0
+        "precision": 0.45454545454545453,
+        "recall": 0.46875,
+        "f1-score": 0.46153846153846156,
+        "support": 32.0
       },
       "order_purchase": {
-        "precision": 0.5,
-        "recall": 0.6666666666666666,
-        "f1-score": 0.5714285714285714,
-        "support": 6.0
+        "precision": 0.9444444444444444,
+        "recall": 0.5666666666666667,
+        "f1-score": 0.7083333333333334,
+        "support": 30.0
       },
       "phone_freezing": {
-        "precision": 0.3333333333333333,
-        "recall": 0.6666666666666666,
-        "f1-score": 0.4444444444444444,
-        "support": 3.0
+        "precision": 1.0,
+        "recall": 0.11764705882352941,
+        "f1-score": 0.21052631578947367,
+        "support": 17.0
       },
       "wifi_bluetooth": {
-        "precision": 0.8,
-        "recall": 1.0,
-        "f1-score": 0.8888888888888888,
-        "support": 4.0
+        "precision": 0.95,
+        "recall": 0.9047619047619048,
+        "f1-score": 0.926829268292683,
+        "support": 21.0
       }
     }
   },
-  "train_size": 193,
-  "test_size": 49,
+  "train_size": 76656,
+  "test_size": 242,
   "n_intents": 10,
   "intent_names": [
     "account_access",

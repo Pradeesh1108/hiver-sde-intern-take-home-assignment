@@ -1,5 +1,5 @@
 # ============================================================
-# eval/04_eval.py — Full Evaluation Harness
+# evaluation_harness/automated_metrics.py — Full Evaluation Harness
 # ============================================================
 # Runs the full agent on all 245 labelled examples and measures:
 #   1. Intent classification accuracy (vs your ground truth labels)
@@ -11,7 +11,7 @@
 #   outputs/eval_results.json  — full results for every example
 #   outputs/eval_summary.json  — headline numbers for the report
 #
-# Run: python3 -m eval.04_eval
+# Run: python3 -m evaluation_harness.automated_metrics
 #
 # Expected runtime: ~20-30 minutes for 245 examples
 # (two API calls per example: classify + draft_reply
@@ -26,8 +26,8 @@ import time
 from collections import defaultdict
 
 from agent.pipeline  import run as agent_run
-from eval.judge      import judge_reply, judge_batch
-from eval.ml_baseline_test import get_models, preprocess
+from evaluation_harness.llm_as_judge      import judge_reply, judge_batch
+from evaluation_harness.classical_ml_baseline import get_models, preprocess, load_76k_training_data
 from sklearn.model_selection import StratifiedShuffleSplit
 
 os.makedirs("outputs", exist_ok=True)
@@ -211,20 +211,15 @@ def run_baseline_eval(eval_set: list) -> dict:
 
     taxonomy     = _load_intent_taxonomy()
     intent_names = taxonomy["intent_names"]
-    # Prepare data
-    messages     = [preprocess(row["message"]) for row in eval_set]
-    ground_truth = [row["your_label"] for row in eval_set]
 
-    # Baseline: ML models from ml_baseline_test (Stratified 80/20 split)
+    # Prepare test data (the 242 human-labeled examples)
+    test_msgs     = [preprocess(row["message"]) for row in eval_set]
+    test_labels   = [row["your_label"] for row in eval_set]
+
     print("\nRunning ML Baselines...")
-    sss = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
-    train_idx, test_idx = next(sss.split(messages, ground_truth))
-    train_idx, test_idx = list(train_idx), list(test_idx)
-
-    train_msgs    = [messages[i]     for i in train_idx]
-    train_labels  = [ground_truth[i] for i in train_idx]
-    test_msgs     = [messages[i]     for i in test_idx]
-    test_labels   = [ground_truth[i] for i in test_idx]
+    print("  Loading 76k training dataset...")
+    train_msgs_raw, train_labels = load_76k_training_data()
+    train_msgs = [preprocess(m) for m in train_msgs_raw]
 
     models = get_models()
     baseline_metrics = {}
@@ -243,8 +238,8 @@ def run_baseline_eval(eval_set: list) -> dict:
     return {
         "metrics":        baseline_metrics,
         "best_baseline":  best_name,
-        "train_n":        len(train_idx),
-        "test_n":         len(test_idx),
+        "train_n":        len(train_msgs),
+        "test_n":         len(test_msgs),
     }
 
 
@@ -364,7 +359,7 @@ def print_summary(summary: dict):
 
 # ─────────────────────────────────────────────
 # MAIN
-# python3 -m eval.04_eval
+# python3 -m evaluation_harness.automated_metrics
 # ─────────────────────────────────────────────
 if __name__ == "__main__":
     import argparse
@@ -433,4 +428,4 @@ if __name__ == "__main__":
 
     print(f"\n  Saved → outputs/eval_results.json")
     print(f"  Saved → outputs/eval_summary.json")
-    print(f"\n  Next: python3 -m eval.judge (measure human-judge agreement)")
+    print(f"\n  Next: python3 -m evaluation_harness.llm_as_judge (measure human-judge agreement)")

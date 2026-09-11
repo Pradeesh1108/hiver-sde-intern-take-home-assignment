@@ -1,5 +1,5 @@
 # ============================================================
-# eval/judge.py — LLM-as-Judge for Reply Quality
+# evaluation_harness/llm_as_judge.py — LLM-as-Judge for Reply Quality
 # ============================================================
 # One public function: judge_reply(message, intent, reply) → dict
 #
@@ -174,7 +174,7 @@ def measure_human_agreement(sample_size: int = 30) -> dict:
 
     # Check if agent eval results exist
     if not os.path.exists("outputs/eval_results.json"):
-        print("  Run 04_eval.py first to generate eval_results.json")
+        print("  Run automated_metrics.py first to generate eval_results.json")
         return {}
 
     with open("outputs/eval_results.json") as f:
@@ -311,7 +311,7 @@ def compute_agreement(human_scoring_path: str = "outputs/human_scoring_sample.cs
 
 # ─────────────────────────────────────────────
 # QUICK TEST
-# python3 -m eval.judge
+# python3 -m evaluation_harness.llm_as_judge
 # ─────────────────────────────────────────────
 if __name__ == "__main__":
     test_cases = [
