@@ -109,6 +109,7 @@ def run(message: str, verbose: bool = False, skip_reply: bool = False, skip_esca
         "reason":     escalation["reason"],
         "confidence": escalation.get("confidence", 1.0),
         "duration_s": duration,
+        "retrieved":  similar_threads,
     }
 
 

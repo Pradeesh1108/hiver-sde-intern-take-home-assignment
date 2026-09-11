@@ -131,20 +131,9 @@ MERGE_MAP = {
             "device_hardware instead."
         ),
     },
-    "apple_pay": {
-        "clusters": [20],
-        "description": (
-            "Customer is asking about Apple Pay availability in their country or region, "
-            "how Apple Pay Cash works, why Apple Pay is not supported yet, or requesting "
-            "Apple Pay to be added to their region. These are feature availability "
-            "questions not payment errors. "
-            "IMPORTANT: If the customer has a billing charge dispute or purchase "
-            "problem, use order_purchase instead."
-        ),
-    },
     "app_issue": {
         "clusters": [57, 52, 71, 41, 46, 50, 42, 22, 37, 17, 55, 23, 18, 11,
-                     40, 60, 44, 56, 27, 3, 34, 21, 0],
+                     40, 60, 44, 56, 27, 3, 34, 21, 0, 20],
         "description": (
             "Customer is having a problem with a specific app — iMessage not "
             "delivering, App Store not loading, FaceTime dropping, Mail not sending, "

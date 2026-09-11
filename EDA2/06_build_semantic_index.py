@@ -14,7 +14,7 @@
 #   3. Cosine similarity → find top 3 most similar
 #   4. Return their brand_replies to the reply drafter
 #
-# Input:  datasets/retrieval_index.json
+# Input:  EDA2/data/retrieval_index.json
 # Output: datasets/semantic_index/<intent>.npy
 #         datasets/semantic_index/<intent>_meta.json
 #
@@ -29,7 +29,7 @@ import os
 import numpy as np
 from collections import defaultdict
 
-INPUT_INDEX  = "datasets/retrieval_index.json"
+INPUT_INDEX  = "EDA2/data/retrieval_index.json"
 OUTPUT_DIR   = "datasets/semantic_index"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
