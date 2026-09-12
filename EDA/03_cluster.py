@@ -1,5 +1,5 @@
 # ============================================================
-# EDA2/03_cluster.py
+# EDA/03_cluster.py
 # ============================================================
 # What this does:
 #   Loads embeddings.npy (76,656 x 768)
@@ -7,10 +7,10 @@
 #   Clusters reduced vectors using HDBSCAN
 #   Saves cluster assignments and UMAP embeddings
 #
-# Input:  EDA2/data/embeddings.npy
-#         EDA2/data/messages_filtered.json
-# Output: EDA2/data/umap_embeddings.npy
-#         EDA2/data/cluster_assignments.csv
+# Input:  EDA/data/embeddings.npy
+#         EDA/data/messages_filtered.json
+# Output: EDA/data/umap_embeddings.npy
+#         EDA/data/cluster_assignments.csv
 #
 # Install:
 #   pip install umap-learn hdbscan pandas
@@ -21,9 +21,9 @@
 #
 # NOTE: UMAP output is saved so if you want to re-run HDBSCAN
 #       with different parameters, use --skip-umap flag:
-#       python3 EDA2/03_cluster.py --skip-umap
+#       python3 EDA/03_cluster.py --skip-umap
 #
-# Run: python3 EDA2/03_cluster.py
+# Run: python3 EDA/03_cluster.py
 # ============================================================
 
 import json
@@ -34,10 +34,10 @@ import numpy as np
 import pandas as pd
 from collections import Counter
 
-INPUT_EMBED     = "EDA2/data/embeddings.npy"
-INPUT_MESSAGES  = "EDA2/data/messages_filtered.json"
-OUTPUT_UMAP     = "EDA2/data/umap_embeddings.npy"
-OUTPUT_CLUSTERS = "EDA2/data/cluster_assignments.csv"
+INPUT_EMBED     = "EDA/data/embeddings.npy"
+INPUT_MESSAGES  = "EDA/data/messages_filtered.json"
+OUTPUT_UMAP     = "EDA/data/umap_embeddings.npy"
+OUTPUT_CLUSTERS = "EDA/data/cluster_assignments.csv"
 
 # Check if --skip-umap flag is passed
 # Use this if UMAP was already run and you only want to re-tune HDBSCAN
@@ -287,6 +287,6 @@ print()
 print("If the cluster count looks wrong:")
 print("  Too many clusters (>30): increase min_cluster_size to 200")
 print("  Too few clusters (<8):   decrease min_cluster_size to 50")
-print("  Then run: python3 EDA2/03_cluster.py --skip-umap")
+print("  Then run: python3 EDA/03_cluster.py --skip-umap")
 print()
-print("Next: python3 EDA2/04_inspect.py")
+print("Next: python3 EDA/04_inspect.py")

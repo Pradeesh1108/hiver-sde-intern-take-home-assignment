@@ -1,17 +1,17 @@
 # ============================================================
-# EDA2/02_embed.py
+# EDA/02_embed.py
 # ============================================================
 # What this does:
-#   Loads EDA2/data/messages.json (79,937 messages)
+#   Loads EDA/data/messages.json (79,937 messages)
 #   Filters out non-English messages
 #   Converts each message to a 768-dim semantic vector
 #   Using sentence-transformers/all-mpnet-base-v2
-#   Saves embeddings as EDA2/data/embeddings.npy
-#   Saves filtered messages as EDA2/data/messages_filtered.json
+#   Saves embeddings as EDA/data/embeddings.npy
+#   Saves filtered messages as EDA/data/messages_filtered.json
 #
-# Input:  EDA2/data/messages.json
-# Output: EDA2/data/embeddings.npy        (N x 768 float32 matrix)
-#         EDA2/data/messages_filtered.json (filtered message list)
+# Input:  EDA/data/messages.json
+# Output: EDA/data/embeddings.npy        (N x 768 float32 matrix)
+#         EDA/data/messages_filtered.json (filtered message list)
 #
 # Install:
 #   pip install sentence-transformers langdetect numpy
@@ -20,16 +20,16 @@
 #          ~8-12 minutes on GPU
 #          Progress bar shows estimated time remaining.
 #
-# Run: python3 EDA2/02_embed.py
+# Run: python3 EDA/02_embed.py
 # ============================================================
 
 import json
 import os
 import numpy as np
 
-INPUT_MESSAGES  = "EDA2/data/messages.json"
-OUTPUT_EMBED    = "EDA2/data/embeddings.npy"
-OUTPUT_FILTERED = "EDA2/data/messages_filtered.json"
+INPUT_MESSAGES  = "EDA/data/messages.json"
+OUTPUT_EMBED    = "EDA/data/embeddings.npy"
+OUTPUT_FILTERED = "EDA/data/messages_filtered.json"
 
 
 # ─────────────────────────────────────────────
@@ -131,13 +131,22 @@ print("=" * 55)
 
 try:
     from sentence_transformers import SentenceTransformer
+    import torch
 except ImportError:
     print("sentence-transformers not installed.")
     print("Install with: pip install sentence-transformers")
     raise
 
-model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
-print("Model loaded: all-mpnet-base-v2 (768 dimensions)")
+# Explicitly detect GPU for faster embeddings
+if torch.cuda.is_available():
+    device = "cuda"
+elif torch.backends.mps.is_available():
+    device = "mps"  # Apple Silicon GPU
+else:
+    device = "cpu"
+
+model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device=device)
+print(f"Model loaded: all-mpnet-base-v2 (768 dimensions) on {device.upper()}")
 
 
 # ─────────────────────────────────────────────
@@ -160,7 +169,10 @@ print("\n" + "=" * 55)
 print("STEP 4: GENERATING EMBEDDINGS")
 print("=" * 55)
 print(f"Embedding {len(filtered_messages)} messages...")
-print("This takes 45-90 minutes on CPU. Progress bar below:\n")
+if device == "cpu":
+    print("This takes 45-90 minutes on CPU. Progress bar below:\n")
+else:
+    print(f"This should be fast using {device.upper()} acceleration. Progress bar below:\n")
 
 texts = [item["message"] for item in filtered_messages]
 
@@ -231,7 +243,7 @@ print(f"  All norms ≈ 1.0: {np.allclose(np.linalg.norm(embeddings, axis=1), 1.
 # Save as .npy (numpy binary format) not JSON.
 # Reason: 75k × 768 floats as JSON would be ~1.5GB.
 #         As .npy it is ~220MB and loads in seconds.
-# Loading later: embeddings = np.load("EDA2/data/embeddings.npy")
+# Loading later: embeddings = np.load("EDA/data/embeddings.npy")
 
 print("\n" + "=" * 55)
 print("STEP 6: SAVING")
@@ -244,4 +256,4 @@ print(f"Saved embeddings → {OUTPUT_EMBED}")
 print(f"  Shape: {embeddings.shape}")
 print(f"  File size: {file_size:.1f} MB")
 print()
-print("Next: python3 EDA2/03_cluster.py")
+print("Next: python3 EDA/03_cluster.py")

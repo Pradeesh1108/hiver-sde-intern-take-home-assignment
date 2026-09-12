@@ -1,5 +1,5 @@
 # ============================================================
-# EDA2/06_build_semantic_index.py — Build Semantic Index
+# EDA/06_build_semantic_index.py — Build Semantic Index
 # ============================================================
 # What this does:
 #   Reads retrieval_index.json (80,483 threads)
@@ -14,14 +14,14 @@
 #   3. Cosine similarity → find top 3 most similar
 #   4. Return their brand_replies to the reply drafter
 #
-# Input:  EDA2/data/retrieval_index.json
+# Input:  EDA/data/retrieval_index.json
 # Output: datasets/semantic_index/<intent>.npy
 #         datasets/semantic_index/<intent>_meta.json
 #
 # Install: pip install sentence-transformers numpy
 # Runtime: ~15-20 minutes on CPU for 80k messages
 #
-# Run: python3 EDA2/06_build_semantic_index.py
+# Run: python3 EDA/06_build_semantic_index.py
 # ============================================================
 
 import json
@@ -29,7 +29,7 @@ import os
 import numpy as np
 from collections import defaultdict
 
-INPUT_INDEX  = "EDA2/data/retrieval_index.json"
+INPUT_INDEX  = "EDA/data/retrieval_index.json"
 OUTPUT_DIR   = "datasets/semantic_index"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -83,7 +83,7 @@ print(f"Intents: {intent_names}")
 # ─────────────────────────────────────────────
 # STEP 3: LOAD EMBEDDING MODEL
 # ─────────────────────────────────────────────
-# Same model used in EDA2/02_embed.py for consistency.
+# Same model used in EDA/02_embed.py for consistency.
 # normalize_embeddings=True means cosine similarity = dot product.
 # This makes similarity computation faster at query time.
 
@@ -93,13 +93,23 @@ print("=" * 55)
 
 try:
     from sentence_transformers import SentenceTransformer
+    import torch
 except ImportError:
     print("sentence-transformers not installed.")
     print("Run: pip install sentence-transformers")
     raise
 
-model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
-print("Model loaded: all-mpnet-base-v2 (768 dimensions)")
+# Explicitly detect GPU for faster index building
+if torch.cuda.is_available():
+    device = "cuda"
+elif torch.backends.mps.is_available():
+    device = "mps"
+else:
+    device = "cpu"
+
+model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device=device)
+print(f"Model loaded: all-mpnet-base-v2 (768 dimensions) on {device.upper()}")
+
 
 
 # ─────────────────────────────────────────────

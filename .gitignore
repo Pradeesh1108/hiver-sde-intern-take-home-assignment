@@ -6,12 +6,12 @@ datasets/eval_set_to_label.csv
 datasets/keyword_spot_check.csv
 datasets/semantic_index/
 
-# EDA2 generated data
-EDA2/data/embeddings.npy
-EDA2/data/umap_embeddings.npy
-EDA2/data/messages.json
-EDA2/data/messages_filtered.json
-EDA2/data/eval_set_to_label.csv
+# EDA generated data
+EDA/data/embeddings.npy
+EDA/data/umap_embeddings.npy
+EDA/data/messages.json
+EDA/data/messages_filtered.json
+EDA/data/eval_set_to_label.csv
 docs/
 .DS_Store
 

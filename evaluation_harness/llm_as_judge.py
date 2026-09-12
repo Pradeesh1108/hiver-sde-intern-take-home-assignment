@@ -27,7 +27,7 @@ import json
 import re
 import os
 from agent.prompts import judge_prompt
-from agent.llm_factory import generate_completion
+from services.llm_factory import generate_completion
 
 
 def judge_reply(

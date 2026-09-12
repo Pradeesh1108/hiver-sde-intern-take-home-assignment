@@ -1,16 +1,16 @@
 # ============================================================
-# EDA2/01_extract_messages.py
+# EDA/01_extract_messages.py
 # ============================================================
 # What this does:
 #   Reads apple_threads.json (80k threads)
 #   Extracts the first customer message from each thread
 #   Cleans the text
-#   Saves to EDA2/data/messages.json
+#   Saves to EDA/data/messages.json
 #
 # Input:  datasets/apple_threads.json
-# Output: EDA2/data/messages.json
+# Output: EDA/data/messages.json
 #
-# Run: python3 EDA2/01_extract_messages.py
+# Run: python3 EDA/01_extract_messages.py
 # ============================================================
 
 import json
@@ -19,8 +19,8 @@ import os
 import random
 
 INPUT_PATH  = "datasets/apple_threads.json"
-OUTPUT_DIR  = "EDA2/data"
-OUTPUT_PATH = "EDA2/data/messages.json"
+OUTPUT_DIR  = "EDA/data"
+OUTPUT_PATH = "EDA/data/messages.json"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -157,4 +157,4 @@ with open(OUTPUT_PATH, "w") as f:
 
 print(f"Saved {len(messages)} messages → {OUTPUT_PATH}")
 print()
-print("Next: python3 EDA2/02_embed.py")
+print("Next: python3 EDA/02_embed.py")

@@ -1,5 +1,5 @@
 # ============================================================
-# EDA2/05_build_taxonomy.py — Build Final Taxonomy Files
+# EDA/05_build_taxonomy.py — Build Final Taxonomy Files
 # ============================================================
 # What this does:
 #   Reads cluster_report.json
@@ -9,20 +9,20 @@
 #     - eval_set_to_label.csv    (new 245 examples to label)
 #     - retrieval_index.json     (new retrieval pool)
 #
-#   All outputs saved to EDA2/data/ only.
+#   All outputs saved to EDA/data/ only.
 #   Nothing in datasets/ or agent/ is touched.
 #   When ready to swap, copy manually.
 #
-# Input:  EDA2/data/cluster_report.json
-#         EDA2/data/cluster_assignments.csv
+# Input:  EDA/data/cluster_report.json
+#         EDA/data/cluster_assignments.csv
 #         datasets/apple_threads.json
 #
-# Output: EDA2/data/intent_taxonomy.json
-#         EDA2/data/few_shot_examples.json
-#         EDA2/data/eval_set_to_label.csv
-#         EDA2/data/retrieval_index.json
+# Output: EDA/data/intent_taxonomy.json
+#         EDA/data/few_shot_examples.json
+#         EDA/data/eval_set_to_label.csv
+#         EDA/data/retrieval_index.json
 #
-# Run: python3 EDA2/05_build_taxonomy.py
+# Run: python3 EDA/05_build_taxonomy.py
 # ============================================================
 
 import json
@@ -34,14 +34,14 @@ from collections import defaultdict
 
 random.seed(42)
 
-INPUT_REPORT    = "EDA2/data/cluster_report.json"
-INPUT_CLUSTERS  = "EDA2/data/cluster_assignments.csv"
+INPUT_REPORT    = "EDA/data/cluster_report.json"
+INPUT_CLUSTERS  = "EDA/data/cluster_assignments.csv"
 INPUT_THREADS   = "datasets/apple_threads.json"
-OUTPUT_DIR      = "EDA2/data"
-OUTPUT_TAXONOMY = "EDA2/data/intent_taxonomy.json"
-OUTPUT_FEWSHOT  = "EDA2/data/few_shot_examples.json"
-OUTPUT_EVAL     = "EDA2/data/eval_set_to_label.csv"
-OUTPUT_RETRIEVAL= "EDA2/data/retrieval_index.json"
+OUTPUT_DIR      = "EDA/data"
+OUTPUT_TAXONOMY = "EDA/data/intent_taxonomy.json"
+OUTPUT_FEWSHOT  = "EDA/data/few_shot_examples.json"
+OUTPUT_EVAL     = "EDA/data/eval_set_to_label.csv"
+OUTPUT_RETRIEVAL= "EDA/data/retrieval_index.json"
 
 
 # ─────────────────────────────────────────────
@@ -256,7 +256,7 @@ with open(OUTPUT_EVAL, "w", newline="", encoding="utf-8") as f:
 print(f"\nSaved {len(eval_rows)} rows → {OUTPUT_EVAL}")
 print()
 print("HOW TO LABEL:")
-print("  1. Open EDA2/data/eval_set_to_label.csv in Google Sheets")
+print("  1. Open EDA/data/eval_set_to_label.csv in Google Sheets")
 print("  2. Read each 'message'")
 print("  3. Glance at 'cluster_hint' — what clustering thinks")
 print("  4. Type correct intent in 'your_label'")
@@ -350,7 +350,7 @@ print(f"\nSaved → {OUTPUT_RETRIEVAL}")
 # ─────────────────────────────────────────────
 
 print("\n" + "=" * 55)
-print("DONE — Files generated in EDA2/data/")
+print("DONE — Files generated in EDA/data/")
 print("=" * 55)
 print(f"""
   intent_taxonomy.json      10 intents, cluster-derived descriptions
@@ -358,12 +358,12 @@ print(f"""
   eval_set_to_label.csv     {len(eval_rows)} examples for human labelling
   retrieval_index.json      {len(retrieval_index)} threads for reply grounding
 
-These files are in EDA2/data/ — NOT yet in datasets/ or agent/.
+These files are in EDA/data/ — NOT yet in datasets/ or agent/.
 
 To activate the new taxonomy:
-  cp EDA2/data/intent_taxonomy.json   datasets/intent_taxonomy.json
-  cp EDA2/data/few_shot_examples.json datasets/few_shot_examples.json
-  cp EDA2/data/retrieval_index.json   datasets/retrieval_index.json
+  cp EDA/data/intent_taxonomy.json   datasets/intent_taxonomy.json
+  cp EDA/data/few_shot_examples.json datasets/few_shot_examples.json
+  cp EDA/data/retrieval_index.json   datasets/retrieval_index.json
 
 Then label eval_set_to_label.csv and run:
   python3 -m evaluation_harness.automated_metrics --skip-reply --skip-escalate --skip-judge

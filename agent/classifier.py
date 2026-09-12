@@ -15,7 +15,7 @@
 # ============================================================
 
 from agent.prompts import classification_prompt, INTENT_NAMES
-from agent.llm_factory import generate_completion
+from services.llm_factory import generate_completion
 
 # Model choice: haiku is fast + cheap for classification
 # max_tokens=20 because the intent name is short (longest is

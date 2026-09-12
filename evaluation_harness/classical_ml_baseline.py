@@ -36,7 +36,7 @@ from sklearn.preprocessing           import LabelEncoder
 # STEP 1: LOAD DATA
 # ─────────────────────────────────────────────
 
-def load_76k_training_data(csv_path: str = "EDA2/data/cluster_assignments.csv", taxonomy_path: str = "datasets/intent_taxonomy.json") -> tuple:
+def load_76k_training_data(csv_path: str = "EDA/data/cluster_assignments.csv", taxonomy_path: str = "datasets/intent_taxonomy.json") -> tuple:
     import pandas as pd
     
     train_df = pd.read_csv(csv_path)

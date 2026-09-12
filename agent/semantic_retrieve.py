@@ -18,7 +18,7 @@
 #   <intent>.npy        — embeddings matrix (N × 768)
 #   <intent>_meta.json  — thread_id + brand_replies
 #
-# Build the index first: python3 EDA2/06_build_semantic_index.py
+# Build the index first: python3 EDA/06_build_semantic_index.py
 # ============================================================
 
 import json
@@ -46,7 +46,17 @@ def _get_model():
             os.environ["HF_HUB_DISABLE_PROGRESS_BARS"] = "1"
             os.environ["TRANSFORMERS_VERBOSITY"] = "error"
             from sentence_transformers import SentenceTransformer
-            _model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
+            import torch
+            
+            # Explicitly detect GPU for faster inference
+            if torch.cuda.is_available():
+                device = "cuda"
+            elif torch.backends.mps.is_available():
+                device = "mps"
+            else:
+                device = "cpu"
+                
+            _model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device=device)
         except ImportError:
             raise ImportError(
                 "sentence-transformers not installed.\n"

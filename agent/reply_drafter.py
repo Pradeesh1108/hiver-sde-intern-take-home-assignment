@@ -17,7 +17,7 @@
 
 import os
 from agent.prompts import reply_drafting_prompt
-from agent.llm_factory import generate_completion
+from services.llm_factory import generate_completion
 
 
 def draft_reply(

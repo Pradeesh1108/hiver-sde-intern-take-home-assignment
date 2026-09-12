@@ -1,5 +1,5 @@
 # ============================================================
-# EDA2/04_inspect.py — Cluster Inspection Report
+# EDA/04_inspect.py — Cluster Inspection Report
 # ============================================================
 # What this does:
 #   Reads cluster_assignments.csv
@@ -8,18 +8,18 @@
 #     - most common words
 #     - sample Apple replies from those threads
 #     - size and % of total
-#   Saves a full report to EDA2/data/cluster_report.json
+#   Saves a full report to EDA/data/cluster_report.json
 #   Also saves a readable cluster_report.txt
 #
-# Input:  EDA2/data/cluster_assignments.csv
-#         EDA2/data/umap_embeddings.npy
-#         EDA2/data/messages_filtered.json
+# Input:  EDA/data/cluster_assignments.csv
+#         EDA/data/umap_embeddings.npy
+#         EDA/data/messages_filtered.json
 #         datasets/apple_threads.json
 #
-# Output: EDA2/data/cluster_report.json
-#         EDA2/data/cluster_report.txt
+# Output: EDA/data/cluster_report.json
+#         EDA/data/cluster_report.txt
 #
-# Run: python3 EDA2/04_inspect.py
+# Run: python3 EDA/04_inspect.py
 # ============================================================
 
 import json
@@ -29,12 +29,12 @@ import numpy as np
 import pandas as pd
 from collections import Counter, defaultdict
 
-INPUT_CLUSTERS  = "EDA2/data/cluster_assignments.csv"
-INPUT_UMAP      = "EDA2/data/umap_embeddings.npy"
-INPUT_MESSAGES  = "EDA2/data/messages_filtered.json"
+INPUT_CLUSTERS  = "EDA/data/cluster_assignments.csv"
+INPUT_UMAP      = "EDA/data/umap_embeddings.npy"
+INPUT_MESSAGES  = "EDA/data/messages_filtered.json"
 INPUT_THREADS   = "datasets/apple_threads.json"
-OUTPUT_JSON     = "EDA2/data/cluster_report.json"
-OUTPUT_TXT      = "EDA2/data/cluster_report.txt"
+OUTPUT_JSON     = "EDA/data/cluster_report.json"
+OUTPUT_TXT      = "EDA/data/cluster_report.txt"
 
 
 # ─────────────────────────────────────────────
@@ -382,4 +382,4 @@ total_classified = sum(e["size"] for e in report)
 print(f"\n  Total classified: {total_classified:,} / {total_messages:,}")
 print(f"  Noise → general_inquiry: included above")
 print()
-print("Next: python3 EDA2/05_build_taxonomy.py")
+print("Next: python3 EDA/05_build_taxonomy.py")
