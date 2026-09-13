@@ -64,7 +64,7 @@ def load_csv(path: str) -> tuple:
     """
     Load the labelled eval CSV.
 
-    Expected columns: thread_id, num_turns, message, keyword_hint, your_label
+    Expected columns: thread_id, num_turns, message, intent, your_label
     Returns (messages, labels) as lists of strings.
     Skips rows where your_label is empty.
     """
@@ -129,13 +129,6 @@ def preprocess(text: str) -> str:
 # Each is a sklearn Pipeline: TF-IDF vectorizer → classifier.
 # Using a Pipeline means the vectorizer is fit only on training
 # data — never on test data. This prevents data leakage.
-#
-# Why these 4?
-#
-# TF-IDF + Logistic Regression:
-#   The standard baseline. Fast, interpretable, works well
-#   on short text. Can inspect feature weights per class.
-#
 
 
 def build_tfidf_vectorizer():
@@ -166,24 +159,6 @@ def build_tfidf_vectorizer():
 def get_models() -> dict:
     """
     Return the two ML models used as baselines.
-
-    Why these two:
-      Logistic Regression — the standard text classification baseline.
-        Linear model, learns a weight per word per intent.
-        Interpretable: you can inspect which words drive each prediction.
-        C=5.0 (slightly higher than default 1.0) gives less regularisation,
-        which helps on our small dataset where overfitting is less of a risk
-        than underfitting.
-
-      ComplementNB — Naive Bayes variant designed specifically for text.
-        Trains each class on the COMPLEMENT of its data (all other classes),
-        which makes it more robust when classes are imbalanced.
-        Does NOT use log(tf) — raw counts work better for NB math.
-        alpha=0.1 is lighter smoothing than default 1.0, better for short text.
-        Consistently outperformed plain Logistic Regression on our data (51% vs 47%).
-
-    Both use TF-IDF with bigrams (ngram_range=(1,2)) so phrases like
-    "battery drain" and "ios update" are treated as single features.
     """
     tfidf = build_tfidf_vectorizer
 
@@ -252,12 +227,6 @@ def cross_validate_model(name: str, pipeline, X, y, cv: int = 5) -> float:
     """
     Run stratified k-fold cross-validation.
 
-    Why cross-validation?
-    With only 245 examples, a single 80/20 split is noisy —
-    the exact accuracy depends on which 49 examples ended up in
-    the test set. Cross-validation runs 5 different splits and
-    averages the results, giving a more stable estimate.
-
     Returns mean accuracy across all folds.
     """
     scores = cross_val_score(
@@ -309,9 +278,9 @@ def print_confusion_matrix(result: dict, intent_names: list):
 
     # Shorten intent names for display
     short = {
-        "ios_update_issue":      "ios_upd",
+        "ios_update_general":    "ios_upd",
         "battery_drain":         "battery",
-        "device_hardware_issue": "hw_issue",
+        "device_hardware":       "hw_issue",
         "app_issue":             "app",
         "account_access":        "account",
         "order_purchase":        "order",

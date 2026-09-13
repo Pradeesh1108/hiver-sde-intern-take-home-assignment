@@ -9,9 +9,6 @@
 #   3. draft_reply()     → reply grounded in those threads
 #   4. should_escalate() → escalation decision + reason
 #
-# This is the only file that imports from all four components.
-# Everything else imports only what it needs.
-#
 # Run this file directly to test the full pipeline end-to-end:
 #   python3 -m agent.pipeline
 # ============================================================

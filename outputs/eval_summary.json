@@ -1,28 +1,28 @@
 {
   "classification": {
-    "overall_accuracy": 0.7107438016528925,
-    "correct": 172,
+    "overall_accuracy": 0.8223140495867769,
+    "correct": 199,
     "total": 242,
     "per_intent": {
       "autocorrect_i_bug": {
-        "correct": 23,
+        "correct": 24,
         "total": 25,
-        "accuracy": 0.92
+        "accuracy": 0.96
       },
       "app_issue": {
-        "correct": 23,
+        "correct": 30,
         "total": 33,
-        "accuracy": 0.696969696969697
+        "accuracy": 0.9090909090909091
       },
       "device_hardware": {
-        "correct": 12,
+        "correct": 14,
         "total": 16,
-        "accuracy": 0.75
+        "accuracy": 0.875
       },
       "wifi_bluetooth": {
-        "correct": 18,
+        "correct": 20,
         "total": 21,
-        "accuracy": 0.8571428571428571
+        "accuracy": 0.9523809523809523
       },
       "battery_drain": {
         "correct": 22,
@@ -30,63 +30,62 @@
         "accuracy": 0.8461538461538461
       },
       "order_purchase": {
-        "correct": 19,
+        "correct": 23,
         "total": 30,
-        "accuracy": 0.6333333333333333
+        "accuracy": 0.7666666666666667
       },
       "general_inquiry": {
-        "correct": 13,
+        "correct": 15,
         "total": 19,
-        "accuracy": 0.6842105263157895
+        "accuracy": 0.7894736842105263
       },
       "ios_update_general": {
-        "correct": 19,
+        "correct": 18,
         "total": 32,
-        "accuracy": 0.59375
+        "accuracy": 0.5625
       },
       "account_access": {
-        "correct": 13,
+        "correct": 16,
         "total": 23,
-        "accuracy": 0.5652173913043478
+        "accuracy": 0.6956521739130435
       },
       "phone_freezing": {
-        "correct": 10,
+        "correct": 17,
         "total": 17,
-        "accuracy": 0.5882352941176471
+        "accuracy": 1.0
       }
     }
   },
   "reply_quality": {
-    "relevance": 3.37,
-    "tone": 4.95,
-    "actionability": 4.13,
-    "conciseness": 4.96,
-    "overall": 4.03,
-    "n_scored": 242
+    "relevance": 4.31,
+    "tone": 4.9,
+    "actionability": 4.35,
+    "conciseness": 5.0,
+    "overall": 4.56,
+    "n_scored": 135
   },
   "escalation": {
-    "rate": 0.14049586776859505,
-    "total": 34,
+    "rate": 0.09504132231404959,
+    "total": 23,
     "by_intent": {
-      "order_purchase": 3,
+      "general_inquiry": 4,
+      "app_issue": 5,
+      "battery_drain": 1,
       "device_hardware": 4,
-      "wifi_bluetooth": 1,
-      "general_inquiry": 6,
-      "app_issue": 7,
-      "ios_update_general": 5,
-      "battery_drain": 2,
-      "account_access": 2,
-      "autocorrect_i_bug": 3,
-      "phone_freezing": 1
+      "autocorrect_i_bug": 1,
+      "order_purchase": 2,
+      "phone_freezing": 1,
+      "account_access": 3,
+      "ios_update_general": 2
     }
   },
   "baselines": {
-    "keyword_accuracy": 0.16115702479338842,
-    "tfidf_accuracy": 0.5102040816326531,
-    "agent_accuracy": 0.7107438016528925
+    "best_baseline_name": "Logistic Regression",
+    "best_baseline_accuracy": 0.6983471074380165,
+    "agent_accuracy": 0.8223140495867769
   },
   "performance": {
-    "avg_duration_s": 23.48,
+    "avg_duration_s": 27.13,
     "total_examples": 242
   }
 }

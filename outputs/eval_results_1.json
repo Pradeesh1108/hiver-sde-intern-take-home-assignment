@@ -1,0 +1,1295 @@
+{
+  "agent_results": [
+    {
+      "thread_id": "1679161",
+      "message": "you plan on fixing the symbol default when we try to type a capital \u201ci\u201d or what?",
+      "true_intent": "autocorrect_i_bug",
+      "predicted_intent": "autocorrect_i_bug",
+      "correct": true,
+      "reply": "We understand how frustrating that autocorrect behavior can be. Please DM us your device model and iOS version so we can guide you through a quick workaround.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common software bug regarding autocorrect behavior, which can be addressed with standard troubleshooting steps or a general acknowledgment without requiring human escalation.",
+      "confidence": 0.95,
+      "duration_s": 15.56,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, empathetic, and concise, effectively addressing the frustration and providing a clear next step, though it slightly deflects from the customer's specific question about a fix by focusing on a workaround."
+      }
+    },
+    {
+      "thread_id": "710098",
+      "message": "why apple music wont save my music offline \ud83e\udd26\ud83c\udffd\u200d\u2642\ufe0f shit just keep spinning like its about to download",
+      "true_intent": "app_issue",
+      "predicted_intent": "app_issue",
+      "correct": true,
+      "reply": "We're sorry to hear Apple Music is stuck on the download spinner. Could you please DM us your iPhone model and iOS version so we can help troubleshoot this?",
+      "decision": "AUTO_HANDLE",
+      "reason": "This is a common app issue with standard troubleshooting steps available, and the customer has not indicated that they have already exhausted all options.",
+      "confidence": 0.95,
+      "duration_s": 2.03,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is professional, empathetic, and directly addresses the issue by requesting specific technical details necessary for troubleshooting in a concise manner suitable for Twitter."
+      }
+    },
+    {
+      "thread_id": "2798397",
+      "message": "Anyone else\u2019s iPhone suddenly autocorrecting \u201cit\u201d to \u201cI.T\u201d?? #AskingForAFriend #AskingForMyself",
+      "true_intent": "autocorrect_i_bug",
+      "predicted_intent": "autocorrect_i_bug",
+      "correct": true,
+      "reply": "We're sorry to hear your iPhone is unexpectedly changing \"it\" to \"I.T.\" We'd be happy to help troubleshoot this for you. Could you please DM us the model of your iPhone and iOS version?",
+      "decision": "AUTO_HANDLE",
+      "reason": "This is a common software glitch with standard troubleshooting steps available and no signs of distress or safety issues.",
+      "confidence": 0.95,
+      "duration_s": 1.68,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is perfectly tailored to the platform, addressing the specific issue with empathy and providing a clear, necessary next step for troubleshooting."
+      }
+    },
+    {
+      "thread_id": "1074244",
+      "message": "when I\u2019m calling someone and want to put it on speaker I don\u2019t get magnified sound. I have an iPhone 7*.",
+      "true_intent": "app_issue",
+      "predicted_intent": "app_issue",
+      "correct": true,
+      "reply": "We're sorry to hear you're having trouble with the speakerphone volume on your iPhone 7. Please DM us so we can guide you through some troubleshooting steps to resolve this.",
+      "decision": "AUTO_HANDLE",
+      "reason": "This is a common audio settings issue on an iPhone 7 that can be resolved with standard troubleshooting steps like checking the mute switch or resetting settings.",
+      "confidence": 0.95,
+      "duration_s": 1.69,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is professional, empathetic, and appropriately concise for Twitter, correctly identifying the issue and providing a clear next step to move the conversation to a more suitable channel for troubleshooting."
+      }
+    },
+    {
+      "thread_id": "1671252",
+      "message": "I have the Apple Watch Series 3 on iOS 4.1 and my watch is still stuck on the loading screen. Will there be a fix any time soon?",
+      "true_intent": "device_hardware",
+      "predicted_intent": "device_hardware",
+      "correct": true,
+      "reply": "I'm sorry to hear your Apple Watch is stuck on the loading screen. Please try the troubleshooting steps in this article: [link]. If it still doesn't resolve, send us a DM so we can assist you further.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common software glitch (stuck on loading screen) and asking about a fix, which can be addressed with standard troubleshooting steps like force restarting the device.",
+      "confidence": 0.95,
+      "duration_s": 1.75,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, concise, and provides a direct troubleshooting link, though it could be improved by acknowledging the specific software version mentioned or offering a more immediate reset instruction."
+      }
+    },
+    {
+      "thread_id": "2543034",
+      "message": "Yup especially after turning back on Airplane mode. Everything goes on, regardless of what was on before \ud83d\ude12\ud83d\ude12\ud83d\ude44\ud83d\ude44",
+      "true_intent": "wifi_bluetooth",
+      "predicted_intent": "wifi_bluetooth",
+      "correct": true,
+      "reply": "I understand how frustrating it is when Wi-Fi and Bluetooth reset unexpectedly after toggling Airplane Mode. Please check this guide for details on how these settings interact: [Link]. If the issue persists, feel free to DM us your device model for further assistance.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common connectivity issue with Airplane mode that can be resolved with standard troubleshooting steps, and there are no signs of distress, safety risks, or complex disputes.",
+      "confidence": 0.95,
+      "duration_s": 10.34,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is empathetic, directly addresses the specific issue of settings resetting after Airplane Mode, provides a relevant resource, and asks for necessary details to proceed, all within an appropriate length for Twitter."
+      }
+    },
+    {
+      "thread_id": "1363278",
+      "message": "my iPhone 6 cannot hold a Bluetooth connection to a speaker with iOS 11. Is there another fix imminent?",
+      "true_intent": "wifi_bluetooth",
+      "predicted_intent": "wifi_bluetooth",
+      "correct": true,
+      "reply": "We understand how frustrating it is when your Bluetooth connection drops. Please try forgetting the speaker and reconnecting it to see if that resolves the issue. If the problem persists, meet us in DM so we can assist you further.",
+      "decision": "AUTO_HANDLE",
+      "reason": "This is a common Bluetooth connectivity issue with standard troubleshooting steps available, and the customer has not indicated that basic fixes have already failed.",
+      "confidence": 0.95,
+      "duration_s": 14.56,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, concise, and provides a standard troubleshooting step, though it could be improved by acknowledging the specific iOS 11 context or offering a more specific fix before suggesting DMs."
+      }
+    },
+    {
+      "thread_id": "481841",
+      "message": "11.1.1 destroyed battery life on my 6s and 11.1.2 is no better. I am stare at my phone, no apps open and watch it drop. Pls fix!",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "We're sorry to hear that your iPhone 6s is experiencing rapid battery drain after the update. Please send us a DM with your device details so we can investigate this further with you.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common battery drain issue after an update and has not indicated that standard troubleshooting steps have been exhausted or that the situation involves safety, legal, or financial disputes.",
+      "confidence": 0.95,
+      "duration_s": 14.29,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, empathetic, and concise, effectively addressing the battery drain issue by requesting necessary details via DM for further investigation."
+      }
+    },
+    {
+      "thread_id": "1930899",
+      "message": "I have a reservation for the X and can\u2019t get the site to \u201cconnect to my carrier\u201d will this be fixed? My time is running out",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "We're sorry for the trouble with your reservation. To help resolve this quickly, please DM us your country so we can guide you through the next steps.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is experiencing a common connectivity issue during the reservation process and has not indicated that standard troubleshooting steps have failed, allowing for automated guidance.",
+      "confidence": 0.9,
+      "duration_s": 14.09,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, empathetic, and concise, effectively moving the conversation to DMs to gather necessary details (country) to resolve the specific carrier connection issue."
+      }
+    },
+    {
+      "thread_id": "2484145",
+      "message": "wtf??? what's going on with you???\ud83d\ude21\ud83d\ude16",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "We\u2019re sorry for the frustration this has caused. Please DM us the specific issue you\u2019re experiencing so we can look into it for you.",
+      "decision": "ESCALATE",
+      "reason": "The message is highly ambiguous and contains abusive language, making it unsafe to respond automatically without human judgment to determine the underlying issue.",
+      "confidence": 0.95,
+      "duration_s": 13.2,
+      "judge_scores": {
+        "relevance": 3,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, empathetic, and provides a clear next step, though it cannot be more specific than asking for details since the customer's message contained no specific issue information."
+      }
+    },
+    {
+      "thread_id": "1469455",
+      "message": "can you PLEASE help me fix my Apple Music? It\u2019s not opening at all anymore and I\u2019ve tried everything short of wiping it clean and restoring it",
+      "true_intent": "app_issue",
+      "predicted_intent": "app_issue",
+      "correct": true,
+      "reply": "We're sorry to hear Apple Music is giving you trouble. Could you please DM us the specific error message or behavior you see when trying to launch the app?",
+      "decision": "ESCALATE",
+      "reason": "The customer states they have tried all standard troubleshooting steps short of a full restore and the issue persists, meeting the escalation criteria for unresolved technical issues.",
+      "confidence": 0.95,
+      "duration_s": 14.75,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is empathetic, concise, and appropriately asks for specific diagnostic details via DM, which is the standard and effective first step for troubleshooting app issues on Twitter."
+      }
+    },
+    {
+      "thread_id": "2843889",
+      "message": "guys any help would be greatly appreciated, my iPhone 6 WiFi reception has stopped in the last few days. The phone is 18 months old and my WiFi has always been perfect, seems to be happening to lots of people according to chat forums on the web. What\u2019s the fix",
+      "true_intent": "wifi_bluetooth",
+      "predicted_intent": "wifi_bluetooth",
+      "correct": true,
+      "reply": "We're sorry to hear your Wi-Fi connection has dropped. Could you please DM us to let us know if the issue occurs on all networks or just specific ones?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common connectivity issue and has not indicated that standard troubleshooting steps have been exhausted, allowing for automated guidance.",
+      "confidence": 0.95,
+      "duration_s": 14.69,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, concise, and appropriately directs the user to DM for further troubleshooting, though it could have offered a quick initial fix like restarting the phone before asking for more details."
+      }
+    },
+    {
+      "thread_id": "1954649",
+      "message": "The update has thoroughly screwed up my phone. #timeforanAndroid",
+      "true_intent": "ios_update_general",
+      "predicted_intent": "ios_update_general",
+      "correct": true,
+      "reply": "We're sorry to hear the recent update has caused issues with your device. Please DM us the specific iOS version you are currently running so we can investigate further.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is expressing frustration about a general iOS update issue without mentioning safety hazards, legal threats, or specific financial disputes, which can be addressed with standard troubleshooting or a polite acknowledgment.",
+      "confidence": 0.95,
+      "duration_s": 13.66,
+      "judge_scores": {
+        "relevance": null,
+        "tone": null,
+        "actionability": null,
+        "conciseness": null,
+        "overall": null,
+        "reasoning": "Scoring failed \u2014 API error",
+        "error": true
+      }
+    },
+    {
+      "thread_id": "2352111",
+      "message": "Dear any idea why the gps on my iPhone 6 hasn\u2019t worked since the iOS 11 update? Would love to be able to use a map app again Same problem. I have iPhone6.",
+      "true_intent": "app_issue",
+      "predicted_intent": "app_issue",
+      "correct": true,
+      "reply": "We're sorry to hear your GPS isn't working after the iOS 11 update. Could you please DM us the specific iOS version you are currently running so we can assist you further?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common GPS issue after an iOS update and has not indicated that standard troubleshooting steps have been exhausted, allowing for automated guidance.",
+      "confidence": 0.95,
+      "duration_s": 14.23,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, empathetic, and concise, effectively asking for a specific detail (iOS version) to narrow down the issue, though it could have been slightly more direct by acknowledging the known compatibility issues with iPhone 6 and iOS 11."
+      }
+    },
+    {
+      "thread_id": "262206",
+      "message": "this new update is horrible. I can\u2019t even change my music when I\u2019m on my lock screen... Makes for walking and running annoying...",
+      "true_intent": "ios_update_general",
+      "predicted_intent": "ios_update_general",
+      "correct": true,
+      "reply": "We're sorry the lock screen controls aren't working as expected during your workouts. Could you please let us know which iOS version you are currently running?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common usability issue with a recent iOS update that can be addressed with standard troubleshooting or feature guidance without requiring human escalation.",
+      "confidence": 0.95,
+      "duration_s": 14.44,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is empathetic, directly addresses the specific lock screen issue, asks a necessary diagnostic question, and is perfectly concise for the platform."
+      }
+    },
+    {
+      "thread_id": "639700",
+      "message": "I leave my house with 90% mid way to work my battery at 30%. Im sick of you guys scamming us , disgusting . Before update my phone was 100X better with battery.",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "We\u2019re sorry to hear about the significant battery drain you\u2019re experiencing after the update. Please DM us your iPhone model and current iOS version so we can investigate this further with you.",
+      "decision": "ESCALATE",
+      "reason": "The customer uses abusive language and makes accusations of fraud ('scamming us'), which requires human judgment to de-escalate and address appropriately.",
+      "confidence": 0.95,
+      "duration_s": 13.92,
+      "judge_scores": {
+        "relevance": null,
+        "tone": null,
+        "actionability": null,
+        "conciseness": null,
+        "overall": null,
+        "reasoning": "Scoring failed \u2014 API error",
+        "error": true
+      }
+    },
+    {
+      "thread_id": "826656",
+      "message": "Can someone please tell me when fixes their update for windows?! I didn\u2019t buy this new iPhone for nothing...",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "We understand the frustration with the Windows update issues. Could you please DM us the specific error message you're seeing so we can assist you further?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is asking a general question about software update availability for a specific platform, which is a routine inquiry that can be addressed with standard information or directed to a DM.",
+      "confidence": 0.95,
+      "duration_s": 14.42,
+      "judge_scores": {
+        "relevance": 2,
+        "tone": 4,
+        "actionability": 3,
+        "conciseness": 5,
+        "overall": 3,
+        "reasoning": "The reply is professional and concise but fails to address the customer's specific complaint about the iPhone update, instead pivoting to a potentially unrelated Windows error request."
+      }
+    },
+    {
+      "thread_id": "496801",
+      "message": "I\u2019ve inadvertently changed to the US store in AppStore now when I try to change it back in settings, I\u2019m told to cancel my Apple Mysic subscription? Help!",
+      "true_intent": "account_access",
+      "predicted_intent": "account_access",
+      "correct": true,
+      "reply": "We understand the frustration of being unable to switch your App Store region due to an active subscription. Please send us a DM with your Apple ID email address so we can review your account status and guide you through the necessary steps to resolve this.",
+      "decision": "AUTO_HANDLE",
+      "reason": "This is a common account configuration issue with standard troubleshooting steps available for changing App Store regions.",
+      "confidence": 0.95,
+      "duration_s": 14.08,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is empathetic, directly addresses the specific issue of region switching with an active subscription, and provides a clear, secure next step (DM) appropriate for the platform."
+      }
+    },
+    {
+      "thread_id": "2981040",
+      "message": "My phone froze for an hour and I accidentally called like 911 like 8 times cause I couldn\u2019t figure out how to force restart my phone. thanks, Apple \ud83d\ude44\ud83d\ude44",
+      "true_intent": "phone_freezing",
+      "predicted_intent": "phone_freezing",
+      "correct": true,
+      "reply": "We\u2019re so sorry to hear about the distressing experience with your frozen iPhone and the accidental calls. To help prevent this from happening again, could you please DM us your iOS version and whether this has occurred before?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is experiencing a common phone freezing issue and has not yet attempted standard troubleshooting steps like a force restart, which can be provided automatically.",
+      "confidence": 0.95,
+      "duration_s": 14.31,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is empathetic, concise, and relevant, effectively moving the conversation to DMs for troubleshooting, though it could have briefly acknowledged the specific distress of the accidental emergency calls more explicitly."
+      }
+    },
+    {
+      "thread_id": "757201",
+      "message": "kindly fix the auto WiFi Bs . Thanks",
+      "true_intent": "wifi_bluetooth",
+      "predicted_intent": "wifi_bluetooth",
+      "correct": true,
+      "reply": "We're sorry for the frustration with your Wi-Fi settings. Could you please DM us which device you are using and describe exactly what happens when you try to turn it off?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common connectivity issue without indicating prior troubleshooting failures, safety concerns, or distress, making it suitable for standard automated troubleshooting steps.",
+      "confidence": 0.95,
+      "duration_s": 13.33,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is professional, empathetic, and appropriately concise for Twitter, effectively asking for the necessary details (device and specific behavior) to diagnose the issue."
+      }
+    },
+    {
+      "thread_id": "515866",
+      "message": "Pop up in Safari has totally crashed iPhone. #WarningVirusAlertCallApple.",
+      "true_intent": "account_access",
+      "predicted_intent": "phone_freezing",
+      "correct": false,
+      "reply": "I'm sorry to hear your iPhone crashed after that Safari pop-up. Please try a force restart to clear the freeze, and let us know if the issue persists so we can assist further via DM.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The issue is a common browser crash likely caused by a malicious pop-up, which can be resolved with standard troubleshooting steps like force-restarting the device and clearing Safari data.",
+      "confidence": 0.95,
+      "duration_s": 14.23,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is empathetic, concise, and directly addresses the freezing issue with a standard troubleshooting step (force restart) while offering further support."
+      }
+    },
+    {
+      "thread_id": "542428",
+      "message": "Dear can you fix this iPhone glitch like now",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "We're sorry to hear you're experiencing a glitch on your iPhone. Could you please DM us the specific model and iOS version so we can help troubleshoot the issue?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a general glitch without mentioning safety issues, legal threats, or prior failed troubleshooting, allowing for standard automated guidance.",
+      "confidence": 0.95,
+      "duration_s": 13.11,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is professional, empathetic, and appropriately concise for Twitter, effectively requesting the necessary details to troubleshoot the vague issue."
+      }
+    },
+    {
+      "thread_id": "738504",
+      "message": "my Apple TV sucks. I can\u2019t enter in my password before you telling me you\u2019re down and I can\u2019t sign in. I know my password.",
+      "true_intent": "account_access",
+      "predicted_intent": "account_access",
+      "correct": true,
+      "reply": "We\u2019re sorry for the frustration with signing in on your Apple TV. Please DM us your Apple ID email address so we can investigate the connection issue securely.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is experiencing a common account access issue with a known error message and has not indicated that standard troubleshooting steps have failed, allowing for automated guidance.",
+      "confidence": 0.95,
+      "duration_s": 13.57,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, empathetic, and concise, effectively addressing the sign-in issue by requesting necessary details via DM, though it could have briefly acknowledged the specific 'server down' error mentioned by the user."
+      }
+    },
+    {
+      "thread_id": "2557344",
+      "message": "So now whenever I get any type of notification my music stops. you never seem to surprise me with these shitty updates when a new phone comes out.",
+      "true_intent": "app_issue",
+      "predicted_intent": "app_issue",
+      "correct": true,
+      "reply": "We're sorry to hear the update is causing your music to pause during notifications. Could you please DM us your iPhone model and iOS version so we can investigate this further?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common app behavior issue (music stopping on notification) with standard troubleshooting available, and while the tone is frustrated, it does not meet the threshold for severe distress, legal threats, or safety concerns requiring escalation.",
+      "confidence": 0.95,
+      "duration_s": 14.44,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 4,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is highly relevant, professional, and concise, effectively addressing the specific technical issue and requesting necessary details for troubleshooting."
+      }
+    },
+    {
+      "thread_id": "1748737",
+      "message": "Explain how my phone has been on charge all night, I take it off, open 2 apps and it\u2019s at 90% from 100% - Sort yourself out",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "We\u2019re sorry to hear about the unexpected battery drop. Could you please DM us your current iOS version so we can investigate further?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common battery drain issue and has not indicated that standard troubleshooting steps have been exhausted, allowing for an automated response with basic diagnostics.",
+      "confidence": 0.95,
+      "duration_s": 15.05,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, concise, and appropriately empathetic, asking for a relevant diagnostic detail (iOS version) to move the conversation to a private channel, though it could have briefly acknowledged the specific frustration of the rapid drain."
+      }
+    },
+    {
+      "thread_id": "2119417",
+      "message": "Still no reserve and pick up I\u2019m so tired waking up every day. I don\u2019t believe this phone exists haha",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "We\u2019re sorry to hear you\u2019re having trouble reserving your device. Please reach out to our Online Support team here for assistance:",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is expressing frustration about a routine order status issue without mentioning legal action, safety hazards, or severe distress, which can be addressed by standard support scripts.",
+      "confidence": 0.95,
+      "duration_s": 13.18,
+      "judge_scores": {
+        "relevance": 2,
+        "tone": 4,
+        "actionability": 1,
+        "conciseness": 5,
+        "overall": 2,
+        "reasoning": "While the tone is empathetic and the length is appropriate, the reply is critically flawed because it directs the customer to a link that is missing from the text, rendering the advice non-actionable."
+      }
+    },
+    {
+      "thread_id": "2358647",
+      "message": "any update coming to podcasts? Ever since iOS 11 I and my girlfriend have trouble with it",
+      "true_intent": "app_issue",
+      "predicted_intent": "app_issue",
+      "correct": true,
+      "reply": "We're sorry to hear you're experiencing issues with the Podcasts app after the iOS 11 update. Could you please DM us the specific error messages or behaviors you're seeing so we can investigate further?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a general app issue with the Podcasts app that has persisted since iOS 11, which is a common technical problem suitable for standard troubleshooting or directing to a human agent via DM, without indicating legal, safety, or severe distress issues.",
+      "confidence": 0.95,
+      "duration_s": 18.66,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is empathetic, directly addresses the reported issue, and provides a clear, concise next step appropriate for the Twitter platform."
+      }
+    },
+    {
+      "thread_id": "1507332",
+      "message": "My phone randomly shuts itself down at least 3x a day!!! This is so aggravating",
+      "true_intent": "phone_freezing",
+      "predicted_intent": "phone_freezing",
+      "correct": true,
+      "reply": "I'm sorry to hear your iPhone is shutting down so frequently; that is certainly not normal behavior. Could you please DM us your iPhone model and current iOS version so we can investigate further?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common performance issue (random shutdowns) without mentioning safety hazards, legal threats, or prior failed troubleshooting, allowing for standard diagnostic steps to be provided.",
+      "confidence": 0.95,
+      "duration_s": 9.12,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is empathetic, directly addresses the issue, and provides a clear, concise next step appropriate for the platform."
+      }
+    },
+    {
+      "thread_id": "2787808",
+      "message": "Why is it that every time I charge my phone to 100% my Bluetooth is automatically turned on? I\u2019m not a fan.",
+      "true_intent": "wifi_bluetooth",
+      "predicted_intent": "wifi_bluetooth",
+      "correct": true,
+      "reply": "We understand how frustrating it is when Bluetooth turns on unexpectedly. Could you let us know if you are toggling it off via the Control Center or in Settings?",
+      "decision": "AUTO_HANDLE",
+      "reason": "This is a common product behavior question regarding Bluetooth settings that can be resolved with standard troubleshooting steps or a link to support documentation.",
+      "confidence": 0.95,
+      "duration_s": 14.23,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is empathetic, concise, and asks a relevant diagnostic question, though it could be slightly more direct by acknowledging the specific 'charging to 100%' trigger mentioned by the customer."
+      }
+    },
+    {
+      "thread_id": "2746111",
+      "message": "I've been having an issue with in-app purchases for over a month now. when I choose to make a purchase it will be processing for minutes & then it will say an error occurred. help.",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "We're sorry to hear you've been experiencing these in-app purchase errors for so long. Please DM us your Apple ID email address so our team can investigate the specific issue with your account.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common in-app purchase error and has not indicated that they have exhausted standard troubleshooting steps or experienced a significant financial dispute requiring human intervention.",
+      "confidence": 0.95,
+      "duration_s": 13.16,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is empathetic, directly addresses the in-app purchase issue, and provides a clear, secure next step (DM for Apple ID) appropriate for the Twitter platform."
+      }
+    },
+    {
+      "thread_id": "1086812",
+      "message": "Trying to pre-register for the iPhone X? Nothing is showing up for me. Help? Thanks!",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "I\u2019m sorry to hear the pre-registration option isn\u2019t appearing for you. Please reach out to our Online Sales Support team directly here:",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is experiencing a common pre-registration visibility issue which can be resolved with standard troubleshooting steps or by directing them to check their Apple ID status.",
+      "confidence": 0.95,
+      "duration_s": 13.67,
+      "judge_scores": {
+        "relevance": 2,
+        "tone": 4,
+        "actionability": 1,
+        "conciseness": 5,
+        "overall": 2,
+        "reasoning": "The reply is polite and concise but fails to provide the actual link or contact method promised, rendering it non-actionable for the customer."
+      }
+    },
+    {
+      "thread_id": "2558669",
+      "message": "The \u201cI\ufe0f\u201d function is still broken and random words are also being capped in text messages. Any timeline on an #ios11 fix?",
+      "true_intent": "autocorrect_i_bug",
+      "predicted_intent": "autocorrect_i_bug",
+      "correct": true,
+      "reply": "We\u2019re sorry to hear the autocorrect issue is persisting. Please back up your device and update to the latest iOS 11.1.1 release, which includes fixes for this behavior. If the problem continues after updating, send us a DM so we can investigate further.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a known software bug (autocorrect/capitalization) and asking for a fix timeline, which is a routine inquiry that can be addressed with standard information or directed to DM for further details.",
+      "confidence": 0.95,
+      "duration_s": 14.29,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is empathetic, directly addresses the specific iOS 11 autocorrect bug with a concrete solution (updating to 11.1.1), and provides a clear next step for further support if needed, all within an appropriate length for Twitter."
+      }
+    },
+    {
+      "thread_id": "644147",
+      "message": "wasted a lot of gas today because your maps aren't up to date \ud83d\ude42",
+      "true_intent": "app_issue",
+      "predicted_intent": "app_issue",
+      "correct": true,
+      "reply": "We're sorry to hear the outdated map data caused you extra fuel costs. Please share the specific location or route where the error occurred so we can investigate further.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common app data issue with mild frustration but no safety, legal, or financial severity that requires human escalation.",
+      "confidence": 0.95,
+      "duration_s": 13.57,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is empathetic, directly addresses the specific issue of outdated maps, and provides a clear, actionable next step within the appropriate length for Twitter."
+      }
+    },
+    {
+      "thread_id": "92699",
+      "message": ": when a purchase to gift at a later day is made , will the charges take place at the moment of the purchase or on the delivery date ?",
+      "true_intent": "order_purchase",
+      "predicted_intent": "order_purchase",
+      "correct": true,
+      "reply": "Great question. You are charged at the time of the transaction, not on the delivery date. If you have any further questions, please reach out to our Sales team here:",
+      "decision": "AUTO_HANDLE",
+      "reason": "This is a general product question about billing timing for gift purchases that can be answered with standard information.",
+      "confidence": 0.95,
+      "duration_s": 14.08,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 4,
+        "actionability": 3,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is direct, concise, and accurately answers the specific question about billing timing, though the actionability is slightly reduced by the generic referral to the Sales team without a specific link or handle."
+      }
+    },
+    {
+      "thread_id": "1389308",
+      "message": "My iPhone Battery drains like crazy, need an update soon \ud83d\ude15",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "We're sorry to hear your iPhone is draining battery faster than expected. Please send us a DM with your iPhone model and iOS version so we can help troubleshoot the issue.",
+      "decision": "AUTO_HANDLE",
+      "reason": "This is a common battery drain issue with standard troubleshooting steps available and no signs of distress or safety concerns.",
+      "confidence": 0.95,
+      "duration_s": 13.15,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is empathetic, directly addresses the battery issue, and provides a clear, concise next step appropriate for the Twitter platform."
+      }
+    },
+    {
+      "thread_id": "1909213",
+      "message": "I can\u2019t sign in on the App Store hello",
+      "true_intent": "account_access",
+      "predicted_intent": "account_access",
+      "correct": true,
+      "reply": "We're sorry for the trouble signing in to the App Store. Please send us a DM so we can help you get back to your apps.",
+      "decision": "AUTO_HANDLE",
+      "reason": "This is a common account access issue with standard troubleshooting steps available and no signs of distress or complex disputes.",
+      "confidence": 0.95,
+      "duration_s": 12.96,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is empathetic, directly addresses the sign-in issue, and provides a clear, appropriate next step for Twitter support by requesting a DM."
+      }
+    },
+    {
+      "thread_id": "743440",
+      "message": "Dear can we expect in your next Keynote to come up with a Solution for that little lot? Its the second charger in one year! Mine too,Three chargers this yr same fking problem. \u00a320 each in London where else I don\u2019t know? The price you pay for phone and this happens",
+      "true_intent": "device_hardware",
+      "predicted_intent": "device_hardware",
+      "correct": true,
+      "reply": "We\u2019re sorry to hear you\u2019ve experienced repeated charger failures; that is certainly not the experience we want you to have. Please DM us your order details so we can review your warranty coverage and assist with a replacement.",
+      "decision": "ESCALATE",
+      "reason": "The customer reports a recurring hardware failure (multiple chargers failing in one year) which indicates standard troubleshooting has failed or is insufficient, and the message contains abusive language ('fking') that requires human judgment.",
+      "confidence": 0.95,
+      "duration_s": 15.39,
+      "judge_scores": {
+        "relevance": null,
+        "tone": null,
+        "actionability": null,
+        "conciseness": null,
+        "overall": null,
+        "reasoning": "Scoring failed \u2014 API error",
+        "error": true
+      }
+    },
+    {
+      "thread_id": "1971331",
+      "message": "I think there is a problem with the gyroscope on iPhone 6s and iPad Pro 9,7. Always fails when unlock the device.",
+      "true_intent": "ios_update_general",
+      "predicted_intent": "device_hardware",
+      "correct": false,
+      "reply": "We're sorry to hear you're experiencing gyroscope issues on both your iPhone 6s and iPad Pro. Please DM us your device serial numbers and current software versions so we can investigate this further with you.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a hardware malfunction without mentioning safety risks, legal action, or prior failed troubleshooting, allowing for standard diagnostic steps to be provided.",
+      "confidence": 0.95,
+      "duration_s": 13.95,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is professional, empathetic, and directly addresses the issue by requesting specific diagnostic information (serial numbers and software versions) in a concise manner suitable for Twitter."
+      }
+    },
+    {
+      "thread_id": "2041470",
+      "message": "girl when are y\u2019all gonna fix the obvious Bluetooth issues w/ iOS 11? My audio drops out in my car speakers constantly!",
+      "true_intent": "wifi_bluetooth",
+      "predicted_intent": "wifi_bluetooth",
+      "correct": true,
+      "reply": "We're sorry to hear your audio is dropping out in your car. Could you please DM us the specific iOS 11 version you are running so we can look into this further?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common Bluetooth connectivity issue with a specific iOS version and has not indicated that standard troubleshooting steps have been exhausted or that the situation involves safety, legal, or financial severity.",
+      "confidence": 0.95,
+      "duration_s": 14.64,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is empathetic, directly addresses the specific Bluetooth audio issue, and provides a clear, concise next step by requesting the iOS version via DM."
+      }
+    },
+    {
+      "thread_id": "1968265",
+      "message": "I updated my phone to the new iOS update and Touch ID doesn\u2019t work, even when adding a new fingerprint \ud83e\udd37\ud83c\udffb\u200d\u2640\ufe0f",
+      "true_intent": "device_hardware",
+      "predicted_intent": "device_hardware",
+      "correct": true,
+      "reply": "We're sorry to hear your Touch ID isn't working after the update. Please DM us your specific iPhone model so we can help troubleshoot this for you.",
+      "decision": "AUTO_HANDLE",
+      "reason": "This is a common post-update software issue with standard troubleshooting steps available, and the customer has not indicated that all standard fixes have failed.",
+      "confidence": 0.95,
+      "duration_s": 13.59,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, empathetic, and concise, effectively moving the conversation to DMs for specific troubleshooting, though it could have offered a quick immediate fix like a restart before asking for the model."
+      }
+    },
+    {
+      "thread_id": "269511",
+      "message": "I didn\u2019t know downloading iOS 11 meant I had to carry a phone charger with me everywhere I went.",
+      "true_intent": "battery_drain",
+      "predicted_intent": "battery_drain",
+      "correct": true,
+      "reply": "We're sorry to hear that your battery life isn't meeting your expectations. Could you please DM us the specific iOS 11 version you are running so we can investigate further?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is expressing frustration about battery drain after an update, which is a common issue resolvable with standard troubleshooting steps and does not meet any escalation criteria.",
+      "confidence": 0.95,
+      "duration_s": 14.13,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, empathetic, and appropriately concise, effectively addressing the battery drain issue by requesting specific version details to investigate further."
+      }
+    },
+    {
+      "thread_id": "1247319",
+      "message": "Has anyone had an issue with an AirPort Extreme router making a high-pitched squealing noise? #askingforafriend",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "device_hardware",
+      "correct": false,
+      "reply": "We\u2019re sorry to hear your AirPort Extreme is making that noise. Please DM us the model number and when the sound occurs so we can investigate further.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common hardware issue (noise) without mentioning safety hazards, legal threats, or prior failed troubleshooting, allowing for standard diagnostic steps to be provided.",
+      "confidence": 0.95,
+      "duration_s": 13.48,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is empathetic, directly addresses the hardware issue, and provides a clear, concise next step appropriate for the Twitter platform."
+      }
+    },
+    {
+      "thread_id": "360301",
+      "message": "It seems like I can't play Carpool KaraOk from High Sierra's iTunes (Malaysia), playing other MV are OK.",
+      "true_intent": "ios_update_general",
+      "predicted_intent": "app_issue",
+      "correct": false,
+      "reply": "Thanks for letting us know about the issue with Carpool Karaoke. Could you please DM us the specific error message or behavior you're seeing so we can investigate further?",
+      "decision": "AUTO_HANDLE",
+      "reason": "This is a specific app playback issue that can be addressed with standard troubleshooting steps like clearing cache or reinstalling the app, without indicating safety, legal, or severe distress concerns.",
+      "confidence": 0.95,
+      "duration_s": 13.93,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is professional, concise, and appropriately asks for specific diagnostic details (error messages) via DM, which is the standard and effective next step for troubleshooting app issues on Twitter."
+      }
+    },
+    {
+      "thread_id": "2605257",
+      "message": "whenever I try I update, it says I'm not connected to the internet when I am. And my phone isn't recognized on iTunes.",
+      "true_intent": "ios_update_general",
+      "predicted_intent": "wifi_bluetooth",
+      "correct": false,
+      "reply": "We're sorry for the frustration with your update and iTunes connection. Could you please DM us your iPhone model and the specific error code you're seeing?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common connectivity and recognition issue that can be resolved with standard troubleshooting steps such as restarting devices and checking network settings.",
+      "confidence": 0.95,
+      "duration_s": 13.78,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, empathetic, and appropriately concise for Twitter, effectively asking for necessary diagnostic details (model and error code) to address the connectivity and recognition issues, though it could have briefly acknowledged the specific 'not connected' error to show deeper understanding."
+      }
+    },
+    {
+      "thread_id": "2303460",
+      "message": "Hi, I want to stop using the beta version of iOS, what should I do?",
+      "true_intent": "ios_update_general",
+      "predicted_intent": "general_inquiry",
+      "correct": false,
+      "reply": "We can help you switch back to the latest public release. Please DM us your device model so we can guide you through removing the beta profile.",
+      "decision": "AUTO_HANDLE",
+      "reason": "This is a standard technical inquiry about exiting a beta program with well-documented troubleshooting steps available.",
+      "confidence": 0.98,
+      "duration_s": 13.57,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is perfectly tailored to the platform, directly addresses the user's intent with a professional tone, and provides a clear, logical next step by requesting necessary information via DM."
+      }
+    },
+    {
+      "thread_id": "1454675",
+      "message": "why does my iPad keep losing wifi signal ? I do forget network re join and it keeps asking for PW or change network on its own",
+      "true_intent": "wifi_bluetooth",
+      "predicted_intent": "wifi_bluetooth",
+      "correct": true,
+      "reply": "I'm sorry to hear your iPad is struggling to maintain a stable Wi-Fi connection. To help narrow this down, does this issue occur with multiple networks or just the one you're trying to join?",
+      "decision": "AUTO_HANDLE",
+      "reason": "This is a common connectivity issue with standard troubleshooting steps available, and the customer has not indicated severe distress or failed all basic fixes.",
+      "confidence": 0.95,
+      "duration_s": 13.39,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, empathetic, and appropriately concise for Twitter, asking a relevant diagnostic question, though it could have been slightly more specific about the 'forgetting' aspect mentioned by the user."
+      }
+    },
+    {
+      "thread_id": "620101",
+      "message": "this feeling of regret for buying the X instead of 8+ is kicking in now lmao fuck u for changing so many functions",
+      "true_intent": "general_inquiry",
+      "predicted_intent": "general_inquiry",
+      "correct": true,
+      "reply": "We understand the frustration with the interface changes on the iPhone X. Please DM us the specific functions that are causing issues so we can help you find the new locations or settings.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is expressing frustration and regret about a purchase decision but is not reporting a technical defect, safety issue, or financial dispute that requires human intervention.",
+      "confidence": 0.95,
+      "duration_s": 14.45,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 4,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, concise, and provides a clear next step by asking for specific details via DM, though it could have been slightly more empathetic to the customer's strong emotional reaction."
+      }
+    },
+    {
+      "thread_id": "2090210",
+      "message": "My phone charger stopped working .... seriously hating on right now \ud83d\ude2d",
+      "true_intent": "device_hardware",
+      "predicted_intent": "device_hardware",
+      "correct": true,
+      "reply": "We're sorry to hear your charger isn't working. Please DM us to let us know if you purchased the charger separately or if it came with your device so we can assist you further.",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is reporting a common hardware issue with a charger and has not indicated that standard troubleshooting steps have been exhausted or that the situation involves safety, legal, or financial severity.",
+      "confidence": 0.95,
+      "duration_s": 13.45,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 5,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is empathetic, directly addresses the hardware issue, and provides a clear, concise next step appropriate for the Twitter platform."
+      }
+    },
+    {
+      "thread_id": "1408454",
+      "message": "any suggestions on how to fix this? I\ufe0f tried making a shortcut in settings but it doesn\u2019t seem to work",
+      "true_intent": "autocorrect_i_bug",
+      "predicted_intent": "autocorrect_i_bug",
+      "correct": true,
+      "reply": "We're sorry the shortcut isn't working as expected. Could you DM us a screenshot of your settings so we can take a closer look?",
+      "decision": "AUTO_HANDLE",
+      "reason": "The customer is asking for troubleshooting advice on a common software feature issue and has not indicated severe distress, safety risks, or failed standard support channels.",
+      "confidence": 0.95,
+      "duration_s": 14.0,
+      "judge_scores": {
+        "relevance": 4,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 4,
+        "reasoning": "The reply is professional, concise, and appropriately moves the conversation to DMs for troubleshooting, though it could have offered a quick initial tip before asking for the screenshot."
+      }
+    },
+    {
+      "thread_id": "922801",
+      "message": "the shortcut for WiFi and Bluetooth don\u2019t work. I use them, but they turn back on automatically.",
+      "true_intent": "wifi_bluetooth",
+      "predicted_intent": "wifi_bluetooth",
+      "correct": true,
+      "reply": "We're sorry for the frustration with your WiFi and Bluetooth settings. This behavior is expected in iOS 11, as the Control Center shortcuts no longer permanently toggle these features off. You can manage them directly in Settings, or check out this guide for more details:",
+      "decision": "AUTO_HANDLE",
+      "reason": "This is a common connectivity issue with standard troubleshooting steps available, and the customer has not indicated severe distress or failed all basic fixes.",
+      "confidence": 0.95,
+      "duration_s": 13.33,
+      "judge_scores": {
+        "relevance": 5,
+        "tone": 5,
+        "actionability": 4,
+        "conciseness": 5,
+        "overall": 5,
+        "reasoning": "The reply is highly relevant, empathetic, and concise, correctly identifying the behavior as expected in iOS 11 and providing a clear alternative solution via Settings."
+      }
+    }
+  ],
+  "baseline_results": {
+    "metrics": {
+      "Logistic Regression": {
+        "overall_accuracy": 0.72,
+        "correct": 36,
+        "total": 50,
+        "per_intent": {
+          "autocorrect_i_bug": {
+            "correct": 2,
+            "total": 4,
+            "accuracy": 0.5
+          },
+          "app_issue": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          },
+          "device_hardware": {
+            "correct": 4,
+            "total": 4,
+            "accuracy": 1.0
+          },
+          "wifi_bluetooth": {
+            "correct": 8,
+            "total": 8,
+            "accuracy": 1.0
+          },
+          "battery_drain": {
+            "correct": 4,
+            "total": 5,
+            "accuracy": 0.8
+          },
+          "order_purchase": {
+            "correct": 4,
+            "total": 5,
+            "accuracy": 0.8
+          },
+          "general_inquiry": {
+            "correct": 3,
+            "total": 5,
+            "accuracy": 0.6
+          },
+          "ios_update_general": {
+            "correct": 2,
+            "total": 6,
+            "accuracy": 0.3333333333333333
+          },
+          "account_access": {
+            "correct": 1,
+            "total": 4,
+            "accuracy": 0.25
+          },
+          "phone_freezing": {
+            "correct": 1,
+            "total": 2,
+            "accuracy": 0.5
+          }
+        },
+        "confusion": {
+          "autocorrect_i_bug": {
+            "autocorrect_i_bug": 2,
+            "general_inquiry": 2
+          },
+          "app_issue": {
+            "app_issue": 7
+          },
+          "device_hardware": {
+            "device_hardware": 4
+          },
+          "wifi_bluetooth": {
+            "wifi_bluetooth": 8
+          },
+          "battery_drain": {
+            "battery_drain": 4,
+            "general_inquiry": 1
+          },
+          "order_purchase": {
+            "order_purchase": 4,
+            "app_issue": 1
+          },
+          "general_inquiry": {
+            "autocorrect_i_bug": 1,
+            "general_inquiry": 3,
+            "ios_update_general": 1
+          },
+          "ios_update_general": {
+            "ios_update_general": 2,
+            "app_issue": 2,
+            "general_inquiry": 2
+          },
+          "account_access": {
+            "app_issue": 3,
+            "account_access": 1
+          },
+          "phone_freezing": {
+            "general_inquiry": 1,
+            "phone_freezing": 1
+          }
+        }
+      },
+      "ComplementNB": {
+        "overall_accuracy": 0.7,
+        "correct": 35,
+        "total": 50,
+        "per_intent": {
+          "autocorrect_i_bug": {
+            "correct": 3,
+            "total": 4,
+            "accuracy": 0.75
+          },
+          "app_issue": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          },
+          "device_hardware": {
+            "correct": 3,
+            "total": 4,
+            "accuracy": 0.75
+          },
+          "wifi_bluetooth": {
+            "correct": 6,
+            "total": 8,
+            "accuracy": 0.75
+          },
+          "battery_drain": {
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1.0
+          },
+          "order_purchase": {
+            "correct": 4,
+            "total": 5,
+            "accuracy": 0.8
+          },
+          "general_inquiry": {
+            "correct": 2,
+            "total": 5,
+            "accuracy": 0.4
+          },
+          "ios_update_general": {
+            "correct": 3,
+            "total": 6,
+            "accuracy": 0.5
+          },
+          "account_access": {
+            "correct": 2,
+            "total": 4,
+            "accuracy": 0.5
+          },
+          "phone_freezing": {
+            "correct": 0,
+            "total": 2,
+            "accuracy": 0.0
+          }
+        },
+        "confusion": {
+          "autocorrect_i_bug": {
+            "autocorrect_i_bug": 3,
+            "app_issue": 1
+          },
+          "app_issue": {
+            "app_issue": 7
+          },
+          "device_hardware": {
+            "device_hardware": 3,
+            "general_inquiry": 1
+          },
+          "wifi_bluetooth": {
+            "wifi_bluetooth": 6,
+            "autocorrect_i_bug": 2
+          },
+          "battery_drain": {
+            "battery_drain": 5
+          },
+          "order_purchase": {
+            "order_purchase": 4,
+            "app_issue": 1
+          },
+          "general_inquiry": {
+            "autocorrect_i_bug": 2,
+            "general_inquiry": 2,
+            "wifi_bluetooth": 1
+          },
+          "ios_update_general": {
+            "ios_update_general": 3,
+            "app_issue": 3
+          },
+          "account_access": {
+            "app_issue": 2,
+            "account_access": 2
+          },
+          "phone_freezing": {
+            "general_inquiry": 2
+          }
+        }
+      }
+    },
+    "best_baseline": "Logistic Regression",
+    "train_n": 76656,
+    "test_n": 50
+  },
+  "summary": {
+    "classification": {
+      "overall_accuracy": 0.88,
+      "correct": 44,
+      "total": 50,
+      "per_intent": {
+        "autocorrect_i_bug": {
+          "correct": 4,
+          "total": 4,
+          "accuracy": 1.0
+        },
+        "app_issue": {
+          "correct": 7,
+          "total": 7,
+          "accuracy": 1.0
+        },
+        "device_hardware": {
+          "correct": 4,
+          "total": 4,
+          "accuracy": 1.0
+        },
+        "wifi_bluetooth": {
+          "correct": 8,
+          "total": 8,
+          "accuracy": 1.0
+        },
+        "battery_drain": {
+          "correct": 5,
+          "total": 5,
+          "accuracy": 1.0
+        },
+        "order_purchase": {
+          "correct": 5,
+          "total": 5,
+          "accuracy": 1.0
+        },
+        "general_inquiry": {
+          "correct": 4,
+          "total": 5,
+          "accuracy": 0.8
+        },
+        "ios_update_general": {
+          "correct": 2,
+          "total": 6,
+          "accuracy": 0.3333333333333333
+        },
+        "account_access": {
+          "correct": 3,
+          "total": 4,
+          "accuracy": 0.75
+        },
+        "phone_freezing": {
+          "correct": 2,
+          "total": 2,
+          "accuracy": 1.0
+        }
+      }
+    },
+    "reply_quality": {
+      "relevance": 4.34,
+      "tone": 4.87,
+      "actionability": 4.32,
+      "conciseness": 5.0,
+      "overall": 4.43,
+      "n_scored": 47
+    },
+    "escalation": {
+      "rate": 0.08,
+      "total": 4,
+      "by_intent": {
+        "general_inquiry": 1,
+        "app_issue": 1,
+        "battery_drain": 1,
+        "device_hardware": 1
+      }
+    },
+    "baselines": {
+      "best_baseline_name": "Logistic Regression",
+      "best_baseline_accuracy": 0.72,
+      "agent_accuracy": 0.88
+    },
+    "performance": {
+      "avg_duration_s": 12.93,
+      "total_examples": 50
+    }
+  }
+}

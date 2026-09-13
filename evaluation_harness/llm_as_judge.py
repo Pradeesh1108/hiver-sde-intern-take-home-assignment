@@ -6,21 +6,6 @@
 # The judge reads a customer message and the agent's drafted reply,
 # then scores the reply on 4 dimensions (1-5 each):
 #   relevance, tone, actionability, conciseness
-#
-# Why LLM-as-judge?
-#   Human evaluation of 245 replies would take hours and is
-#   subjective. An LLM judge is faster, consistent, and can be
-#   calibrated against human scores to measure its own reliability.
-#   The assignment explicitly asks for "evidence of how well your
-#   judge agrees with a human" — we handle that with an agreement
-#   measurement on a small sample.
-#
-# Important limitation:
-#   LLM-as-judge has known biases:
-#   - Prefers longer replies (verbosity bias)
-#   - Prefers its own outputs (self-preference bias)
-#   - May be inconsistent on borderline cases
-#   These are documented in the report's "what is misleading" section.
 # ============================================================
 
 import json

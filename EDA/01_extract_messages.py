@@ -52,12 +52,6 @@ def clean_text(text: str) -> str:
 # ─────────────────────────────────────────────
 # STEP 2: EXTRACT FIRST CUSTOMER MESSAGE
 # ─────────────────────────────────────────────
-# Why first message only?
-#   At runtime the agent classifies the opening message.
-#   Clustering should match the same conditions.
-#   Later turns contain Apple's questions ("Which iOS version?")
-#   which add noise — Apple's language, not the customer's problem.
-
 def get_first_customer_message(thread: dict):
     for turn in thread.get("turns", []):
         if turn.get("role") == "customer":

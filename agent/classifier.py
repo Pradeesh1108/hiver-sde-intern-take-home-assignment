@@ -8,18 +8,10 @@
 #   2. Call the LLM
 #   3. Validate the response is a known intent name
 #   4. Return the intent string
-#
-# The LLM used here is claude-haiku — fast and cheap.
-# We save the more expensive model for reply drafting
-# where output quality matters more.
 # ============================================================
 
 from agent.prompts import classification_prompt, INTENT_NAMES
 from services.llm_factory import generate_completion
-
-# Model choice: haiku is fast + cheap for classification
-# max_tokens=20 because the intent name is short (longest is
-# "device_hardware_issue" = 21 chars — we give a little headroom)
 _MAX_TOKENS = 800
 
 def classify(message: str, retries: int = 2) -> str:

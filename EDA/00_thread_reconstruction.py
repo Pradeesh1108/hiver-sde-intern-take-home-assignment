@@ -214,9 +214,6 @@ print(f"Local root tweets found: {len(local_roots)}")
 # From each local root, do a BFS downward through children.
 # At each node, if there are multiple children (branching thread),
 # we pick the LONGEST branch — the one that leads to the most turns.
-# Why longest? Support conversations are linear; branches usually
-# happen when multiple users pile onto the same tweet, not when
-# the resolution path splits. The longest branch is the main thread.
 
 def get_subtree_depth(tid, children_map, memo={}):
     """

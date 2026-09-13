@@ -9,11 +9,6 @@
 #   3. Cosine similarity → find top 3 most similar past threads
 #   4. Return those threads' brand_replies
 #
-# Why only the classified intent's embeddings?
-#   Intent filter first, then similarity search.
-#   We never compare a battery complaint against autocorrect threads.
-#   This reduces the search space from 80k to ~4k-14k per query.
-#
 # Files needed in datasets/semantic_index/:
 #   <intent>.npy        — embeddings matrix (N × 768)
 #   <intent>_meta.json  — thread_id + brand_replies

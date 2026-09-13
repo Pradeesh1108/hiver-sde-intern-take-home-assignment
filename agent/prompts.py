@@ -6,8 +6,6 @@
 #
 # Each prompt is a function that takes arguments and returns
 # a fully-formed string ready to send to the LLM.
-# Functions are easier to test than raw f-strings scattered
-# across multiple files.
 # ============================================================
 
 import json
@@ -18,8 +16,6 @@ import json
 # ─────────────────────────────────────────────
 # We load the intent taxonomy and few-shot examples once
 # when this module is imported, not on every function call.
-# This avoids re-reading the same files thousands of times
-# during the eval run.
 
 def _load_json(path):
     with open(path, "r") as f:
@@ -75,30 +71,30 @@ def classification_prompt(customer_message: str) -> str:
 
     return f"""You are classifying customer support messages...
 
-        {intent_section}
+{intent_section}
 
-        BOUNDARY RULES — apply these before deciding:
-        1. Phone FROZEN, BLACK SCREEN, WON'T TURN ON → phone_freezing
-        (even if an update caused it — the symptom is the freeze)
-        2. Cannot log into APPLE ID or ICLOUD → account_access
-        (not app_issue, even if the problem is inside an app)
-        3. CHARGED wrongly, BILLING issue, ORDER problem → order_purchase
-        (not account_access, even if the account is involved)
-        4. Update caused a SPECIFIC symptom → use the specific intent
-        "update broke my wifi" → wifi_bluetooth (not ios_update_general)
-        "update killed my battery" → battery_drain (not ios_update_general)
-        "phone frozen since update" → phone_freezing (not ios_update_general)
-        ios_update_general only when no more specific intent fits.
+BOUNDARY RULES — apply these before deciding:
+1. Phone FROZEN, BLACK SCREEN, WON'T TURN ON → phone_freezing
+(even if an update caused it — the symptom is the freeze)
+2. Cannot log into APPLE ID or ICLOUD → account_access
+(not app_issue, even if the problem is inside an app)
+3. CHARGED wrongly, BILLING issue, ORDER problem → order_purchase
+(not account_access, even if the account is involved)
+4. Update caused a SPECIFIC symptom → use the specific intent
+"update broke my wifi" → wifi_bluetooth (not ios_update_general)
+"update killed my battery" → battery_drain (not ios_update_general)
+"phone frozen since update" → phone_freezing (not ios_update_general)
+ios_update_general only when no more specific intent fits.
 
-        Customer message:
-        \"\"\"{customer_message}\"\"\"
+Customer message:
+\"\"\"{customer_message}\"\"\"
 
-        Step 1 — In one sentence, identify the PRIMARY problem the customer has.
-        Step 2 — Write the intent name on the next line.
+Step 1 — In one sentence, identify the PRIMARY problem the customer has.
+Step 2 — Write the intent name on the next line.
 
-        Your response must be exactly two lines:
-        Line 1: one sentence describing the primary problem
-        Line 2: the intent name (nothing else)"""
+Your response must be exactly two lines:
+Line 1: one sentence describing the primary problem
+Line 2: the intent name (nothing else)"""
 
 
 # ─────────────────────────────────────────────

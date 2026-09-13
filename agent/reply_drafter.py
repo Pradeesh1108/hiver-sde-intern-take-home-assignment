@@ -9,10 +9,6 @@
 #   2. Builds the reply drafting prompt (from prompts.py)
 #   3. Calls the LLM
 #   4. Returns the drafted reply string
-#
-# Model choice: claude-sonnet for reply drafting (not haiku)
-# because reply quality matters — this is customer-facing text.
-# Classification uses haiku (speed/cost), reply uses sonnet (quality).
 # ============================================================
 
 import os

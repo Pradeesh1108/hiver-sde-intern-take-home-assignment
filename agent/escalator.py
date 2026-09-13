@@ -12,12 +12,6 @@
 #   Layer 2 — LLM judgment for ambiguous cases
 #     If no hard trigger → ask the LLM to decide
 #     LLM handles nuance: "already tried everything", distress level
-#
-# Why two layers?
-#   Hard rules are fast, free, and 100% reliable for clear cases.
-#   LLM handles the grey areas that rules can't enumerate.
-#   This is also easier to explain: "here are our hard rules,
-#   everything else goes to the LLM with these guidelines."
 # ============================================================
 
 import json
@@ -71,16 +65,31 @@ def _check_hard_triggers(message: str) -> dict | None:
         None if no hard trigger matched.
     """
     message_lower = message.lower()
+    
+    # Known partial stems that should match as substrings (e.g. exploding, injured, electricity)
+    partials = {"explod", "electr", "injur"}
 
     for trigger in HARD_ESCALATION_TRIGGERS:
         for pattern in trigger["patterns"]:
-            if pattern in message_lower:
-                return {
-                    "decision":   "ESCALATE",
-                    "reason":     trigger["reason"],
-                    "confidence": 1.0,          # hard rule = 100% confident
-                    "trigger":    trigger["name"]  # which rule fired
-                }
+            if pattern in partials:
+                # Substring match for explicitly partial stems
+                if pattern in message_lower:
+                    return {
+                        "decision":   "ESCALATE",
+                        "reason":     trigger["reason"],
+                        "confidence": 1.0,          # hard rule = 100% confident
+                        "trigger":    trigger["name"]  # which rule fired
+                    }
+            else:
+                # Strict word boundaries for everything else to prevent 'sue' matching 'issue'
+                # or 'fire' matching 'firefox'
+                if re.search(r'\b' + re.escape(pattern) + r'\b', message_lower):
+                    return {
+                        "decision":   "ESCALATE",
+                        "reason":     trigger["reason"],
+                        "confidence": 1.0,          # hard rule = 100% confident
+                        "trigger":    trigger["name"]  # which rule fired
+                    }
     return None
 
 

@@ -17,19 +17,22 @@ This folder contains the complete evaluation suite for the Apple Support Agent. 
    ```
    This will output a full summary and save detailed results to `outputs/eval_results.json` and `outputs/eval_summary.json`.
 
-2. **Generate human-agreement evidence**:
-   To prove that the LLM judge is reliable, you can run a script that samples 30 replies for you to score manually, and then computes the correlation and error between your scores and the judge's scores.
+2. **Human-judge agreement evidence**:
+
+   The assignment requires evidence of human-judge agreement. This step generates 30 replies for you to score manually, then computes correlation between your scores and the judge's scores.
 
    *Step A: Generate the sample CSV*
    ```bash
    python3 -c "from evaluation_harness.llm_as_judge import measure_human_agreement; measure_human_agreement(30)"
    ```
-   
+
    *Step B: Score the sample*
    Open `outputs/human_scoring_sample.csv` and fill in the `human_*` columns (1-5).
-   
+
+   > **Note**: `outputs/human_scoring_sample.csv` already contains completed human scores. You can skip Step B and run Step C directly to see the agreement results.
+
    *Step C: Compute the agreement*
    ```bash
    python3 -c "from evaluation_harness.llm_as_judge import compute_agreement; compute_agreement()"
    ```
-   Paste the resulting table (showing MAE, Correlation, and Within-1 agreement) into your final report!
+   The resulting table shows MAE, Pearson correlation, and Within-1 agreement between human and judge scores across all 4 dimensions.

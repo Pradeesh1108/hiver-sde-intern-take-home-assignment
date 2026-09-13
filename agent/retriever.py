@@ -4,20 +4,9 @@
 # One public function: retrieve(intent, n) → list of threads
 #
 # How it works:
-#   1. Load the retrieval index (80k threads with keyword_hint)
+#   1. Load the retrieval index (80k threads with intent)
 #   2. Filter to threads matching the given intent
 #   3. Return n random threads from that pool
-#
-# Why random and not similarity-based?
-#   Embedding similarity would be more accurate — a message about
-#   "battery dying at 80%" would find threads about "battery
-#   dropping suddenly" rather than just any battery thread.
-#   But it requires running all 80k messages through an embedding
-#   model and storing vectors. For this project, keyword-filtered
-#   random sampling gives good enough grounding with zero extra
-#   infrastructure.
-#   This is documented as a known limitation in the decision log
-#   and report (D12). "One more week" would add embeddings.
 # ============================================================
 
 import json
@@ -64,10 +53,8 @@ def retrieve(intent: str, n: int = 3, seed: int = None) -> list:
     """
     index = _load_index()
 
-    # Filter to threads whose keyword_hint matches the intent
-    # keyword_hint was assigned by the same keyword logic used
-    # during sampling — so it's consistent with the intent names
     # Filter to threads whose intent matches the classified intent
+    # intent was assigned by the same logic used
     matching = [
         entry for entry in index
         if entry.get("intent") == intent
@@ -155,7 +142,7 @@ def retrieve_by_keywords(message: str, intent: str, n: int = 3) -> list:
 if __name__ == "__main__":
     print("Testing retriever...\n")
 
-    for intent in ["battery_drain", "ios_update_issue", "account_access"]:
+    for intent in ["battery_drain", "ios_update_general", "account_access"]:
         threads = retrieve(intent, n=2)
         print(f"  [{intent}] — {len(threads)} threads retrieved")
         for t in threads:
@@ -167,7 +154,7 @@ if __name__ == "__main__":
     print("Testing keyword retrieval...")
     threads = retrieve_by_keywords(
         "my battery is draining really fast since I updated",
-        "ios_update_issue",
+        "ios_update_general",
         n=3
     )
     print(f"  Retrieved {len(threads)} threads with keyword overlap")

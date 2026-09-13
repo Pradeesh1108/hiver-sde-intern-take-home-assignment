@@ -328,7 +328,6 @@
     "cracked screen, broken keyboard, burnt charger, Apple Watch hardware → device_hardware",
     "iMessage, App Store, Maps, AirPlay, Siri, alarm, screenshot broken → app_issue",
     "iPhone X order, delivery, billing charge, activation → order_purchase",
-    "Apple Pay not available in my country, how does Apple Pay work → apple_pay",
     "iOS/macOS update slow, broken, features missing → ios_update_general",
     "too vague, customer service rant, Genius Bar → general_inquiry (last resort)"
   ]

@@ -12,10 +12,6 @@
 #   outputs/eval_summary.json  — headline numbers for the report
 #
 # Run: python3 -m evaluation_harness.automated_metrics
-#
-# Expected runtime: ~20-30 minutes for 245 examples
-# (two API calls per example: classify + draft_reply
-#  one more for judge scoring = three total)
 # ============================================================
 
 import json
@@ -119,26 +115,44 @@ def run_agent_eval(eval_set: list, verbose: bool = True, skip_reply: bool = Fals
     Returns:
         List of result dicts, one per example.
     """
-    results = []
     total   = len(eval_set)
-
+    results = [None] * total
+    
+    import os, json, threading
+    checkpoint_file = "outputs/checkpoint_agent.jsonl"
+    cached_results = {}
+    if os.path.exists(checkpoint_file):
+        with open(checkpoint_file, "r") as f:
+            for line in f:
+                if line.strip():
+                    try:
+                        res = json.loads(line)
+                        if "thread_id" in res:
+                            cached_results[res["thread_id"]] = res
+                    except Exception:
+                        pass
+    
     print(f"\nRunning agent on {total} examples...")
-    print("(This will take ~20-30 minutes — 3 API calls per example)\n")
+    if cached_results:
+        print(f"(Resuming from checkpoint: {len(cached_results)} already completed)")
 
-    for i, row in enumerate(eval_set):
+    lock = threading.Lock()
+
+    def process_row(i, row):
+        tid = row.get("thread_id", "")
+        if tid and tid in cached_results:
+            return i, cached_results[tid]
+
+        import time
         message    = row["message"]
         true_label = row["your_label"]
-
-        # Run the full pipeline
         result = agent_run(message, verbose=False, skip_reply=skip_reply, skip_escalate=skip_escalate)
         
-        import os
-        # Free Tier Rate Limit: Wait 3s between examples to stay under 30 RPM (skip if local ollama)
         if os.getenv("LLM_PROVIDER", "groq").lower() != "ollama":
-            time.sleep(3)
-
-        results.append({
-            "thread_id":        row.get("thread_id", ""),
+            time.sleep(6.5)
+            
+        final_res = {
+            "thread_id":        tid,
             "message":          message,
             "true_intent":      true_label,
             "predicted_intent": result["intent"],
@@ -149,12 +163,38 @@ def run_agent_eval(eval_set: list, verbose: bool = True, skip_reply: bool = Fals
             "confidence":       result["confidence"],
             "duration_s":       result["duration_s"],
             "judge_scores":     {},  # filled in Step 2
-        })
+        }
+        
+        with lock:
+            with open(checkpoint_file, "a") as f:
+                f.write(json.dumps(final_res) + "\n")
+                
+        return i, final_res
 
-        if verbose and (i + 1) % 10 == 0:
-            correct_so_far = sum(r["correct"] for r in results)
-            acc = correct_so_far / len(results) * 100
-            print(f"  [{i+1:>3}/{total}] Running accuracy: {acc:.1f}%")
+    import os
+    if os.getenv("LLM_PROVIDER", "groq").lower() == "ollama":
+        import concurrent.futures
+        max_workers = int(os.getenv("MAX_WORKERS", 8))
+        print(f"  (Running in parallel using ThreadPoolExecutor with {max_workers} workers for Ollama)")
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = [executor.submit(process_row, i, row) for i, row in enumerate(eval_set)]
+            completed = 0
+            for future in concurrent.futures.as_completed(futures):
+                idx, res = future.result()
+                results[idx] = res
+                completed += 1
+                if verbose and completed % 1 == 0:
+                    correct_so_far = sum(r["correct"] for r in results if r is not None)
+                    acc = correct_so_far / completed * 100
+                    print(f"  [{completed:>3}/{total}] Running accuracy: {acc:.1f}%")
+    else:
+        for i, row in enumerate(eval_set):
+            idx, res = process_row(i, row)
+            results[idx] = res
+            if verbose and (i + 1) % 1 == 0:
+                correct_so_far = sum(r["correct"] for r in results[:i+1])
+                acc = correct_so_far / (i + 1) * 100
+                print(f"  [{i+1:>3}/{total}] Running accuracy: {acc:.1f}%")
 
     return results
 
@@ -176,18 +216,66 @@ def run_judge_eval(agent_results: list, verbose: bool = True) -> list:
     Returns:
         The same list with judge_scores filled in.
     """
+    import os, json, threading
+    checkpoint_file = "outputs/checkpoint_judge.jsonl"
+    cached_scores = {}
+    if os.path.exists(checkpoint_file):
+        with open(checkpoint_file, "r") as f:
+            for line in f:
+                if line.strip():
+                    try:
+                        data = json.loads(line)
+                        if "thread_id" in data:
+                            cached_scores[data["thread_id"]] = data["scores"]
+                    except Exception:
+                        pass
+                        
     print(f"\nJudging {len(agent_results)} replies...")
+    if cached_scores:
+        print(f"(Resuming from checkpoint: {len(cached_scores)} already judged)")
 
-    for i, result in enumerate(agent_results):
+    lock = threading.Lock()
+
+    def process_judge(i, result):
+        tid = result.get("thread_id", "")
+        if tid and tid in cached_scores:
+            return i, cached_scores[tid]
+
         scores = judge_reply(
             result["message"],
             result["predicted_intent"],
             result["reply"]
         )
-        result["judge_scores"] = scores
+        
+        import os, time
+        if os.getenv("LLM_PROVIDER", "groq").lower() != "ollama":
+            time.sleep(3)
+            
+        with lock:
+            with open(checkpoint_file, "a") as f:
+                f.write(json.dumps({"thread_id": tid, "scores": scores}) + "\n")
+                
+        return i, scores
 
-        if verbose and (i + 1) % 20 == 0:
-            print(f"  Judged {i+1}/{len(agent_results)}...")
+    import os
+    if os.getenv("LLM_PROVIDER", "groq").lower() == "ollama":
+        import concurrent.futures
+        max_workers = int(os.getenv("MAX_WORKERS", 8))
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = [executor.submit(process_judge, i, res) for i, res in enumerate(agent_results)]
+            completed = 0
+            for future in concurrent.futures.as_completed(futures):
+                idx, scores = future.result()
+                agent_results[idx]["judge_scores"] = scores
+                completed += 1
+                if verbose and completed % 1 == 0:
+                    print(f"  Judged {completed}/{len(agent_results)}...")
+    else:
+        for i, result in enumerate(agent_results):
+            idx, scores = process_judge(i, result)
+            agent_results[idx]["judge_scores"] = scores
+            if verbose and (i + 1) % 1 == 0:
+                print(f"  Judged {i+1}/{len(agent_results)}...")
 
     return agent_results
 

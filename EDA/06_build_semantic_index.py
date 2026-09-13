@@ -120,12 +120,6 @@ print(f"Model loaded: all-mpnet-base-v2 (768 dimensions) on {device.upper()}")
 #   b) Embed them in batches
 #   c) Save embeddings as .npy  (the search key)
 #   d) Save metadata as .json   (thread_id + brand_replies)
-#
-# Why split by intent?
-#   At query time we only load one intent's embeddings.
-#   Loading 4,077 battery_drain embeddings (~12MB) is much
-#   faster than loading all 80k embeddings (~225MB).
-#   Intent filtering happens BEFORE similarity search —
 #   we never compare a battery complaint against autocorrect threads.
 
 print("\n" + "=" * 55)

@@ -49,15 +49,6 @@ print(f"Loaded {len(messages)} messages")
 # ─────────────────────────────────────────────
 # STEP 2: FILTER NON-ENGLISH
 # ─────────────────────────────────────────────
-# Why filter non-English?
-#
-# all-mpnet-base-v2 is primarily an English model.
-# Spanish, Portuguese, French messages will cluster together
-# by LANGUAGE, not by intent. A Spanish battery complaint
-# would cluster with Spanish iOS complaints — not with
-# English battery complaints. That pollutes our intent clusters.
-#
-# We use langdetect — fast, works offline, no API.
 # It is not perfect (short messages are hard to detect)
 # so we keep messages where detection is uncertain.
 #

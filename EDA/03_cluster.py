@@ -68,19 +68,6 @@ print("Count check: OK")
 
 # ─────────────────────────────────────────────
 # STEP 2: UMAP
-# ─────────────────────────────────────────────
-# Why UMAP before HDBSCAN?
-#
-# HDBSCAN struggles in 768 dimensions — the curse of
-# dimensionality makes all points roughly equidistant.
-# UMAP preserves local neighborhood structure while
-# compressing to 30 dimensions where HDBSCAN works well.
-#
-# Parameters:
-#   n_neighbors=30   how many nearby points UMAP considers
-#                    higher = more global structure, slower
-#                    30 is right for 76k points
-#
 #   n_components=30  output dimensions
 #                    NOT 2 (that's for plotting only)
 #                    30D gives HDBSCAN much more to work with
@@ -129,15 +116,6 @@ else:
 
 # ─────────────────────────────────────────────
 # STEP 3: HDBSCAN CLUSTERING
-# ─────────────────────────────────────────────
-# Why HDBSCAN over K-Means?
-#
-# K-Means requires specifying K upfront.
-# We do not know how many intents exist in the data.
-# HDBSCAN finds clusters by density — K comes from data.
-# Points that do not fit any cluster are marked -1 (noise).
-# These noise points become general_inquiry.
-#
 # Parameters:
 #   min_cluster_size=100
 #     Minimum messages to form a cluster.
