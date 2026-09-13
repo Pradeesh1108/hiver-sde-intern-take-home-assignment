@@ -50,3 +50,5 @@ env.bak/
 venv.bak/
 # Test directory for multi-key evaluation
 test/
+outputs/checkpoint_*.jsonl
+outputs/eval_*_1.json
