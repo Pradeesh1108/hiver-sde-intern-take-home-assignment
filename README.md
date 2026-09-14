@@ -1,5 +1,7 @@
 # 🍎 Apple Support Twitter AI Agent
 
+> 📄 **Project Documents**: Read the full **[AI Customer Support Report](./AI%20Customer%20Support%20Report.pdf)** and the **[Decision Log](./Decision%20Log.md)**
+
 <!-- > **Live Demo**: [https://your-deployment-url.com](https://your-deployment-url.com) ← replace with your deployed link -->
 
 ![Python](https://img.shields.io/badge/Python-3.14-3776AB?style=flat&logo=python&logoColor=white)
