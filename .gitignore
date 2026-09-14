@@ -1,6 +1,5 @@
 # Datasets
 datasets/Customer Support Twitter Archive/
-datasets/apple_threads.json
 datasets/retrieval_index.json
 datasets/eval_set_to_label.csv
 datasets/keyword_spot_check.csv
