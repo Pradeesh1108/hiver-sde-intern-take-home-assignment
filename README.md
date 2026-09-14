@@ -490,9 +490,9 @@ python3 -m evaluation_harness.classical_ml_baseline
 
 ---
 
-## 10. Reproduce Results in 15 Minutes
+## 10. Reproduce Results
 
-> The pre-built datasets (`datasets/`) are included. You do **not** need to re-run the EDA pipeline. Steps below go from clone to running agent in under 15 minutes.
+> **Important**: The semantic embeddings and retrieval indexes (~250MB) are too large for standard GitHub tracking. After cloning, you **must** run the data generation script to build the agent's knowledge base before starting the backend.
 
 ### Prerequisites
 
@@ -546,47 +546,13 @@ source .venv/bin/activate
 
 ---
 
-### Step 4 — Start the server
+### Step 4 — Build the Knowledge Base (EDA)
 
-```bash
-uvicorn main:app --reload
-```
-
-Open [http://localhost:8000](http://localhost:8000) in your browser. The React frontend is served automatically.
-
----
-
-### Step 5 — Reproduce headline results
-
-Run the full evaluation harness on all 242 labelled examples:
-
-```bash
-python3 -m evaluation_harness.automated_metrics
-```
-
-Results are saved to `outputs/eval_summary.json`. Expected output:
-
-```
-Classification accuracy:  82.2%  (199/242)
-Reply quality overall:    4.56 / 5
-Escalation rate:          9.5%
-```
-
-Run the ML baselines for comparison:
-
-```bash
-python3 -m evaluation_harness.classical_ml_baseline
-```
-
----
-
-### Optional — Regenerate everything from the raw dataset
-
-> The pre-built outputs are already in `datasets/` so this section is not required to reproduce results. But if you want to rebuild the full pipeline, you have two options.
+Because the semantic indexes are large, they are built locally. You have two options:
 
 #### Option 1: Fast Generation (Skipping Kaggle Download)
 
-We provide the pre-processed `apple_threads.json` file in the repo. You can skip the raw Kaggle dataset download and run the pipeline starting from message extraction:
+We provide the pre-processed `apple_threads.json` (78MB) in the repo. You can skip the raw Kaggle dataset download and build the index directly:
 
 ```bash
 ./scripts/generate_data_fast.sh
@@ -608,7 +574,41 @@ Then run:
 ./scripts/generate_data.sh
 ```
 
-Both scripts will run the remaining EDA steps (embedding → clustering → taxonomy → semantic index). The embedding step takes **45–90 minutes on CPU** (or 8–12 minutes on Apple Silicon / GPU). All other steps are fast.
+*Note: The embedding generation step takes **45–90 minutes on CPU** (or 8–12 minutes on Apple Silicon / GPU). All other steps are fast.*
+
+---
+
+### Step 5 — Start the server
+
+```bash
+uvicorn main:app --reload
+```
+
+Open [http://localhost:8000](http://localhost:8000) in your browser. The React frontend is served automatically.
+
+---
+
+### Step 6 — Reproduce headline results
+
+Run the full evaluation harness on all 242 labelled examples:
+
+```bash
+python3 -m evaluation_harness.automated_metrics
+```
+
+Results are saved to `outputs/eval_summary.json`. Expected output:
+
+```
+Classification accuracy:  82.2%  (199/242)
+Reply quality overall:    4.56 / 5
+Escalation rate:          9.5%
+```
+
+Run the ML baselines for comparison:
+
+```bash
+python3 -m evaluation_harness.classical_ml_baseline
+```
 
 ---
 
