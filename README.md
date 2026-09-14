@@ -504,7 +504,7 @@ python3 -m evaluation_harness.classical_ml_baseline
 ### Step 1 — Clone and set up
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Pradeesh1108/hiver-sde-intern-take-home-assignment.git
 cd hiver-task
 ./scripts/setup.sh
 ```
